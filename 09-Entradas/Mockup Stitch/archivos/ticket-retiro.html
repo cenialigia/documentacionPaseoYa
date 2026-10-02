@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+
+<html lang="es"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_stack" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "surface-container-low": "#f2f3ff", "surface-bright": "#faf8ff", "outline-variant": "#c5c5d3", "surface-container-high": "#e2e7ff", "surface": "#faf8ff", "primary": "#00236f", "on-tertiary": "#ffffff", "on-secondary": "#ffffff", "secondary": "#006a61", "on-surface": "#131b2e", "secondary-fixed-dim": "#6bd8cb", "on-background": "#131b2e", "secondary-container": "#86f2e4", "on-tertiary-container": "#ef9900", "surface-container": "#eaedff", "inverse-on-surface": "#eef0ff", "secondary-fixed": "#89f5e7", "on-error-container": "#93000a", "primary-fixed-dim": "#b6c4ff", "surface-variant": "#dae2fd", "tertiary-fixed-dim": "#ffb95f", "background": "#faf8ff", "on-secondary-fixed": "#00201d", "error": "#ba1a1a", "on-surface-variant": "#444651", "on-tertiary-fixed": "#2a1700", "tertiary-fixed": "#ffddb8", "on-primary-fixed": "#00164e", "primary-container": "#1e3a8a", "on-primary-fixed-variant": "#264191", "surface-container-highest": "#dae2fd", "outline": "#757682", "on-primary": "#ffffff", "on-secondary-container": "#006f66", "inverse-primary": "#b6c4ff", "tertiary": "#3e2400", "error-container": "#ffdad6", "primary-fixed": "#dce1ff", "surface-dim": "#d2d9f4", "on-secondary-fixed-variant": "#005049", "on-primary-container": "#90a8ff", "surface-container-lowest": "#ffffff", "surface-tint": "#4059aa", "tertiary-container": "#5c3800", "inverse-surface": "#283044", "on-tertiary-fixed-variant": "#653e00", "on-error": "#ffffff" }, borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, spacing: { "gutter": "1rem", "space-xl": "2rem", "space-sm": "0.5rem", "space-md": "1rem", "space-lg": "1.5rem", "margin-mobile": "1rem", "space-xs": "0.25rem", "margin": "1.5rem", "gutter-mobile": "0.75rem" }, fontFamily: { "label-sm": ["Plus Jakarta Sans"], "body-sm": ["Plus Jakarta Sans"], "headline-sm": ["Plus Jakarta Sans"], "headline-md": ["Plus Jakarta Sans"], "headline-lg-mobile": ["Plus Jakarta Sans"], "display-lg": ["Plus Jakarta Sans"], "body-lg": ["Plus Jakarta Sans"], "label-md": ["Plus Jakarta Sans"], "headline-lg": ["Plus Jakarta Sans"], "label-lg": ["Plus Jakarta Sans"], "body-md": ["Plus Jakarta Sans"] }, fontSize: { "label-sm": ["11px", { lineHeight: "14px", letterSpacing: "0.03em", fontWeight: "700" }], "body-sm": ["12px", { lineHeight: "16px", fontWeight: "400" }], "headline-sm": ["18px", { lineHeight: "24px", fontWeight: "600" }], "headline-md": ["20px", { lineHeight: "28px", letterSpacing: "-0.01em", fontWeight: "600" }], "headline-lg-mobile": ["24px", { lineHeight: "32px", letterSpacing: "-0.01em", fontWeight: "700" }], "display-lg": ["36px", { lineHeight: "44px", letterSpacing: "-0.02em", fontWeight: "800" }], "body-lg": ["16px", { lineHeight: "24px", fontWeight: "400" }], "label-md": ["12px", { lineHeight: "16px", letterSpacing: "0.02em", fontWeight: "600" }], "headline-lg": ["28px", { lineHeight: "36px", letterSpacing: "-0.02em", fontWeight: "700" }], "label-lg": ["14px", { lineHeight: "20px", letterSpacing: "0.01em", fontWeight: "600" }], "body-md": ["14px", { lineHeight: "20px", fontWeight: "400" }] } } } };</script><style>@layer base{html,body{width:100vw;margin:0;padding:0;background-color:#faf8ff;}body{overscroll-behavior-y:none;-webkit-tap-highlight-color:transparent;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-on-surface min-h-screen flex flex-col antialiased selection:bg-secondary selection:text-on-secondary"><header class="fixed top-0 inset-x-0 z-50 bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] pt-safe"><div class="h-16 px-space-xs flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-xs min-w-0"><button aria-label="Volver" class="w-11 h-11 flex items-center justify-center rounded-full text-on-surface hover:text-primary transition-colors flex-shrink-0" onclick="history.back()"><span class="material-symbols-outlined text-[24px]">arrow_back</span></button><img alt="Logo PaseoYa" class="h-7 w-auto object-contain flex-shrink-0" src="https://lh3.googleusercontent.com/aida/AEtjO1U7TsvktCJrNxiFZcj2jZFcZBX4h_-fEQ_3YXiZZ1elKX7sFJ7kVMGvTySZqsgMjD41yqqpnwMewus5B6uL9bpOGndhmVC-jVV45sH5fUZE0yQBtRzK7BE3hka1z0gYBlpH7sXPXeWcPBfEIWIS2DaszHlJT-jgzpGyqgEFaUv6Qu0pC6vhN3XNYHZu0oWLUGPhsk60OIxnLbNe_Z0urOVsAu51XdXyHoL5Zv1wDQJlRiYO0xk3b5T2vjg"/><h1 class="font-headline-sm text-headline-sm text-on-surface font-bold truncate">Retiro Express Qr</h1></div><div class="flex items-center pr-space-xs flex-shrink-0"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex-1 flex flex-col relative w-full pt-16 bg-surface"><div class="flex flex-col w-full pb-safe">
+<!-- Status Announcement Banner -->
+<div class="px-space-md pt-space-md">
+<div class="bg-secondary-container text-on-secondary-container rounded-xl p-space-md shadow-sm flex items-center justify-between gap-space-sm relative overflow-hidden">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="relative flex items-center justify-center flex-shrink-0">
+<span class="absolute w-3.5 h-3.5 rounded-full bg-secondary opacity-75 animate-ping"></span>
+<span class="relative w-2.5 h-2.5 rounded-full bg-secondary"></span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-sm text-label-sm uppercase tracking-wider font-extrabold text-secondary">Estado del Pedido</span>
+<span class="font-headline-sm text-headline-sm font-bold text-on-secondary-container truncate">LISTO PARA RETIRO</span>
+</div>
+</div>
+<div class="flex items-center gap-space-xs bg-surface-container-lowest/80 px-space-sm py-1 rounded-full text-secondary flex-shrink-0 shadow-sm">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+<span class="font-label-sm text-label-sm">Validado</span>
+</div>
+</div>
+</div>
+<!-- Main Voucher Container (Card Design with Notch Detail) -->
+<div class="px-space-md pt-space-md">
+<div class="bg-surface-container-lowest rounded-xl shadow-md overflow-hidden flex flex-col relative">
+<!-- Store & Identification Header -->
+<div class="p-space-lg bg-surface-container-low flex flex-col gap-space-sm">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex items-center gap-space-md">
+<div class="w-12 h-12 rounded-xl bg-surface-container-highest flex items-center justify-center text-primary flex-shrink-0">
+<span class="material-symbols-outlined text-[28px]">devices</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface truncate">TechZone Cochabamba</span>
+<div class="flex items-center gap-space-xs text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px]">storefront</span>
+<span class="font-body-sm text-body-sm">Paseo Aranjuez • Nivel 2</span>
+</div>
+</div>
+</div>
+<div class="text-right flex-shrink-0">
+<span class="font-label-sm text-label-sm text-on-surface-variant block uppercase tracking-wider">Orden</span>
+<span class="font-headline-sm text-headline-sm font-extrabold text-primary tracking-tight">#PY-10482</span>
+</div>
+</div>
+<div class="flex flex-wrap items-center gap-space-sm pt-space-xs">
+<span class="inline-flex items-center gap-1 bg-surface-container-high px-space-sm py-0.5 rounded-full font-label-md text-label-md text-primary font-semibold">
+<span class="material-symbols-outlined text-[14px]">qr_code_2</span> Pagado con QR Simple
+          </span>
+<span class="inline-flex items-center gap-1 bg-surface-container-high px-space-sm py-0.5 rounded-full font-label-md text-label-md text-on-surface-variant">
+<span class="material-symbols-outlined text-[14px]">schedule</span> Plazo: 24 de Nov (14 días)
+          </span>
+</div>
+</div>
+<!-- Scannable Ticket Core (QR & Backup PIN) -->
+<div class="px-space-lg py-space-xl flex flex-col items-center text-center relative">
+<p class="font-label-md text-label-md text-on-surface-variant mb-space-sm">Presenta este código al personal de la tienda</p>
+<!-- High Contrast QR Code -->
+<div class="p-space-md bg-surface-container-lowest rounded-xl shadow-lg flex flex-col items-center justify-center">
+<svg class="w-48 h-48" fill="none" viewbox="0 0 160 160" xmlns="http://www.w3.org/2000/svg">
+<rect fill="#FFFFFF" height="160" width="160"></rect>
+<!-- Top-Left Target -->
+<rect fill="#00236F" height="40" rx="4" width="40" x="12" y="12"></rect>
+<rect fill="#FFFFFF" height="24" rx="2" width="24" x="20" y="20"></rect>
+<rect fill="#00236F" height="12" rx="1" width="12" x="26" y="26"></rect>
+<!-- Top-Right Target -->
+<rect fill="#00236F" height="40" rx="4" width="40" x="108" y="12"></rect>
+<rect fill="#FFFFFF" height="24" rx="2" width="24" x="116" y="20"></rect>
+<rect fill="#00236F" height="12" rx="1" width="12" x="122" y="26"></rect>
+<!-- Bottom-Left Target -->
+<rect fill="#00236F" height="40" rx="4" width="40" x="12" y="108"></rect>
+<rect fill="#FFFFFF" height="24" rx="2" width="24" x="20" y="116"></rect>
+<rect fill="#00236F" height="12" rx="1" width="12" x="26" y="122"></rect>
+<!-- Dynamic QR Data Modules -->
+<rect fill="#00236F" height="8" width="8" x="60" y="16"></rect>
+<rect fill="#00236F" height="16" width="8" x="76" y="16"></rect>
+<rect fill="#00236F" height="8" width="8" x="92" y="20"></rect>
+<rect fill="#00236F" height="8" width="8" x="64" y="32"></rect>
+<rect fill="#00236F" height="8" width="12" x="80" y="40"></rect>
+<rect fill="#00236F" height="8" width="12" x="16" y="60"></rect>
+<rect fill="#00236F" height="16" width="8" x="36" y="64"></rect>
+<rect fill="#00236F" height="8" width="16" x="52" y="56"></rect>
+<rect fill="#00236F" height="16" width="8" x="76" y="56"></rect>
+<rect fill="#00236F" height="8" width="16" x="92" y="64"></rect>
+<rect fill="#00236F" height="8" width="16" x="116" y="60"></rect>
+<rect fill="#00236F" height="16" width="8" x="140" y="68"></rect>
+<rect fill="#00236F" height="8" width="16" x="60" y="80"></rect>
+<rect fill="#00236F" height="16" width="16" x="84" y="80"></rect>
+<rect fill="#00236F" height="12" width="8" x="108" y="80"></rect>
+<rect fill="#00236F" height="8" width="12" x="128" y="84"></rect>
+<rect fill="#00236F" height="12" width="8" x="20" y="88"></rect>
+<rect fill="#00236F" height="8" width="12" x="40" y="92"></rect>
+<rect fill="#00236F" height="12" width="8" x="60" y="96"></rect>
+<rect fill="#00236F" height="12" width="12" x="60" y="116"></rect>
+<rect fill="#00236F" height="24" width="8" x="80" y="108"></rect>
+<rect fill="#00236F" height="8" width="16" x="96" y="120"></rect>
+<rect fill="#00236F" height="16" width="8" x="120" y="112"></rect>
+<rect fill="#00236F" height="12" width="12" x="136" y="116"></rect>
+<rect fill="#00236F" height="8" width="20" x="108" y="136"></rect>
+<rect fill="#00236F" height="12" width="8" x="68" y="136"></rect>
+<rect fill="#00236F" height="8" width="16" x="84" y="140"></rect>
+<!-- Subtle Center Logo Badge -->
+<rect fill="#006A61" height="24" rx="6" width="24" x="68" y="68"></rect>
+<path d="M75 80L78 83L85 76" stroke="#FFFFFF" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"></path>
+</svg>
+</div>
+<!-- PIN Backup for Store Clerks -->
+<div class="mt-space-md flex flex-col items-center">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-bold">Código PIN de Respaldo</span>
+<div class="mt-space-xs flex items-center gap-space-sm bg-surface-container px-space-md py-space-xs rounded-xl">
+<span class="font-headline-lg text-headline-lg font-extrabold tracking-widest text-primary font-mono select-all">739-251</span>
+<button aria-label="Copiar PIN" class="text-on-surface-variant hover:text-primary transition-colors p-1" id="copy-btn" onclick="navigator.clipboard.writeText('739-251'); this.innerHTML='&lt;span class=\'material-symbols-outlined text-[18px] text-secondary\'&gt;check&lt;/span&gt;'; setTimeout(() =&gt; this.innerHTML='&lt;span class=\'material-symbols-outlined text-[18px]\'&gt;content_copy&lt;/span&gt;', 2000)">
+<span class="material-symbols-outlined text-[18px]">content_copy</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Tear Line Decorative Styling -->
+<div class="relative flex items-center justify-between px-space-md py-space-xs bg-surface-container-low">
+<div class="w-6 h-6 rounded-full bg-surface -ml-6 shadow-inner"></div>
+<div class="flex-1 flex justify-between gap-1 overflow-hidden px-space-xs">
+<span class="h-0.5 w-2 bg-outline-variant/40 rounded-full inline-block"></span>
+<span class="h-0.5 w-2 bg-outline-variant/40 rounded-full inline-block"></span>
+<span class="h-0.5 w-2 bg-outline-variant/40 rounded-full inline-block"></span>
+<span class="h-0.5 w-2 bg-outline-variant/40 rounded-full inline-block"></span>
+<span class="h-0.5 w-2 bg-outline-variant/40 rounded-full inline-block"></span>
+<span class="h-0.5 w-2 bg-outline-variant/40 rounded-full inline-block"></span>
+<span class="h-0.5 w-2 bg-outline-variant/40 rounded-full inline-block"></span>
+<span class="h-0.5 w-2 bg-outline-variant/40 rounded-full inline-block"></span>
+<span class="h-0.5 w-2 bg-outline-variant/40 rounded-full inline-block"></span>
+<span class="h-0.5 w-2 bg-outline-variant/40 rounded-full inline-block"></span>
+</div>
+<div class="w-6 h-6 rounded-full bg-surface -mr-6 shadow-inner"></div>
+</div>
+<!-- Product Breakdown & Item Summary -->
+<div class="p-space-lg flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface">Artículos del Paquete</span>
+<span class="font-label-md text-label-md text-secondary font-bold">2 Productos listos</span>
+</div>
+<div class="space-y-space-sm">
+<!-- Item 1 -->
+<div class="flex items-center justify-between bg-surface-container-low p-space-sm rounded-xl">
+<div class="flex items-center gap-space-md min-w-0">
+<img class="w-12 h-12 rounded-lg object-cover flex-shrink-0" data-alt="High quality close up studio photograph of sleek matte black modern noise-cancelling bluetooth over-ear headphones on pure neutral background with subtle teal rim lighting, boutique electronic catalog style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB0q8rqd8y2g1WJyJigmigzZOk5JbwqqiKCzhnlWI73GWJc36QTbSqKsxrpMZL1AW5J-ATN4rv6JkzfE7tW5LywyeRA8wgBSfPP_pH1zf0fxdeSkZUpG68sDyu_Y1lgPuHEOoKRyvKXjp57V_UpI51G3i_ju_AyH1eV922148_VpIOp-u7ZCIamyhVZxi6ddA5xQRvBEfJzG-M5ehh1lQouJdKeCWmujYmACfknlhI_WhxTbDWogMKP"/>
+<div class="flex flex-col min-w-0">
+<span class="font-label-lg text-label-lg font-bold text-on-surface truncate">Audífonos Bluetooth Pro</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Cantidad: 1 • Color: Negro Espacial</span>
+</div>
+</div>
+<span class="font-label-lg text-label-lg font-bold text-primary flex-shrink-0">210 Bs.</span>
+</div>
+<!-- Item 2 -->
+<div class="flex items-center justify-between bg-surface-container-low p-space-sm rounded-xl">
+<div class="flex items-center gap-space-md min-w-0">
+<img class="w-12 h-12 rounded-lg object-cover flex-shrink-0" data-alt="Minimalist ergonomic vertical wireless mouse in soft dark graphite tone positioned on luxury office desk surface, soft ambient lighting highlighting architectural modern curves." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDa1LqHBJhKEBMq_95EnJIOioVXz7rntT9KdZAQPvC4XO6l2UmSZxERswZNZ_En274njTXorgudzZgldFaut3rXagbbEeZLeMPIApIc8O3ojYaXAoLzKVEW1X-WruMMGA7irkLiu0pI_luRRdL8K41tT0GoapzaAVNQqIFujkQ1i2OKhiPwsIwYZxw1YquREDfTGfzG05dpOTripAhn5DdWCVzrwofirhGfQt5XApFcgQzdmvGGZfoe"/>
+<div class="flex flex-col min-w-0">
+<span class="font-label-lg text-label-lg font-bold text-on-surface truncate">Mouse Ergo Vertical</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Cantidad: 1 • Recargable USB-C</span>
+</div>
+</div>
+<span class="font-label-lg text-label-lg font-bold text-primary flex-shrink-0">95 Bs.</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-space-xs">
+<span class="font-body-md text-body-md text-on-surface-variant">Monto Total Abonado</span>
+<span class="font-headline-sm text-headline-sm font-extrabold text-primary">305 Bs.</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Mall Indoor Wayfinding & Navigation Card -->
+<div class="px-space-md pt-space-md">
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs text-primary font-bold">
+<span class="material-symbols-outlined text-[20px]">explore</span>
+<span class="font-headline-sm text-headline-sm">¿Cómo llegar al local?</span>
+</div>
+<span class="bg-surface-container-high text-primary px-space-sm py-0.5 rounded-full font-label-sm text-label-sm font-semibold">Nivel 2</span>
+</div>
+<!-- Mall Context Graphic / Visual Wayfinding Map Placeholder -->
+<div class="w-full h-36 rounded-xl bg-surface-container-highest bg-cover bg-center relative overflow-hidden flex flex-col justify-end p-space-sm shadow-inner" data-location="Paseo Aranjuez, Cochabamba, Bolivia" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCKfDNweqcDavXyQTq4MrpA4Rh4kVjrG7kArV5dCj66xo0fIiUOL54qKcB3dra7ZDyq55pnmAnAV5zpJEF1ZwxCva-xdUANuEB5eMrYBvFNFmkX8SKr_NC04joE9pjs-UtRksxABq-Yq0n-iDO_OVloaEKjHnJIACz-iO9UAsxQtgOtnmADrfaMkmGXTkrQnFlRbZr_MLXd6W4IGl9YA-1Z04LjBp7b3wOnnsF60sAJAKnrlIh72rt7')">
+<div class="absolute inset-0 bg-gradient-to-t from-primary/80 via-primary/30 to-transparent"></div>
+<div class="relative z-10 flex items-center gap-space-xs text-surface-bright">
+<span class="material-symbols-outlined text-secondary-fixed text-[20px]">pin_drop</span>
+<span class="font-label-md text-label-md font-bold drop-shadow-sm">TechZone • Frente a Cafetería Central</span>
+</div>
+</div>
+<!-- Step-by-step guidance -->
+<div class="flex items-start gap-space-sm bg-surface-container-low p-space-sm rounded-xl">
+<span class="material-symbols-outlined text-secondary flex-shrink-0 text-[22px] mt-0.5">alt_route</span>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md font-bold text-on-surface">Instrucción de llegada:</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Sube por la escalera mecánica central al <strong class="text-on-surface font-semibold">Piso 2</strong>. El local se encuentra justo al frente de la cafetería y al lado del ascensor panorámico.
+          </p>
+</div>
+</div>
+</div>
+</div>
+<!-- Pickup Verification Security Note -->
+<div class="px-space-md pt-space-md">
+<div class="bg-surface-container-low rounded-xl p-space-md flex items-center gap-space-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-primary text-[22px] flex-shrink-0">shield</span>
+<p class="font-body-sm text-body-sm">
+        Para tu seguridad, la entrega se validará mediante el escaneo único de tu ticket. No compartas este código con terceros no autorizados.
+      </p>
+</div>
+</div>
+<!-- Primary and Secondary Actions -->
+<div class="px-space-md pt-space-lg pb-space-xl flex flex-col gap-space-sm">
+<!-- Save to Wallet / PDF Export -->
+<button class="w-full h-[50px] bg-primary-container text-on-primary rounded-xl font-label-lg text-label-lg font-bold flex items-center justify-center gap-space-sm shadow-md active:scale-95 transition-transform" onclick="alert('Ticket sincronizado exitosamente con Apple Wallet / Google Pay')">
+<span class="material-symbols-outlined text-[20px]">account_balance_wallet</span>
+<span>Guardar en Wallet / Descargar Comprobante</span>
+</button>
+<!-- Support / Cancellation Disclaimer & Report Modal Trigger -->
+<button class="w-full h-[50px] bg-surface-container-high text-on-surface rounded-xl font-label-lg text-label-lg font-bold flex items-center justify-center gap-space-sm active:scale-95 transition-transform" onclick="document.getElementById('report-modal').classList.remove('hidden')">
+<span class="material-symbols-outlined text-error text-[20px]">report_problem</span>
+<span>Reportar inconveniente o cancelar</span>
+</button>
+</div>
+<!-- Interactive Cancellation & Help Modal Overlay -->
+<div class="fixed inset-0 z-50 bg-inverse-surface/60 backdrop-blur-sm hidden flex items-end justify-center" id="report-modal">
+<div class="bg-surface rounded-t-2xl w-full max-w-lg p-space-lg flex flex-col gap-space-md shadow-2xl animate-in slide-in-from-bottom duration-200">
+<div class="w-10 h-1 bg-outline-variant/60 rounded-full self-center mb-space-xs"></div>
+<div class="flex items-start gap-space-sm">
+<div class="w-10 h-10 rounded-full bg-error-container text-on-error-container flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-[24px]">warning</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface">Gestión de Orden Lista</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Tu pedido ya ha sido embalado y reservado en TechZone. La cancelación en este estado requiere confirmación directa de tienda.
+          </p>
+</div>
+</div>
+<div class="bg-surface-container-low p-space-sm rounded-xl space-y-space-xs text-on-surface">
+<div class="flex items-center gap-space-xs font-label-md text-label-md font-bold text-error">
+<span class="material-symbols-outlined text-[16px]">info</span>
+<span>Política de retiros de Paseo Aranjuez</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          Dispones de 14 días (hasta el 24 de Noviembre) para recoger tu compra o enviar a una persona autorizada con tu código QR.
+        </p>
+</div>
+<div class="flex flex-col gap-space-xs pt-space-xs">
+<button class="w-full h-12 bg-secondary text-on-secondary rounded-xl font-label-lg text-label-lg font-bold flex items-center justify-center gap-space-sm" onclick="window.location.href='tel:+59144410293'">
+<span class="material-symbols-outlined text-[18px]">support_agent</span>
+<span>Contactar a Soporte PaseoYa</span>
+</button>
+<button class="w-full h-12 bg-surface-container-high text-on-surface rounded-xl font-label-lg text-label-lg font-bold" onclick="document.getElementById('report-modal').classList.add('hidden')">
+          Mantener mi retiro activo
+        </button>
+</div>
+</div>
+</div>
+</div></main></body></html>
