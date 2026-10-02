@@ -42,3 +42,12 @@ Para relevo entre agentes: actualizar esta nota con tarea/intent/revisión, auto
 - El formulario reúne las decisiones conocidas DEC-01–16 y DEC-18–25; DEC-17 permanece resuelta. En el plan se renombraron lotes de interfaz `LUI-*` para distinguirlos de pantallas `UI-*`.
 - Inicio independiente de respuestas: F0-01 inventario sin instalación y F1/LUI-01 con propuestas y datos sintéticos; F1 se cierra tras DEC-11. F0-02/03 y código esperan las decisiones indicadas. La preparación documental de pruebas también puede avanzar.
 - **Pruebas estáticas PASS (2026-10-02):** 28 notas revisadas, 0 enlaces wiki rotos; 27 casillas (19 demo + 4 B + 4 C), 15 pruebas planificadas y todos los DEC-01–16/18–25 presentes en el formulario. Límite: comprobación de archivos, no de renderizado ni comportamiento. Todas las pruebas de código, servicio, dispositivo y piloto `NO_EJECUTADA`. Uso de sesión `SessionUsage/v1`: análisis `null`, documentación `null`, validación `null` por ausencia de telemetría.
+
+## 2026-10-02 · Publicación del baúl en GitHub
+
+**Entrada:** SRC-07, autorización expresa de Paulo. **Destino:** repositorio público `cenialigia/documentacionPaseoYa`, rama `main`.
+
+- Se inicializó Git dentro de `PaseoYA-Core`; la raíz `PaseoYA`, `AGENTS.md` y `CLAUDE.md` quedaron fuera. Se conservaron los 54 archivos del baúl, incluidos `.obsidian`, entradas originales, mockup y el cambio reciente del propietario.
+- Importación inicial: commit `7989005406c1d765aee741a33f49336a75330afa`. Antes del commit, los 54 blobs staged coincidían byte por byte con los archivos locales. Se mantuvieron finales de línea y espacios de las fuentes originales.
+- `git push` creó `origin/main`; `git ls-remote` devolvió el mismo hash del commit inicial y GitHub mostró el repositorio no vacío con rama principal `main`. Este registro documental se añade en un commit posterior.
+- **Límite:** esto verifica publicación de archivos, no funcionamiento de Obsidian ni de la futura app. Pruebas runtime del producto: `NO_EJECUTADA`.
