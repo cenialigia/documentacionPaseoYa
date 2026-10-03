@@ -92,3 +92,17 @@ Para relevo entre agentes: actualizar esta nota con tarea/intent/revisión, auto
 - Metro se detuvo después de la captura, al agotar el límite de tiempo de la tarea en segundo plano; se relanza con `npm run android` en `frontend/`. Quedan en ejecución el emulador y el stack de Supabase (`npm run db:stop` en `backend/`).
 - **Siguiente fase:** F1/LUI-01, la especificación visual desde SRC-04. Puede avanzar con propuestas y sólo se cierra con DEC-11. La primera tanda de decisiones (DEC-19, 03, 10, 11 y 15) desbloquea F2.
 - **Uso de sesión:** `SessionUsage/v1`: runtime `null`, documentación `null`.
+
+## 2026-10-03 · F1/LUI-01: especificación UI propuesta
+
+**Entrada:** el usuario pidió continuar tras cerrar F0. LUI-01 puede avanzar sin decisiones, pero sólo se cierra con DEC-11 (Plan por fases).
+
+- Se creó [[02-Arquitectura/Especificacion UI LUI-01]] con: tokens canónicos (la paleta M3 de los HTML, con contraste medido), tipografía, espaciado, objetivo táctil de 48 dp, rutas Expo Router por rol, inventario de componentes, matriz vista→estado→acción, estados de pedido y pago separados, glosario y frases prohibidas, fixtures coherentes (TechZone = Local 208, que resuelve MK-06), licencias de recursos y propuestas para MK-01–08.
+- **Hallazgos:**
+  - Los colores de la prosa de `DESIGN.md` no coinciden con los HTML y tres fallan AA con texto blanco.
+  - `outline-variant` no alcanza 3:1 para bordes de controles.
+  - Las fotos de Stitch tienen licencia desconocida y no se usarán.
+- Enlaces añadidos en Inicio, Contexto activo, Mapa de pantallas, la nota del mockup y DEC-11 (lista de 8 puntos para responder).
+- **Evidencia:** EVID-LUI-01a PASS (documental/estática). T-UI `NO_EJECUTADA`. LUI-01 sigue abierta.
+- **Próximo paso:** Paulo responde DEC-11 (y DEC-15 para imágenes). Con eso se cierra LUI-01 y arranca LUI-02 (shell de cuatro pestañas, tema y componentes con fixtures) en `frontend/`.
+- **Uso de sesión:** `SessionUsage/v1`: análisis `null`, redacción `null`.

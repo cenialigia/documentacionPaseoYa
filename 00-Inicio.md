@@ -15,7 +15,7 @@ Estado: **planificación documental ampliada con mockup; implementación no inic
 | Recuperar el contexto mínimo | [[01-Contexto/Contexto activo]] · [[10-Metodologia/Metodo del proyecto]] |
 | Decidir sin perder procedencia | [[02-Arquitectura/Decisiones tecnicas]] · [[02-Arquitectura/Decisiones pendientes]] · [[Decisiones de Usuario para el desarrollo]] |
 | Ver sistema y datos | [[02-Arquitectura/Vision general]] · [[04-Reglas-de-negocio/_Indice de reglas]] |
-| Revisar experiencia e interfaz | [[02-Arquitectura/Mapa de pantallas]] · [[02-Arquitectura/Wireframes iniciales]] · [[02-Arquitectura/Mockup Stitch - vistas y ubicaciones]] |
+| Revisar experiencia e interfaz | [[02-Arquitectura/Mapa de pantallas]] · [[02-Arquitectura/Wireframes iniciales]] · [[02-Arquitectura/Mockup Stitch - vistas y ubicaciones]] · [[02-Arquitectura/Especificacion UI LUI-01]] |
 | Trabajar por fases | [[05-Desarrollo/Plan por fases]] · [[06-Estado/Tareas pendientes]] |
 | Verificar y entregar | [[05-Desarrollo/Testing]] · [[05-Desarrollo/Criterio de terminado]] · [[08-Produccion/_Indice de produccion]] |
 | Consultar módulos o vocabulario | [[03-Modulos/_Indice de modulos]] · [[01-Contexto/Glosario]] |

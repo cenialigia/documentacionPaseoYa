@@ -82,6 +82,8 @@ Estado listo, identificación de comercio/pedido, medio de pago y fecha límite;
 
 ## Huecos y conflictos para revisión
 
+Las propuestas de resolución están en [[02-Arquitectura/Especificacion UI LUI-01#9. Propuesta para MK-01–08]].
+
 | ID | Hallazgo | Tarea / puerta |
 | --- | --- | --- |
 | MK-01 | No hay capturas de detalle, acceso/cuenta, comercio ni admin. | LUI-03 y LUI-07–09 diseñan esas pantallas desde RF y DEC-10/13; no se inventan como “aprobadas por Stitch”. |

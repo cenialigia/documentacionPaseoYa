@@ -50,7 +50,7 @@ updated: 2026-10-02
 
 ### DEC-11 · Dirección visual
 
-**Indicar:** si se aprueba Stitch como dirección visual o qué cambia: logo, paleta, tipografía, textos, navegación, fotos y estados faltantes. El HTML no se copia como React Native. **Fija:** LUI-01/02 y aceptación visual. **Respuesta:** `PENDIENTE`.
+**Indicar:** si se aprueba Stitch como dirección visual o qué cambia: logo, paleta, tipografía, textos, navegación, fotos y estados faltantes. El HTML no se copia como React Native. **Fija:** LUI-01/02 y aceptación visual. **Para responder rápido:** la lista de 8 puntos en [[02-Arquitectura/Especificacion UI LUI-01#10. Para cerrar LUI-01 (lista para DEC-11)]]. **Respuesta:** `PENDIENTE`.
 
 ### DEC-15 · Datos e imágenes de desarrollo
 

@@ -25,6 +25,8 @@ Inventario visual actualizado desde [[02-Arquitectura/Mockup Stitch - vistas y u
 
 **Flujos de navegación propuestos:** cuatro pestañas cliente Explorar/Comparar/Carritos/Pedidos; explorar→tienda/detalle→carrito del comercio→checkout→pedido→ticket→retiro; comercio catálogo↔pedidos→validar; admin lista→detalle→acción. Volver atrás nunca repite un checkout. La navegación exacta y componentes se definen tras DEC-01/10/11. Capturas disponibles sólo para UI-01/02/04/05/06A/06B; las demás vistas se diseñan desde RF y decisiones, no se atribuyen al mockup.
 
+**Especificación propuesta (LUI-01, 2026-10-03):** tokens, rutas Expo Router, componentes, matriz de estados y fixtures en [[02-Arquitectura/Especificacion UI LUI-01]]; se cierra con DEC-11.
+
 ## Entregables visuales que faltan
 
 - V0: estos bocetos y mapa; **documentados, pendientes de aprobación**.

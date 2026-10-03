@@ -17,7 +17,7 @@ Casillas del plan [[05-Desarrollo/Plan por fases]]. **F0 cerrada con evidencia (
 
 ## UI · F1–F6
 
-- [ ] **LUI-01 / F1** Cerrar inventario visual, tokens, rutas, copy, assets/licencias, estados y conflictos MK-01–08 de [[02-Arquitectura/Mockup Stitch - vistas y ubicaciones]].
+- [ ] **LUI-01 / F1** *(propuesta lista 2026-10-03 en [[02-Arquitectura/Especificacion UI LUI-01]], EVID-LUI-01a; falta DEC-11)* Cerrar inventario visual, tokens, rutas, copy, assets/licencias, estados y conflictos MK-01–08 de [[02-Arquitectura/Mockup Stitch - vistas y ubicaciones]].
 - [ ] **LUI-02 / F2** Shell React Native, cuatro pestañas cliente, stacks, tema, componentes y fixtures coherentes.
 - [ ] **LUI-03 / F3** Explorar, tiendas, ofertas, detalle faltante, búsqueda/comparación y filtros.
 - [ ] **LUI-04 / F4** Carritos separados, cantidades, subtotal, temporizador y expiración visual.
