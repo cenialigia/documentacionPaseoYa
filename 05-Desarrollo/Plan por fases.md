@@ -100,11 +100,11 @@ Aprobado en el chat: **app simulada completa + backend Supabase aparte**. La app
 
 | Orden | Lote | Contenido mínimo para la demo | Estado |
 | --- | --- | --- | --- |
-| D1 | Ajustes por decisiones | pestaña «Buscar» en lugar de Comparar (DEC-09); quitar Avisos (DEC-20); perfil con «Reportar problema»; detalle con «Simular pago» (DEC-04) y cancelación en Confirmado (DEC-08); ticket con QR + PIN (DEC-16) y «Guardar ticket» | en curso |
-| D2 | Acceso por rol (LUI-07 mínimo) | login con cuentas de demostración CLIENTE / COMERCIO (TechZone) / ADMIN, registro de cliente y redirección por rol (DEC-10) | pendiente |
-| D3 | Panel de comercio (LUI-08 mínimo) | cola de pedidos de su comercio: iniciar preparación → marcar listo → validar PIN → entregado; confirmar efectivo | pendiente |
-| D4 | Admin mínimo (LUI-09) | listado de comercios y supervisión de pedidos (sólo lectura) | pendiente |
-| B1 | Backend (BE-01/03/04 mínimo) | migración con perfiles/roles, comercios, productos, pedidos y credenciales; RLS por rol y `comercio_id`; funciones `confirmar_pedido` (stock atómico e idempotente), `simular_pago`, transiciones, `validar_retiro`, `cancelar_pedido`; seed ficticio; pruebas SQL de RLS y concurrencia | pendiente |
+| D1 | Ajustes por decisiones | pestaña «Buscar» en lugar de Comparar (DEC-09); quitar Avisos (DEC-20); perfil con «Reportar problema»; detalle con «Simular pago» (DEC-04) y cancelación en Confirmado (DEC-08); ticket con QR + PIN (DEC-16) y «Guardar ticket» | hecho · frontend `c0040b1` |
+| D2 | Acceso por rol (LUI-07 mínimo) | login con cuentas de demostración CLIENTE / COMERCIO (TechZone) / ADMIN, registro de cliente y redirección por rol (DEC-10) | hecho |
+| D3 | Panel de comercio (LUI-08 mínimo) | cola de pedidos de su comercio: iniciar preparación → marcar listo → validar PIN → entregado; confirmar efectivo | hecho · EVID-DEMO-a |
+| D4 | Admin mínimo (LUI-09) | listado de comercios y supervisión de pedidos (sólo lectura) | hecho |
+| B1 | Backend (BE-01/03/04 mínimo) | migración con perfiles/roles, comercios, productos, pedidos y credenciales; RLS por rol y `comercio_id`; funciones `confirmar_pedido` (stock atómico e idempotente), `simular_pago`, transiciones, `validar_retiro`, `cancelar_pedido`; seed ficticio; pruebas SQL de RLS y concurrencia | hecho · backend `2475598`, EVID-BE-a/b/c |
 
 Fuera del plazo: integración real (INT-01), expiraciones programadas, estadísticas, promociones y la pasada manual con TalkBack.
 

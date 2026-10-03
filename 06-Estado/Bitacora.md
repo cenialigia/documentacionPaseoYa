@@ -178,3 +178,20 @@ Para relevo entre agentes: actualizar esta nota con tarea/intent/revisión, auto
 - **Evidencia:** EVID-LUI-05a PASS (servicio simulado). La idempotencia real se probará en BE-03.
 - **Próximo paso:** LUI-06, con DEC-16/20 pendientes. Las decisiones abiertas bloquean ya el cierre de LUI-02 a 05.
 - **Uso de sesión:** `SessionUsage/v1`: implementación `null`, pruebas `null`, documentación `null`.
+
+## 2026-10-03 · Decisiones del propietario y demo completa (plan de recorte)
+
+**Entrada:** el usuario pidió responder las decisiones para avanzar. Tres tandas en el chat resolvieron DEC-03/04/05/06/07/08/09/10/16/19/20 (ADR-011). DEC-03: **entrega en menos de 1 día, 2 personas**. Se aprobó el plan «app simulada + backend aparte».
+
+- **Frontend `c0040b1` + `c703e41`:**
+  - Ajustes por decisiones: pestaña Buscar (DEC-09); sin avisos ni otras acciones extra (DEC-20); perfil con «Reportar problema»; QR de pago «SIMULADO · sin valor» con «Simular pago» (DEC-04); cancelación en Confirmado (DEC-08); ticket con QR + PIN y «Guardar ticket» (DEC-16, con `react-native-qrcode-svg`, `react-native-svg`, `react-native-view-shot` y `expo-sharing` instalados con `expo install`).
+  - Login simulado por rol con áreas protegidas (DEC-10), panel de comercio y vista de admin.
+  - Plazo del carrito desde la última modificación (DEC-06).
+- **Defectos hallados al probar y corregidos:**
+  - El aviso de «Retiro validado» se perdía porque la tarjeta cambiaba de lista y se desmontaba; ahora vive en el panel.
+  - El botón flotante de Expo Go tapaba «Perfil»; se anotó en el README (sólo afecta a Expo Go).
+- **Backend `2475598`:** migración con tablas, RLS por rol y `comercio_id`, y funciones SECURITY DEFINER para todas las escrituras de pedidos. Seed con catálogo y cuentas ficticias; pruebas SQL y de concurrencia.
+- **Evidencia:** EVID-DEMO-a, EVID-BE-a (17/17), EVID-BE-b y EVID-BE-c en PASS. Progreso 9/19 (47,4 %).
+- **Límites:** la app no usa el backend (INT-01 fuera del plazo). Sin probar en el dispositivo: «Guardar ticket» y el registro. TalkBack sigue pendiente.
+- **Próximo paso:** ensayar la demo con el guion del README del frontend; después de la entrega, INT-01.
+- **Uso de sesión:** `SessionUsage/v1`: decisiones `null`, implementación `null`, pruebas `null`, documentación `null`.
