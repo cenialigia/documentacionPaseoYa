@@ -93,3 +93,18 @@ Antes de programar operaciones críticas, elegir y registrar si se implementan c
 - Puertas humanas: DEC-01/02 para F0; DEC-04–06/09/11/15 para UI y datos; DEC-10/13/16 para roles y retiro. Una puerta detiene sólo los lotes afectados.
 - **Orquestación, reevaluación 2026-10-02:** siguen presentes dependencias, varias sesiones previstas, decisiones humanas y efectos futuros. Se mantiene coordinación explícita **por archivos del Core** (este grafo, bitácora y pruebas), sin runtime instalado. Persistencia: notas del Core; alternativa ante falta de herramienta auxiliar: trabajo secuencial por archivos. Si se automatizan tareas con efectos o varios agentes escriben concurrentemente, se decide entonces mecanismo de exclusión/reintento con versión y aprobación.
 - Cierre de cada fase: salida real, `PASS/FAIL/NO_EJECUTADA` y límite de prueba en [[05-Desarrollo/Testing]], estado de casillas en [[06-Estado/Tareas pendientes]], [[05-Desarrollo/Progreso]] y [[06-Estado/Bitacora]].
+
+## Plan de recorte por plazo (DEC-03: entrega en menos de 1 día, 2 personas) · 2026-10-03
+
+Aprobado en el chat: **app simulada completa + backend Supabase aparte**. La app no se conecta a Supabase en esta entrega; el backend se entrega con esquema, RLS y funciones probados localmente con SQL. INT-01 queda fuera del plazo.
+
+| Orden | Lote | Contenido mínimo para la demo | Estado |
+| --- | --- | --- | --- |
+| D1 | Ajustes por decisiones | pestaña «Buscar» en lugar de Comparar (DEC-09); quitar Avisos (DEC-20); perfil con «Reportar problema»; detalle con «Simular pago» (DEC-04) y cancelación en Confirmado (DEC-08); ticket con QR + PIN (DEC-16) y «Guardar ticket» | en curso |
+| D2 | Acceso por rol (LUI-07 mínimo) | login con cuentas de demostración CLIENTE / COMERCIO (TechZone) / ADMIN, registro de cliente y redirección por rol (DEC-10) | pendiente |
+| D3 | Panel de comercio (LUI-08 mínimo) | cola de pedidos de su comercio: iniciar preparación → marcar listo → validar PIN → entregado; confirmar efectivo | pendiente |
+| D4 | Admin mínimo (LUI-09) | listado de comercios y supervisión de pedidos (sólo lectura) | pendiente |
+| B1 | Backend (BE-01/03/04 mínimo) | migración con perfiles/roles, comercios, productos, pedidos y credenciales; RLS por rol y `comercio_id`; funciones `confirmar_pedido` (stock atómico e idempotente), `simular_pago`, transiciones, `validar_retiro`, `cancelar_pedido`; seed ficticio; pruebas SQL de RLS y concurrencia | pendiente |
+
+Fuera del plazo: integración real (INT-01), expiraciones programadas, estadísticas, promociones y la pasada manual con TalkBack.
+

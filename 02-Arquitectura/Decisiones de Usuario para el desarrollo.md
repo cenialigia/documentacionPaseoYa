@@ -30,7 +30,7 @@ updated: 2026-10-02
 
 ### DEC-19 · Objetivo de entrega
 
-**Elegir:** A demo del hackathon; B RF-01–44 completos; C piloto/uso real. Puede elegir una secuencia con fecha para cada hito. **Fija:** qué fases son obligatorias y cómo se mide terminado. **Respuesta de Paulo:** `PENDIENTE` (nivel, fecha y criterio).
+**Elegir:** A demo del hackathon; B RF-01–44 completos; C piloto/uso real. Puede elegir una secuencia con fecha para cada hito. **Fija:** qué fases son obligatorias y cómo se mide terminado. **Respuesta (2026-10-03, chat):** **A · Demo funcional** (F0–F10).
 
 ### DEC-01 · Plataforma y modalidad React Native
 
@@ -42,11 +42,11 @@ updated: 2026-10-02
 
 ### DEC-03 · Tiempo y equipo
 
-**Indicar:** fecha de demo/hackathon, personas disponibles, tiempo semanal y orden de prioridad si el plazo no alcanza. **Fija:** recorte del primer hito sin borrar RF. **Respuesta:** `PENDIENTE`.
+**Indicar:** fecha de demo/hackathon, personas disponibles, tiempo semanal y orden de prioridad si el plazo no alcanza. **Fija:** recorte del primer hito sin borrar RF. **Respuesta (2026-10-03, chat):** entrega en **menos de 1 día**; equipo de **2 personas**. Fuerza un plan de recorte (ver Plan por fases).
 
 ### DEC-10 · Roles y altas
 
-**Elegir:** quién puede crear comercio y asignar personal, si una persona puede pertenecer a varios comercios, permisos por rol, cómo nace admin y si comercio/admin usan la misma app móvil o una superficie distinta. **Fija:** RLS, LUI-07–09 y pruebas de acceso. **Respuesta:** `PENDIENTE`.
+**Elegir:** quién puede crear comercio y asignar personal, si una persona puede pertenecer a varios comercios, permisos por rol, cómo nace admin y si comercio/admin usan la misma app móvil o una superficie distinta. **Fija:** RLS, LUI-07–09 y pruebas de acceso. **Respuesta (2026-10-03, chat):** tres roles con un solo rol por usuario: **CLIENTE** (se registra solo; explora, busca, carrito, pedidos, código de retiro), **COMERCIO** (lo crea sólo el ADMIN; una única cuenta por comercio, vinculada por `comercioId`; gestiona productos, precios, inventario, pedidos, preparación, validación de entrega y sus ventas) y **ADMIN Paseo Aranjuez** (cuenta creada previamente; acceso global a comercios, cuentas, usuarios, categorías, pedidos, promociones, ventas y estadísticas). Misma autenticación y **misma app móvil**; tras el login cada rol va a su área. **La autorización se impone en el backend (RLS/funciones), no ocultando opciones.**
 
 ### DEC-11 · Dirección visual
 
@@ -60,7 +60,7 @@ updated: 2026-10-02
 
 ### DEC-09 · Comparación de productos · antes de F3/F7
 
-**Elegir:** sólo productos idénticos por identificador, equivalencias curadas por admin/comercio o comparación automática con criterio aprobado. La captura junta modelos diferentes. **Respuesta:** `PENDIENTE`.
+**Elegir:** sólo productos idénticos por identificador, equivalencias curadas por admin/comercio o comparación automática con criterio aprobado. La captura junta modelos diferentes. **Respuesta (2026-10-03, chat):** **se quita «Comparar» como función**. La comparación la hace el usuario en el **buscador**, que muestra varias opciones del producto en distintos comercios. La pestaña pasa a «Buscar». RF-10 queda cubierto por los resultados de búsqueda (variante explícita del alcance).
 
 ### DEC-12 · Servicios · antes de cerrar catálogo/modelo
 
@@ -72,31 +72,31 @@ updated: 2026-10-02
 
 ### DEC-20 · Acciones extras del mockup · antes de hacerlas activas
 
-**Elegir para cada una:** implementar con comportamiento definido, mostrar sólo en demo como no disponible, o retirarla de la UI: campana/notificaciones; mapa de plaza; tiempo estimado; aviso de llegada; guardar en wallet/descargar; reportar inconveniente; puntuaciones, garantía y descuentos. Indicar fuente de datos y responsable de atender cada acción activa. **Respuesta:** `PENDIENTE`.
+**Elegir para cada una:** implementar con comportamiento definido, mostrar sólo en demo como no disponible, o retirarla de la UI: campana/notificaciones; mapa de plaza; tiempo estimado; aviso de llegada; guardar en wallet/descargar; reportar inconveniente; puntuaciones, garantía y descuentos. Indicar fuente de datos y responsable de atender cada acción activa. **Respuesta (2026-10-03, chat):** se implementan **«Guardar ticket»** y **«Reportar problema»**, este último en el perfil o los ajustes del usuario. Se quitan de la UI: campana/avisos, mapa, aviso de llegada, tiempo estimado y puntuaciones/garantía/descuentos.
 
 ### DEC-04 · Pago QR simulado · antes de F4/F8
 
-**Elegir:** cómo se simula confirmación, quién puede marcar pago, qué muestra el QR de pago y qué mensajes evitan confundirlo con el QR de retiro. **Respuesta:** `PENDIENTE`.
+**Elegir:** cómo se simula confirmación, quién puede marcar pago, qué muestra el QR de pago y qué mensajes evitan confundirlo con el QR de retiro. **Respuesta (2026-10-03, chat):** el cliente ve un QR «SIMULADO · sin valor» y pulsa **«Simular pago»**; una función confiable del backend lo marca PAID. No se mueve dinero.
 
 ### DEC-05 · Inventario · antes de F4/F8
 
-**Elegir:** si el carrito sólo comprueba stock o lo aparta; momento de reserva/descuento para QR y efectivo; momento y condición de liberación. La frase «stock reservado» del mockup espera esta respuesta. **Respuesta:** `PENDIENTE`.
+**Elegir:** si el carrito sólo comprueba stock o lo aparta; momento de reserva/descuento para QR y efectivo; momento y condición de liberación. La frase «stock reservado» del mockup espera esta respuesta. **Respuesta (2026-10-03, chat):** el carrito sólo comprueba; el stock se **aparta de forma atómica al confirmar el pedido** (QR o efectivo) y se libera si se cancela o vence.
 
 ### DEC-06 · Plazos · antes de F4/F8/F9
 
-**Elegir:** instante inicial y zona horaria de 4 h, 3 días y 14 días; si «3 días» son 72 h, días calendario o hábiles; efecto de comercio cerrado, feriados y cambios de horario. **Respuesta:** `PENDIENTE`.
+**Elegir:** instante inicial y zona horaria de 4 h, 3 días y 14 días; si «3 días» son 72 h, días calendario o hábiles; efecto de comercio cerrado, feriados y cambios de horario. **Respuesta (2026-10-03, chat):** **tiempo corrido**, zona America/La_Paz: carrito 4 h desde su última modificación; efectivo 72 h desde la confirmación; QR 14 días desde la confirmación; un comercio cerrado no detiene el reloj.
 
 ### DEC-07 · Pedido QR vencido · antes de F9
 
-**Elegir:** cómo representar en una simulación la frase de SRC-02 «dinero queda para comercio», o retirarla del flujo; **no implica transferir dinero real**. **Respuesta:** `PENDIENTE`.
+**Elegir:** cómo representar en una simulación la frase de SRC-02 «dinero queda para comercio», o retirarla del flujo; **no implica transferir dinero real**. **Respuesta (2026-10-03, chat):** el pedido QR vencido pasa a **«Expirado»** y el pago simulado queda **«Retenido por el comercio»**; no se mueve dinero.
 
 ### DEC-08 · Cancelaciones · antes de F9
 
-**Elegir:** ventana de cancelación, quién autoriza excepciones, qué pasa con QR simulado/efectivo, stock y auditoría. **Respuesta:** `PENDIENTE`.
+**Elegir:** ventana de cancelación, quién autoriza excepciones, qué pasa con QR simulado/efectivo, stock y auditoría. **Respuesta (2026-10-03, chat):** el **cliente cancela sólo en «Confirmado»** (antes de «En preparación»); se libera el stock y un QR simulado pasa a «Reembolso simulado». Excepciones: sólo el admin.
 
 ### DEC-16 · Credencial de retiro · antes de F5/F9
 
-**Elegir:** QR, PIN o ambos; cuándo aparece, caducidad, reintentos, respaldo sin cámara, uso único y datos visibles en ticket/descarga. **Respuesta:** `PENDIENTE`.
+**Elegir:** QR, PIN o ambos; cuándo aparece, caducidad, reintentos, respaldo sin cámara, uso único y datos visibles en ticket/descarga. **Respuesta (2026-10-03, chat):** **QR + PIN de 6 dígitos**; aparece sólo en «Listo para retiro», es de un solo uso, caduca con el pedido y sólo lo valida el comercio dueño.
 
 ### DEC-21 · Operación de comercios · antes de F7/F11
 
