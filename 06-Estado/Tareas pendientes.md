@@ -2,12 +2,12 @@
 title: "Tareas pendientes"
 tags: [paseoya]
 status: planificado
-updated: 2026-10-02
+updated: 2026-10-03
 ---
 
 # Tareas pendientes
 
-Casillas del plan [[05-Desarrollo/Plan por fases]]. **F0 cerrada con evidencia (2026-10-02)**; el resto sigue pendiente. El inventario SRC-04 y la planificación de esta sesión son documentación, no ejecución de fases. Marcar una casilla sólo al registrar salida y prueba en [[05-Desarrollo/Testing]] y [[06-Estado/Bitacora]].
+Casillas del plan [[05-Desarrollo/Plan por fases]]. **F0 y otros 10 lotes de demo cerrados con evidencia; total 13/19** según [[05-Desarrollo/Progreso]]. F14 sólo está documentada. Marcar una casilla al registrar salida, prueba y límite en [[05-Desarrollo/Testing]] y [[06-Estado/Bitacora]].
 
 ## F0 · Preparación técnica
 
@@ -23,7 +23,7 @@ Casillas del plan [[05-Desarrollo/Plan por fases]]. **F0 cerrada con evidencia (
 - [x] **LUI-04 / F4** *(cerrada 2026-10-03: DEC-05/06 aplicadas, EVID-LUI-04a + EVID-DEMO-a)* Carritos separados, cantidades, subtotal, temporizador y expiración visual.
 - [x] **LUI-05 / F4** *(cerrada 2026-10-03: DEC-04/05/06 aplicadas, EVID-LUI-05a + EVID-DEMO-a)* Checkout por comercio, QR **simulado**/efectivo, condiciones y errores/reintentos.
 - [x] **LUI-06 / F5** *(cerrada 2026-10-03: ticket QR + PIN, «Guardar ticket», cancelación y actualización en tiempo real; EVID-DEMO-a, EVID-INT-02a/b)* Pedidos en curso/historial, ticket, credencial ilustrativa, ubicación e incidencias.
-- [ ] **LUI-07 / F6** *(mínimo implementado: login simulado por rol y registro de cliente; perfil y sesión real dependen de INT-01)* Acceso, cuenta y sesión por rol.
+- [ ] **LUI-07 / F6** *(login, sesión y registro Supabase probados en EVID-INT-01a/02a; recuperación de contraseña y edición de perfil siguen abiertas)* Acceso, cuenta y sesión por rol.
 - [x] **LUI-08 / F6** *(cerrada 2026-10-03: catálogo propio (RF-27–31) con stock protegido frente a ventas concurrentes, cola, preparación, efectivo y PIN; EVID-LUI-08a, EVID-DEMO-a, EVID-INT-02b; frontend `cf9c9da`)* Vistas de comercio: catálogo, cola, preparación y retiro.
 - [ ] **LUI-09 / F6** *(supervisión de sólo lectura; faltan acciones de gestión)* Vistas de administración según DEC-10/13.
 - [ ] **LUI-10 / F6** Accesibilidad, dispositivos, estados vacíos/error/offline y comparación de capturas.
@@ -33,7 +33,7 @@ Casillas del plan [[05-Desarrollo/Plan por fases]]. **F0 cerrada con evidencia (
 - [x] **BE-01 / F7** *(cerrada 2026-10-03, backend `2475598`, EVID-BE-a/c)* Migraciones, Auth, membresías, RLS y pruebas de acceso directo.
 - [ ] **BE-02 / F7** *(catálogo por RLS y seed listos; sin búsqueda en el servidor)* Catálogo, búsqueda/comparación y seed sintético consistente.
 - [x] **BE-03 / F8** *(cerrada 2026-10-03, EVID-BE-a/b)* Carritos y checkout transaccional por comercio, pago separado, idempotencia y concurrencia de stock.
-- [x] **BE-04 / F9** *(cerrada 2026-10-03: transiciones, PIN, cancelación y expiración con pg_cron; EVID-BE-a/d; commit `45b0e3e` pendiente de push)* Flujo comercio, retiro QR/PIN de un uso, cancelación y expiraciones independientes del móvil.
+- [x] **BE-04 / F9** *(cerrada 2026-10-03: transiciones, PIN, cancelación y expiración con pg_cron; EVID-BE-a/d; `45b0e3e` publicado según bitácora)* Flujo comercio, retiro QR/PIN de un uso, cancelación y expiraciones independientes del móvil.
 
 ## Integración · F10
 
@@ -53,5 +53,15 @@ Casillas del plan [[05-Desarrollo/Plan por fases]]. **F0 cerrada con evidencia (
 - [ ] **OPS-02** Seguridad, rendimiento, accesibilidad, respaldo/restauración, monitoreo, privacidad y soporte.
 - [ ] **PIL-01** Datos y comercios autorizados, capacitación y UAT por rol.
 - [ ] **PIL-02** Salida controlada, observación, corrección y aceptación del piloto.
+
+## F14 · Nueva documentación por roles, aún NO_EJECUTADA
+
+- [ ] **F14-00.0–00.3** Comprobación conjunta de cambios/commits del Core, frontend y backend con el agente asignado; después inventario del código y preguntas/decisiones de [[02-Arquitectura/Decisiones F14 antes de iniciar]] antes de implementar cada lote afectado.
+- [ ] **F14-UI-C** 26 tareas `F14-CLI-01`–`26`, cada una con captura y ubicación en [[02-Arquitectura/F14 - Cliente - vistas y tareas]].
+- [ ] **F14-UI-M** 14 tareas `F14-COM-01`–`14` en [[02-Arquitectura/F14 - Comercio - vistas y tareas]].
+- [ ] **F14-UI-A** 14 tareas `F14-ADM-01`–`14` en [[02-Arquitectura/F14 - Administrador - vistas y tareas]].
+- [ ] **F14-UI-X** 6 tareas `F14-X-01`–`06` para rutas/estados exigidos por los PDF sin cuadro independiente, en [[05-Desarrollo/F14 - Revision y ampliacion por roles]].
+- [ ] **F14-BE-01–07** Identidad, búsqueda, compra/reserva, retiro por cámara, comercio, administración y extras condicionales, descritos en [[05-Desarrollo/F14 - Revision y ampliacion por roles]].
+- [ ] **F14-QA-01–04** Matriz de trazabilidad, dispositivo/accesibilidad, seguridad/concurrencia y comparación visual; evidencia en [[05-Desarrollo/Testing]].
 
 **Puertas críticas:** ver [[Decisiones de Usuario para el desarrollo]]. DEC-19 determina si el denominador activo son 19 lotes para demo, 23 para cobertura funcional o 27 para piloto. Las decisiones restantes sólo bloquean los lotes dependientes; no se inventa una respuesta por el mockup. Ideas futuras como Points, Jarvis, delivery o IA permanecen fuera del MVP.

@@ -2,12 +2,12 @@
 title: "Plan de pruebas y evidencia"
 tags: [paseoya]
 status: planificado
-updated: 2026-10-02
+updated: 2026-10-03
 ---
 
 # Plan de pruebas y evidencia
 
-Pruebas diseñadas; **T-F0 PASS** (2026-10-02, EVID-F0-01 a 03e); el resto sin ejecutar. Fuentes: PDF §§5–9 y MD RF-01–44/RN-01–09. Datos ficticios; separar cuentas cliente, comercio A, comercio B y admin.
+Hay evidencia PASS de F0, UI, backend e integración más abajo; no confundir la cobertura demostrada con cierre total del producto. Para F14 aún no hay prueba de implementación: [[05-Desarrollo/F14 - Revision y ampliacion por roles]]. Datos ficticios; separar cuentas cliente, comercio A, comercio B y admin.
 
 | ID | Caso y resultado esperado | Requisito/fase |
 | --- | --- | --- |
@@ -26,6 +26,8 @@ Pruebas diseñadas; **T-F0 PASS** (2026-10-02, EVID-F0-01 a 03e); el resto sin e
 | T-FULL | Matriz RF-01–44/RN/RNF con prueba y evidencia por cada RF; CRUD comercio, ventas, admin, estadísticas, promociones y extras aprobados sin rutas muertas. | F11, DEC-12/13/20–22 |
 | T-OPS | Build/distribución del destino, control de acceso, carga, accesibilidad, respaldo/restauración, migración/reversa, alerta e incidente ensayados. | F12, DEC-23/24 |
 | T-PIL | UAT cliente/comercio/admin con datos autorizados, monitoreo del periodo acordado y aceptación o decisión de detener. | F13, DEC-25 |
+| T-F14-UI | Para cada recorte, comparar ruta y estado real con el mapa F14; interacción, carga/vacío/error, 200 %, TalkBack, permisos de cámara y cierre de sesión. | F14-UI-C/M/A, F14-QA-01/02 |
+| T-F14-BE | RLS directo por rol, métricas/ventas, CRUD autorizado, stock concurrente, QR/PIN de un uso, idempotencia, vencimiento y pago pendiente antes de entrega. | F14-BE, F14-QA-03 |
 
 Registrar `EVID-ID | fecha | versión | dispositivo/ambiente | datos sintéticos | pasos/comando | observado | PASS/FAIL/NO_EJECUTADA | límite`. Un esquema SQL que compila no prueba RLS ni la demo. Si falta entorno, escribir NO_EJECUTADA con motivo. No usar datos reales sin permiso.
 
@@ -58,3 +60,10 @@ Registrar `EVID-ID | fecha | versión | dispositivo/ambiente | datos sintéticos
 | EVID-INT-02b | 2026-10-03 | frontend `146c16a`/`2a5a32a` + backend `45b0e3e` | **teléfono físico** Xiaomi M2102J20SG (Android 12, Expo Go 57.0.9, operado a mano por el usuario) + emulador (TechZone, por adb), ambos con `adb reverse` | seed | el usuario en el teléfono: Buscar «cargador» → carrito TechZone → efectivo → confirmar → «Ver código de retiro»; en el emulador: preparar → listo → confirmar efectivo → validar el PIN leído de la pantalla del teléfono; verificación con `uiautomator dump` de ambos y `psql` | PY-1027 aparece solo en el panel del emulador; el teléfono pasa solo a «En preparación» y «Listo para retiro»; el PIN del teléfono coincide con la base; tras validar, la base deja `DELIVERED`/`PAID` con el PIN usado, las ventas de TechZone son `Bs 120,00` y el ticket del teléfono cambia solo a «Este código ya se usó»; 0 errores JS en ambos | PASS (dos dispositivos reales, tiempo real) | No se guardan capturas del teléfono en el Core (privacidad de la barra de estado). MIUI bloquea los toques inyectados (`INJECT_EVENTS`): el teléfono lo opera una persona |
 | EVID-CART-a | 2026-10-03 | frontend `9068cd4` | emulador Pixel 3a + Supabase local | seed + «Ana Prueba» | agregar productos de TechZone y Boutique como `cliente@` → cerrar Expo Go a la fuerza y reabrir → entrar como Ana → volver como `cliente@` | tras reabrir se conservan la sesión y los dos carritos con su plazo; Ana ve «No tiene carritos activos»; el cliente recupera sus dos carritos; 0 errores JS | PASS (runtime en emulador) | Almacenamiento local por usuario (`expo-sqlite` localStorage); el carrito no se sincroniza entre dispositivos |
 | EVID-LUI-08a | 2026-10-03 | frontend `cf9c9da` | emulador Pixel 3a + Supabase local | seed | como `techzone@`: «Gestionar mi catálogo» → crear «Funda para celular» (precio «35,50», stock 10) → nuevo producto con precio anterior menor que el precio → editar el Cargador mientras se descuenta 1 unidad por SQL (venta simulada) → guardar → guardar otra vez → desactivar la funda → como cliente, RLS y búsqueda | catálogo propio con 3 productos (incluido el agotado); la funda queda en la base a 35.50, stock 10, activa; el precio anterior inválido se rechaza sin crear nada; el primer guardado detecta el conflicto («El stock cambió…»), recarga 11 y no pisa la venta; el segundo guarda 30; desactivar deja `activo = false`, el cliente ve 0 filas por RLS y su búsqueda da «Sin resultados»; 0 errores JS | PASS (runtime en emulador + base) | Los clientes en otros dispositivos ven los cambios del catálogo al recargarlo (no hay Realtime sobre `productos`) |
+
+## F14 · Evidencia documental y ejecución pendiente
+
+| EVID-ID | Fecha | Superficie | Pasos | Observado | Resultado | Límite |
+| --- | --- | --- | --- | --- | --- | --- |
+| EVID-F14-DOC | 2026-10-03 | `PaseoYA-Core` | Extraer los tres PDF (13/31/10 páginas), conservar 3 PDF + 3 mosaicos con SHA-256, recortar 26/14/14 vistas, inspeccionar muestras, comprobar enlaces/embeds nuevos y `git diff --check` | 54 recortes asignados a tareas/ubicación, 6 originales preservados, 0 enlaces nuevos faltantes y diff sin error de espacio | PASS (documentación) | El código vive en otro equipo; no se ejecutó comparación UI real ni backend F14 |
+| EVID-F14-EXEC | 2026-10-03 | Frontend/backend | F14-00, UI, BE y QA aún no iniciados | Puerta de decisiones pendiente | NO_EJECUTADA | Requiere inventario de commits y respuestas de Paulo por lote |

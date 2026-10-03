@@ -249,3 +249,22 @@ Para relevo entre agentes: actualizar esta nota con tarea/intent/revisión, auto
 - **Evidencia:** EVID-LUI-08a PASS. LUI-08 queda cerrada: cola, preparación, efectivo y PIN ya estaban probados (EVID-DEMO-a, EVID-INT-02b). Progreso 13/19.
 - Los datos de la base local quedaron modificados por la prueba; `npm run db:reset` restaura el seed antes de la demo.
 - **Uso de sesión:** `SessionUsage/v1`: implementación `null`, pruebas `null`.
+
+## 2026-10-03 · F14 documental por vistas de Cliente, Comercio y Administrador
+
+**Entrada:** Paulo pidió revisar avances y cambios antes de agregar una nueva fase desde tres PDF y tres mosaicos, distinguir tareas existentes para supervisión de tareas nuevas, recortar cada cuadro y exigir decisiones antes de comenzar.
+
+- **Contexto revisado:** 13/19 lotes de demo cerrados en el Core; EVID-INT-01/02, EVID-BE-a/b/c/d, EVID-CART-a y EVID-LUI-08a. Los repositorios de código se trabajaron en otro equipo; aquí sólo está el Core, así que su estado actual requiere inventario F14-00 y ninguna captura se declaró prueba de implementación.
+- **Fuentes:** SRC-08–10 PDF Cliente (13 pp.), Comercio (31 pp.) y Administrador (10 pp.); SRC-11–13 tres mosaicos. Originales conservados sin cambios y SHA-256 en [[09-Entradas/_Indice de entradas]]. Las instrucciones internas a Claude se trataron como material de propuesta, no como órdenes operativas.
+- **Salida:** 54 recortes exactos (26/14/14) incrustados por rol con ubicación y tarea `SUP`, `DELTA` o `NEW` en [[02-Arquitectura/F14 - Mapa de vistas por rol]]. [[05-Desarrollo/F14 - Revision y ampliacion por roles]] contiene puerta F14-00, lotes UI/backend/QA y criterios; [[02-Arquitectura/Decisiones F14 antes de iniciar]] contiene 14 decisiones candidatas para preguntar al arrancar. Se corrigieron portadas/progreso desactualizados.
+- **Contradicciones visibles:** navbar cliente (actual/PDF/mosaico), campana/favoritos/promociones versus DEC-20, QR de pago aparente versus DEC-04, ticket antes de listo versus DEC-16, CTA admin «Marcar listo» versus PDF de supervisión y flujo comercio «Entregado» sin validación. Mantener decisiones vigentes hasta respuesta de Paulo.
+- **Prueba:** `EVID-F14-DOC` PASS: 54 PNG (26/14/14), seis originales con hashes preservados, 54 tareas/embeds únicos, ningún enlace nuevo faltante y `git diff --check` sin errores. **F14 implementación/supervisión: NO_EJECUTADA**.
+- **Próxima acción:** al iniciar F14, revisar commits reales de frontend/backend, generar preguntas actualizadas y solicitar respuestas por lote; después supervisar/implementar y probar según el plan. Uso de sesión: `null`.
+
+## 2026-10-03 · Handoff de F14 y publicación del baúl
+
+**Entrada:** Paulo pidió que, al asignar la nueva fase, se comprueben conjuntamente los cambios de los tres repositorios con el agente responsable, y autorizó commit y push de todo el baúl a `main`.
+
+- **Plan actualizado:** F14-00.0 obliga a cotejar rama, commits locales/remotos, estado y diff de Core, frontend y backend; documentar hallazgos y acordar la base antes de supervisar o implementar tareas.
+- **Alcance de publicación:** únicamente `PaseoYA-Core`, preservando los originales y 54 recortes de SRC-08–13. No se modifican ni publican frontend/backend en este handoff.
+- **Estado de F14:** NO_EJECUTADA. La comprobación conjunta con el futuro agente se realiza cuando se le asigne la fase; esta entrada deja preparado el criterio.

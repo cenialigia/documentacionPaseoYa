@@ -2,7 +2,7 @@
 title: "Decisiones pendientes del propietario"
 tags: [paseoya]
 status: planificado
-updated: 2026-10-02
+updated: 2026-10-03
 ---
 
 # Decisiones pendientes del propietario
@@ -37,3 +37,5 @@ No bloquear trabajo documental ni pruebas sintéticas por preguntas abiertas. **
 | DEC-25 | ¿Con qué comercios, dispositivos, volumen y metas se acepta el piloto? | F13, UAT y firma de cierre. |
 
 DEC-17 queda **resuelta por SRC-02**: varios carritos y un pedido por comercio son requisitos expresos RN-02/03; se conserva el ID histórico sin volver a preguntarlo. El PDF oficial manda en condiciones del reto; el MD contiene requisitos de Paulo. Ninguno concede permiso de conectar servicios, hacer pagos reales o publicar.
+
+**Nueva puerta F14:** DEC-F14-01–14 en [[02-Arquitectura/Decisiones F14 antes de iniciar]] quedan **PENDIENTES**. Se formulan antes de implementar los lotes afectados por los PDF/mosaicos nuevos. En particular, DEC-04 (QR simulado), DEC-11 (dirección visual/local/trato), DEC-16 (credencial sólo al estar listo) y DEC-20 (avisos retirados) siguen vigentes hasta respuesta expresa de Paulo; una captura discrepante no los revoca.

@@ -2,12 +2,12 @@
 title: "Entorno local previsto"
 tags: [paseoya]
 status: planificado
-updated: 2026-10-02
+updated: 2026-10-03
 ---
 
 # Entorno local previsto
 
-No existe proyecto React Native ni Supabase configurado en esta raíz al crear la semilla. SRC-05 pide planificar **F0** para verificar Node.js, gestor de paquetes, toolchain React Native, plataforma de prueba y CLI/entorno Supabase. Versiones, Expo/bare y comandos se fijan en F0/DEC-01–02 después de comprobar compatibilidad actual. Ver [[05-Desarrollo/Plan por fases]].
+Al crear la semilla no existían proyectos React Native/Supabase en esta raíz. Después F0 se cerró en otro equipo y la app se integró con Supabase local según [[05-Desarrollo/Testing]]. **En este workspace de Paulo sólo se observó el Core**; las rutas y versiones de código citadas abajo describen el equipo `Ferfloo27` y deben volver a comprobarse en F14-00 antes de ejecutar trabajo nuevo. Ver [[05-Desarrollo/Plan por fases]].
 
 Topología operativa solicitada: `PaseoYA-frontend/` y `PaseoYA-backend/` como repositorios Git independientes, ambos fuera de `PaseoYA-Core/`. Backend contiene migraciones, RLS, configuración y operaciones confiables de Supabase; no equivale necesariamente a un servidor Node. **Estado (2026-10-02, F0-02):** repositorios verificados, ver tabla siguiente; proyecto Supabase cloud no conectado.
 
@@ -41,7 +41,7 @@ Comprobado el 2026-10-02 sin instalar nada. Referencias oficiales consultadas es
 | Expo CLI / EAS | ausentes globalmente | Expo se usa con `npx`, sin instalación global | Sin bloqueo |
 | Watchman | ausente | Opcional en Windows | Sin bloqueo |
 
-**Faltantes para F0-03:** iniciar Docker Desktop; Supabase CLI dentro de `backend/`; resolver DEC-01 (plataforma, Expo o bare) y DEC-02 (Supabase local o cloud, propietario). No se necesita un servidor Node adicional.
+**Nota histórica:** esos faltantes fueron resueltos para el entorno local de F0-03; la tabla anterior conserva los resultados del inventario inicial. El proyecto Supabase cloud sigue sin conectarse. No se necesita un servidor Node adicional por inferencia.
 
 Propuesta de aislamiento: datos ficticios de demo, proyecto Supabase de desarrollo o entorno local según elección, variables en archivo de ejemplo sin valores, migraciones reproducibles y política explícita que impida ejecutar pruebas destructivas contra datos ajenos. No registrar `service_role`, claves, contraseñas ni URLs privadas en el Core.
 
@@ -49,6 +49,6 @@ Antes de conectar: confirmar propietario del proyecto Supabase, límites/cuotas,
 
 Cuando se cree código, documentar aquí: versiones efectivamente observadas, instalación aprobada, rutas y remotos, comandos exactos de arranque, emulador/dispositivo, migración, seed sintético, pruebas y síntomas de fallo. Arranque (F0-03): en `frontend/`, `npm install`, `cp .env.example .env` y `npm run android`; en `backend/`, `npm install` y `npm run db:start` / `db:status` / `db:reset` / `db:stop`, con Docker Desktop abierto. El `.env` del frontend toma la URL y la clave *anon* locales de `db:status`; nunca la `service_role`.
 
-Estado actual de comandos: inventario F0-01 ejecutado (evidencia `EVID-F0-01` en [[05-Desarrollo/Testing]]); arranque, migración y seed `NO_EJECUTADA`.
+Estado posterior: F0-01/02/03, arranque, migración y seed locales registrados en EVID-F0-01–03e; integración/pruebas en EVID-INT-01/02. Se refiere al equipo y commits indicados en [[05-Desarrollo/Testing]], no a una nueva verificación en este workspace.
 
 Comandos de inventario reproducibles (Git Bash): `node -v`, `npm -v`, `fnm list`, `java -version`, `echo $JAVA_HOME $ANDROID_HOME`, `ls $ANDROID_HOME/{platforms,build-tools,ndk}`, `$ANDROID_HOME/emulator/emulator -list-avds`, `adb devices`, `docker info`, `command -v supabase scoop`, `git -C <repo> rev-parse --show-toplevel`.

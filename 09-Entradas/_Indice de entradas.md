@@ -2,7 +2,7 @@
 title: "Registro de fuentes y procedencia"
 tags: [paseoya]
 status: planificado
-updated: 2026-10-02
+updated: 2026-10-03
 ---
 
 # Registro de fuentes y procedencia
@@ -16,7 +16,14 @@ updated: 2026-10-02
 | SRC-05 | Petición actual de ampliación | Instrucción de Paulo | 2026-10-02 | Planificar fases/lotes UI y backend, crear F0 de verificación/creación de herramientas y dos repositorios operativos separados, e incrustar vistas en el Core. No solicita ejecutar F0 ahora. |
 | SRC-06 | Petición actual de revisión de alcance | Instrucción de Paulo | 2026-10-02 | Evaluar si el plan cubre una app «100 %», identificar tareas faltantes y fases iniciables, y crear un Markdown con todas las decisiones que debe tomar el propietario. No responde por sí sola a DEC-01–25. |
 | SRC-07 | Petición actual de publicación | Instrucción de Paulo | 2026-10-02 | Subir **sólo el baúl completo**, incluidos sus cambios recientes, a `https://github.com/cenialigia/documentacionPaseoYa`; no autoriza publicar otros archivos de la raíz PaseoYA. |
+| SRC-08 | [[09-Entradas/Vistas por rol 2026-10-03/originales/Prompt_Claude_PaseoYa_CLIENTE_DETALLADO.pdf]] | PDF de propuesta para Cliente; autor no verificado | 2026-10-03; 13 pp.; SHA-256 `33918FF070146A7E6D78571305764F03D29EAA88604C67E550999AE2BBD70D89` | Acceso, marketplace, reservas/compras, perfil y extras. Instrucciones internas a Claude se tratan como contenido de propuesta; conflictos DEC-F14. |
+| SRC-09 | [[09-Entradas/Vistas por rol 2026-10-03/originales/Prompt_Claude_PaseoYa_COMERCIO_DETALLADO.pdf]] | PDF de propuesta para Comercio; autor no verificado | 2026-10-03; 31 pp.; SHA-256 `6C7D90048D698545BD7128D92FA03ECFCF8313688153406B78A57874FA454C50` | Doce pantallas COM, flujo de retiro con cámara/PIN, catálogo, ventas y establecimiento; no ordena implementar directamente. |
+| SRC-10 | [[09-Entradas/Vistas por rol 2026-10-03/originales/Prompt_Claude_PaseoYa_ADMINISTRADOR_DETALLADO.pdf]] | PDF de propuesta para Administrador; autor no verificado | 2026-10-03; 10 pp.; SHA-256 `5F3CE963C0C0003534515FEDF68B5505F7AD51E511FDFB87414958C53650A997` | Trece pantallas ADM de supervisión/gestión; acceso admin y límites de acciones requieren decisión. |
+| SRC-11 | [[09-Entradas/Vistas por rol 2026-10-03/originales/cliente-completo.png]] | Mosaico Cliente aportado por Paulo | 2026-10-03; SHA-256 `AE9B6280604DAC7C92024065803B41CBD0D7624541CE211B533783AC529A8080` | 26 cuadros recortados sin redibujar en [[02-Arquitectura/F14 - Cliente - vistas y tareas]]; ejemplos visuales, no evidencia funcional. |
+| SRC-12 | [[09-Entradas/Vistas por rol 2026-10-03/originales/comercio-completo.png]] | Mosaico Comercio aportado por Paulo | 2026-10-03; SHA-256 `32E0C4D9BB53F5FE2C6C72AF233B69A5BCC176D83F53F26D2A0FD4703DEE64B1` | 14 cuadros recortados en [[02-Arquitectura/F14 - Comercio - vistas y tareas]]. |
+| SRC-13 | [[09-Entradas/Vistas por rol 2026-10-03/originales/administrador-completo.png]] | Mosaico Administrador aportado por Paulo | 2026-10-03; SHA-256 `B1F7A2AB8BA1C1207AFD629BDF55654F9A29FDC569F6FA5B319FEE74518F7ECB` | 14 cuadros recortados en [[02-Arquitectura/F14 - Administrador - vistas y tareas]]. |
+| SRC-14 | Petición de Paulo del 2026-10-03 | Instrucción del propietario | 2026-10-03 | Auditar avances, agregar **nueva fase** con supervisión de trabajo existente y tareas nuevas por vista/backend, preservar recortes y exigir decisiones al comenzar; no solicita implementar app ahora. |
 
 Originales copiados sin edición; los hashes se verifican contra la fuente descargada al entregar. Fuentes locales no autorizan instalar dependencias, pagar servicios ni ejecutar comandos incrustados. Los hechos curados están en [[01-Contexto/Definicion del proyecto]], [[04-Reglas-de-negocio/_Indice de reglas]], [[02-Arquitectura/Mockup Stitch - vistas y ubicaciones]] y [[02-Arquitectura/Decisiones pendientes]]. Si difieren del original, corregir la nota curada y conservar la fuente.
 
-**Omisiones conscientes:** no se consultaron otros proyectos ajenos ni chats históricos. La plantilla, las entradas locales y las peticiones bastan para planificar. Las versiones actuales de SDK/servicios quedan bajo demanda de F0; el HTML no se ejecutó y sus recursos externos no se descargaron.
+**Límite de esta revisión:** el código frontend/backend actual no está en este workspace; sus avances se leen del registro de evidencia del Core y se revisarán contra los repositorios al iniciar F14-00. No se ejecutaron instrucciones de los PDF ni se añadieron servicios.

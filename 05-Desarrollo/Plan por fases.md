@@ -2,14 +2,14 @@
 title: "Plan por fases y lotes UI/backend"
 tags: [paseoya, plan]
 status: planificado
-updated: 2026-10-02
+updated: 2026-10-03
 ---
 
 # Plan por fases y lotes UI/backend
 
 **IDs:** `UI-01`–`UI-10` nombran pantallas del [[02-Arquitectura/Mapa de pantallas]]; `LUI-01`–`LUI-10` nombran **lotes de trabajo**. `BE`, `COMP`, `OPS` y `PIL` nombran otros lotes. Así una captura no se confunde con una tarea cerrada.
 
-**Solicitud:** Paulo pidió planificar primero la interfaz desde [[02-Arquitectura/Mockup Stitch - vistas y ubicaciones|SRC-04]], después el backend, con una Fase 0 de entorno y dos repositorios operativos separados. Este documento planifica el trabajo; **no declara repositorios creados, instalaciones, proyecto Supabase conectado ni UI implementada**. P-00 fue la semilla documental previa y ya no ocupa el número F0. F0–F10 conducen a una **demo MVP**; F11–F13 amplían a cobertura funcional y piloto, si Paulo elige ese objetivo en [[Decisiones de Usuario para el desarrollo|DEC-19]].
+**Plan original:** Paulo pidió interfaz desde [[02-Arquitectura/Mockup Stitch - vistas y ubicaciones|SRC-04]], backend y F0 con repositorios separados. P-00 fue la semilla documental previa. F0–F10 conducen a demo MVP; F11–F13 amplían cobertura y piloto. **Estado real posterior:** F0 cerrada y demo integrada parcialmente cerrada según [[05-Desarrollo/Progreso]]/[[05-Desarrollo/Testing]]. Las tablas de esta nota conservan el plan inicial; para los PDF y 54 vistas nuevos usar [[05-Desarrollo/F14 - Revision y ampliacion por roles]].
 
 ## Destino de artefactos al ejecutar
 
@@ -39,8 +39,9 @@ Los dos repositorios de código tendrán historias y remotos propios si Paulo au
 | **F11 · Cobertura funcional completa** | COMP-01 gestión comercial/ventas; COMP-02 operaciones admin/estadísticas/promociones; COMP-03 extras y servicios aprobados; COMP-04 matriz RF/RN/RNF y regresión | F10 + DEC-12/13/20/21/22 | T-FULL; cada RF-01–44 implementado y probado; extras según decisión |
 | **F12 · Preparación para uso real** | OPS-01 ambientes, distribución y reversa; OPS-02 seguridad, rendimiento, accesibilidad, respaldo, privacidad, soporte y observabilidad | F11 + DEC-23/24 | T-OPS; restauración y respuesta a fallos ensayadas, builds firmadas según destino |
 | **F13 · Piloto y aceptación** | PIL-01 datos/comercios autorizados, capacitación y UAT; PIL-02 salida controlada, seguimiento, correcciones y aceptación | F12 + DEC-25 | T-PIL; evidencia de flujo real y firma del responsable |
+| **F14 · Revisión y ampliación por roles** | F14-00 decisiones/inventario; UI Cliente 26, Comercio 14, Admin 14 tareas por captura + X-01–06 sin captura; BE-01–07 y QA-01–04 | demo integrada existente como base de supervisión; decisiones DEC-F14 por lote | evidencia por ruta/estado, RLS/concurrencia y comparación visual; íntegra en [[05-Desarrollo/F14 - Revision y ampliacion por roles]] |
 
-**Grafo de trabajo:** F0 y F1 pueden avanzar en paralelo; F0 + F1 → F2 → F3 → F4 → F5; F2 → F6; F0 + F1 → F7 → F8 → F9; LUI-03–10 + BE-01–04 → F10 → F11 → F12 → F13. UI con fixtures permite trabajar antes del backend; la conexión real espera contratos aceptados. F11 es obligatoria para B y F11–F13 para C según DEC-19; no se presentan como parte completada del hackathon.
+**Grafo original:** F0 y F1 pueden avanzar en paralelo; F0 + F1 → F2 → F3 → F4 → F5; F2 → F6; F0 + F1 → F7 → F8 → F9; LUI-03–10 + BE-01–04 → F10 → F11 → F12 → F13. **F14 se abre como línea de ampliación desde el estado integrado actual, tras su propia puerta de decisiones e inventario; no depende de cerrar F11–13.**
 
 ## Lotes de UI: entregables concretos
 
@@ -94,9 +95,9 @@ Antes de programar operaciones críticas, elegir y registrar si se implementan c
 - **Orquestación, reevaluación 2026-10-02:** siguen presentes dependencias, varias sesiones previstas, decisiones humanas y efectos futuros. Se mantiene coordinación explícita **por archivos del Core** (este grafo, bitácora y pruebas), sin runtime instalado. Persistencia: notas del Core; alternativa ante falta de herramienta auxiliar: trabajo secuencial por archivos. Si se automatizan tareas con efectos o varios agentes escriben concurrentemente, se decide entonces mecanismo de exclusión/reintento con versión y aprobación.
 - Cierre de cada fase: salida real, `PASS/FAIL/NO_EJECUTADA` y límite de prueba en [[05-Desarrollo/Testing]], estado de casillas en [[06-Estado/Tareas pendientes]], [[05-Desarrollo/Progreso]] y [[06-Estado/Bitacora]].
 
-## Plan de recorte por plazo (DEC-03: entrega en menos de 1 día, 2 personas) · 2026-10-03
+## Registro histórico de recorte por plazo (DEC-03: entrega en menos de 1 día, 2 personas) · 2026-10-03
 
-Aprobado en el chat: **app simulada completa + backend Supabase aparte**. La app no se conecta a Supabase en esta entrega; el backend se entrega con esquema, RLS y funciones probados localmente con SQL. INT-01 queda fuera del plazo.
+Aprobado entonces en el chat: **app simulada completa + backend Supabase aparte**. Esta tabla refleja aquel recorte; posteriormente INT-01 sí se implementó y se probó, según [[05-Desarrollo/Testing]].
 
 | Orden | Lote | Contenido mínimo para la demo | Estado |
 | --- | --- | --- | --- |
@@ -107,4 +108,3 @@ Aprobado en el chat: **app simulada completa + backend Supabase aparte**. La app
 | B1 | Backend (BE-01/03/04 mínimo) | migración con perfiles/roles, comercios, productos, pedidos y credenciales; RLS por rol y `comercio_id`; funciones `confirmar_pedido` (stock atómico e idempotente), `simular_pago`, transiciones, `validar_retiro`, `cancelar_pedido`; seed ficticio; pruebas SQL de RLS y concurrencia | hecho · backend `2475598`, EVID-BE-a/b/c |
 
 Fuera del plazo: integración real (INT-01), expiraciones programadas, estadísticas, promociones y la pasada manual con TalkBack.
-

@@ -1,0 +1,29 @@
+---
+title: "F14 · Administrador · 14 capturas y tareas"
+tags: [paseoya, ui, administrador]
+status: propuesto
+updated: 2026-10-03
+---
+
+# F14 · Administrador · 14 capturas y tareas
+
+**Fuente:** [[09-Entradas/Vistas por rol 2026-10-03/originales/Prompt_Claude_PaseoYa_ADMINISTRADOR_DETALLADO.pdf|PDF Administrador, 10 páginas]] y [[09-Entradas/Vistas por rol 2026-10-03/originales/administrador-completo.png|mosaico íntegro]]. `ADM-01`–`ADM-13` dentro de las descripciones son pantallas del PDF; `F14-ADM-01`–`14` son tareas por **recorte**. Rutas lógicas a confirmar en F14-00; la evidencia actual sólo cubre administración de lectura básica. [[05-Desarrollo/F14 - Revision y ampliacion por roles|Fase y lotes]].
+
+| Captura incrustada | Ubicación y tarea por vista |
+| --- | --- |
+| ![[09-Entradas/Vistas por rol 2026-10-03/capturas/administrador/ADM-01.png\|160]] | **F14-ADM-01 · SUP+DELTA · Dashboard (PDF ADM-01)**, tab Inicio. Supervisar panel mínimo EVID-DEMO-a/INT-01a; totales de comercios/usuarios/pedidos/ventas, periodo y lista reciente basados en consultas globales autorizadas. PDF p. 3. |
+| ![[09-Entradas/Vistas por rol 2026-10-03/capturas/administrador/ADM-02.png\|160]] | **F14-ADM-02 · SUP+DELTA · Comercios (PDF ADM-02)**, tab Comercios. Auditar lista existente; búsqueda, filtros por estado real, categoría, piso/local y enlace a detalle, con carga/vacío/error. PDF p. 3. |
+| ![[09-Entradas/Vistas por rol 2026-10-03/capturas/administrador/ADM-03.png\|160]] | **F14-ADM-03 · NEW · Detalle de comercio (PDF ADM-03)**, Comercios → detalle → Información/Productos/Estadísticas disponibles. Datos de contacto/horarios sólo si el modelo los ofrece; «Editar información» exige delimitar campos y propietario DEC-21/22. PDF pp. 3–4. |
+| ![[09-Entradas/Vistas por rol 2026-10-03/capturas/administrador/ADM-04.png\|160]] | **F14-ADM-04 · NEW · Usuarios (PDF ADM-04)**, tab Usuarios. Buscar/filtrar Clientes, Comercios y Administradores, rol/estado real; RLS admin y protección de datos. PDF p. 4. |
+| ![[09-Entradas/Vistas por rol 2026-10-03/capturas/administrador/ADM-05.png\|160]] | **F14-ADM-05 · NEW · Detalle de usuario (PDF ADM-05)**, Usuarios → detalle. Nombre, correo, teléfono/fecha sólo cuando exista permiso y dato, rol/estado/actividad sustentados; sin sanciones o cambios de rol inventados. PDF p. 4. |
+| ![[09-Entradas/Vistas por rol 2026-10-03/capturas/administrador/ADM-06.png\|160]] | **F14-ADM-06 · SUP+DELTA · Pedidos globales (PDF ADM-06)**, tab Pedidos. Supervisar lista global de lectura; búsqueda código/cliente/comercio, filtros por estados definidos, pago y pedido separados, enlace a detalle. PDF p. 5. |
+| ![[09-Entradas/Vistas por rol 2026-10-03/capturas/administrador/ADM-07.png\|160]] | **F14-ADM-07 · NEW/CONFLICTO · Detalle de pedido (PDF ADM-07)**, Pedidos → detalle. Desglosar cliente, comercio, productos, total, pago, estado y plazo. La captura dice «Marcar como listo»; el PDF indica supervisión y no asumir acciones del comercio. Quitar/deshabilitar ese CTA hasta decisión explícita de excepción admin. PDF p. 5. |
+| ![[09-Entradas/Vistas por rol 2026-10-03/capturas/administrador/ADM-08.png\|160]] | **F14-ADM-08 · NEW/CONFLICTO · Productos de comercio**, Comercios → detalle → pestaña Productos (dentro de PDF ADM-03), no módulo admin independiente. Listar productos y estado; PDF permite activar/desactivar con confirmación, pero prohíbe crear, editar precio/stock y eliminar. DEC-22 debe fijar permiso del toggle. PDF p. 4. |
+| ![[09-Entradas/Vistas por rol 2026-10-03/capturas/administrador/ADM-09.png\|160]] | **F14-ADM-09 · NEW · Estado de producto**, Comercios → detalle → Productos → producto. Precio/stock sólo lectura; activar/desactivar con confirmación si autorizado, sin CRUD comercial. Es subvista de ADM-03, no un catálogo admin. PDF p. 4. |
+| ![[09-Entradas/Vistas por rol 2026-10-03/capturas/administrador/ADM-10.png\|160]] | **F14-ADM-10 · NEW · Ventas**, tab Más → Analítica → pestaña Ventas (PDF ADM-08). Total, pedidos con venta, ticket promedio/categorías sólo con definición de cálculo, periodo y exclusión de pagos pendientes. PDF p. 6. |
+| ![[09-Entradas/Vistas por rol 2026-10-03/capturas/administrador/ADM-11.png\|160]] | **F14-ADM-11 · NEW · Analítica**, tab Más → Analítica → Resumen/Clientes/Ventas (PDF ADM-08). Usuarios, comercios, pedidos y distribución por estado; métricas y series deben tener fuente/periodo, sin cifras sintéticas como reales. PDF p. 6. |
+| ![[09-Entradas/Vistas por rol 2026-10-03/capturas/administrador/ADM-12.png\|160]] | **F14-ADM-12 · NEW · Categorías (PDF ADM-09/10)**, tab Más → Administración → Categorías → crear/editar. Lista/búsqueda, conteo si existe, formulario y confirmación; definir campos, unicidad, borrado y efecto en productos antes de mutar. El formulario no aparece en el mosaico y se diseña desde PDF p. 6. |
+| ![[09-Entradas/Vistas por rol 2026-10-03/capturas/administrador/ADM-13.png\|160]] | **F14-ADM-13 · NEW · Promociones (PDF ADM-11/12)**, tab Más → Administración → Promociones → crear/editar. Lista/filtro, vigencia/estado/porcentaje o 2x1 sólo si el modelo aprobado lo admite; campos y reglas no se infieren del ejemplo visual. Formulario pendiente de diseño. PDF p. 7. |
+| ![[09-Entradas/Vistas por rol 2026-10-03/capturas/administrador/ADM-14.png\|160]] | **F14-ADM-14 · NEW/DELTA · Perfil admin (PDF ADM-13)**, avatar superior, fuera del navbar. Información personal, ayuda/legal y cierre de sesión con destinos reales; notificaciones y preferencias sujetas a decisión. PDF p. 7. |
+
+**Navegación propuesta por PDF:** Inicio, Comercios, Usuarios, Pedidos, Más; avatar abre Perfil. El mosaico muestra cinco tabs pero Productos en lugar de Más: resolver DEC-F14 antes de rehacer navbar. Pantallas PDF sin recorte: crear/editar categoría y crear/editar promoción; corresponden a F14-ADM-12/13. Todas las listas requieren loading, vacío, sin resultados y error, con estado textual además del color.
