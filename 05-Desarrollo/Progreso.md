@@ -15,8 +15,9 @@ Derivado de las 27 casillas potenciales de [[06-Estado/Tareas pendientes]] y los
 - Documentación de planificación: mockup SRC-04 preservado e incrustado; fases y lotes redactados. Esta salida no cierra F0 ni LUI-01: dirección visual y conflictos requieren decisión.
 - Decisiones materiales: DEC-01–16 y DEC-18–25 pendientes según la fase; DEC-17 resuelta por RN-02/03. ADR-008 registra la separación de repositorios solicitada.
 - **LUI-01:** cerrada con la aprobación de DEC-11 (EVID-LUI-01b). Es una especificación documental: todavía no hay pantallas implementadas.
-- **LUI-02:** shell implementado y probado en el emulador (EVID-LUI-02a); la casilla sigue abierta hasta la prueba de accesibilidad con TalkBack. No suma al porcentaje.
-- Próximo paso: cerrar LUI-02 con TalkBack y texto al 200 %; después LUI-03 (Explorar, tienda, detalle y comparación con filtros), con DEC-09 pendiente para la equivalencia de productos.
+- **LUI-02:** implementado; accesibilidad automática y texto al 200 % en PASS (EVID-LUI-02b). Abierta sólo por la pasada manual con TalkBack (EVID-LUI-02c `NO_EJECUTADA`).
+- **LUI-03:** implementado y probado en el emulador (EVID-LUI-03a); abierto hasta DEC-09 (equivalencia en la comparación). Ninguno suma todavía al porcentaje.
+- Próximo paso: **LUI-04** (carritos: cantidades, eliminar, temporizador en vivo y vencimiento), que se apoya en el estado de carritos creado en LUI-03. DEC-05/06 siguen pendientes para el texto de reserva y los plazos. Backend BE-01 espera DEC-10.
 - Separación de progreso: documentación de planificación ≠ implementación ≠ funcionamiento probado.
 
 Actualizar esta nota desde casillas reales del plan y resultados de pruebas; no estimar porcentajes desde sensación. Si una prueba no es ejecutable por falta de entorno, listar su motivo sin contarla como aprobada.

@@ -18,8 +18,8 @@ Casillas del plan [[05-Desarrollo/Plan por fases]]. **F0 cerrada con evidencia (
 ## UI · F1–F6
 
 - [x] **LUI-01 / F1** *(cerrada 2026-10-03: [[02-Arquitectura/Especificacion UI LUI-01]] aprobada en DEC-11; EVID-LUI-01a/b)* Cerrar inventario visual, tokens, rutas, copy, assets/licencias, estados y conflictos MK-01–08 de [[02-Arquitectura/Mockup Stitch - vistas y ubicaciones]].
-- [ ] **LUI-02 / F2** *(implementado 2026-10-03, frontend `cdf4aa8`, EVID-LUI-02a PASS; falta la prueba con TalkBack y texto al 200 % para cerrarla)* Shell React Native, cuatro pestañas cliente, stacks, tema, componentes y fixtures coherentes.
-- [ ] **LUI-03 / F3** Explorar, tiendas, ofertas, detalle faltante, búsqueda/comparación y filtros.
+- [ ] **LUI-02 / F2** *(implementado 2026-10-03; EVID-LUI-02a/b PASS, incluido el texto al 200 %; falta una pasada manual con TalkBack, EVID-LUI-02c)* Shell React Native, cuatro pestañas cliente, stacks, tema, componentes y fixtures coherentes.
+- [ ] **LUI-03 / F3** *(implementado 2026-10-03, frontend `2f36838`, EVID-LUI-03a PASS; la comparación queda provisional hasta DEC-09)* Explorar, tiendas, ofertas, detalle faltante, búsqueda/comparación y filtros.
 - [ ] **LUI-04 / F4** Carritos separados, cantidades, subtotal, temporizador y expiración visual.
 - [ ] **LUI-05 / F4** Checkout por comercio, QR **simulado**/efectivo, condiciones y errores/reintentos.
 - [ ] **LUI-06 / F5** Pedidos en curso/historial, ticket, credencial ilustrativa, ubicación e incidencias.

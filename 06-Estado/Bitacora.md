@@ -132,3 +132,17 @@ Para relevo entre agentes: actualizar esta nota con tarea/intent/revisión, auto
 - **Evidencia:** EVID-LUI-02a PASS en emulador. TalkBack y texto al 200 % siguen `NO_EJECUTADA`, por eso LUI-02 sigue abierta.
 - **Próximo paso:** prueba de accesibilidad de LUI-02 y después LUI-03. BE-01 espera DEC-10 (roles y altas).
 - **Uso de sesión:** `SessionUsage/v1`: implementación `null`, pruebas `null`, documentación `null`.
+
+## 2026-10-03 · Accesibilidad de LUI-02 y LUI-03 implementada
+
+**Entrada:** el usuario pidió hacer la prueba de accesibilidad en el emulador y continuar con LUI-03.
+
+- **Auditoría de accesibilidad (EVID-LUI-02b PASS):** script que, sobre `uiautomator dump`, busca tocables sin nombre y objetivos menores de 48 dp, más capturas al 200 %. Se corrigieron dos defectos (frontend `9f31bb3`): chips de 36 dp → área de 48 dp, y chips de estado que se salían de la tarjeta → filas con salto de línea.
+- **TalkBack (EVID-LUI-02c `NO_EJECUTADA`):** se activó por `settings`; su permiso de notificaciones se **denegó** (opción más conservadora). Los gestos y atajos inyectados por adb no movieron el foco y `screencap` devolvió imágenes congeladas. Se desactivó TalkBack y la escala de texto volvió a 1,0. Hace falta una pasada manual breve.
+- **LUI-03, frontend `2f36838`:**
+  - Estado de carritos en cliente (`src/state/cart.tsx`): un carrito por comercio que se crea si no existe; comprueba stock y comercio cerrado; no reserva stock (DEC-05); plazo ilustrativo de 4 h (DEC-06).
+  - Pantallas: categorías y ofertas en Explorar; tienda real con aviso de cerrado; detalle con selector de cantidad accesible (rol `adjustable`); Comparar con resumen de menor precio y aviso de que la equivalencia no está verificada (DEC-09).
+- **Evidencia:** EVID-LUI-03a PASS en emulador; el rechazo por falta de stock y el comercio cerrado quedaron verificados.
+- **Nota operativa:** el watcher de Metro de este equipo no detecta de forma fiable las ediciones. Antes de probar, conviene reiniciar con `npx expo start --clear` y comprobar en el bundle que el cambio llegó.
+- **Próximo paso:** LUI-04 (carritos completos). Decisiones útiles: DEC-09 para cerrar LUI-03, DEC-05/06 para el texto de carritos y DEC-10 para el backend.
+- **Uso de sesión:** `SessionUsage/v1`: pruebas `null`, implementación `null`, documentación `null`.
