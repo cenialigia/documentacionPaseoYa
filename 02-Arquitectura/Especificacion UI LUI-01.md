@@ -1,13 +1,13 @@
 ---
 title: "Especificación UI · LUI-01"
 tags: [paseoya, ui, especificacion]
-status: propuesto
+status: aprobado
 updated: 2026-10-03
 ---
 
 # Especificación UI · LUI-01
 
-**Estado:** propuesta del agente, construida a partir de [[02-Arquitectura/Mockup Stitch - vistas y ubicaciones|SRC-04]], [[02-Arquitectura/Mapa de pantallas]] y los RF/RN de SRC-02. **No está aprobada.** LUI-01 se cierra cuando Paulo responda [[Decisiones de Usuario para el desarrollo|DEC-11]] (y DEC-15 en lo que toca a imágenes). Mientras tanto, LUI-02 puede usar esta especificación como borrador. Las decisiones de negocio pendientes (DEC-04/05/06/09/16) aparecen como marcadores, nunca como reglas.
+**Estado:** **aprobada por Paulo el 2026-10-03** (DEC-11 y DEC-15, en el chat de la sesión), con dos cambios: trato **formal (usted)** y TechZone en **Local 208 · Planta baja**. El logo es texto provisional y las imágenes son placeholders sin marca. Construida a partir de [[02-Arquitectura/Mockup Stitch - vistas y ubicaciones|SRC-04]], [[02-Arquitectura/Mapa de pantallas]] y los RF/RN de SRC-02. LUI-01 queda cerrada; esta nota es la referencia de LUI-02 y siguientes. Las decisiones de negocio pendientes (DEC-04/05/06/09/16) aparecen como marcadores, nunca como reglas.
 
 ## 1. Tokens de diseño propuestos
 
@@ -156,7 +156,7 @@ Se usan los estados **propuestos** en SRC-02 §12–13. Pedido y pago son dos ch
 
 ## 6. Textos y formato
 
-- **Idioma:** español de Bolivia, tuteo. Es lo que usa el mockup (por ejemplo «Agregar a carrito», «Ver código»); se confirma en DEC-11.
+- **Idioma:** español de Bolivia con **trato formal (usted)**, decidido en DEC-11. Se prefieren formas neutras («Agregar al carrito», «Ver código de retiro»); cuando haga falta un verbo dirigido, va en usted («Confirme su pedido», «Presente este código en el local»). Nunca tuteo.
 - **Moneda:** el formateador único es `Intl.NumberFormat('es-BO', { style: 'currency', currency: 'BOB' })`. La salida exacta (`Bs`, separadores) se verifica en el dispositivo durante LUI-02 antes de fijar los textos.
 - **Glosario obligatorio:**
   - «QR de pago (simulado)» y «Código de retiro» nunca comparten nombre ni icono (MK-04).
@@ -168,13 +168,18 @@ Se usan los estados **propuestos** en SRC-02 §12–13. Pedido y pago son dos ch
   - «equivalente» en la comparación (DEC-09).
   - «3 días hábiles» y «72 horas» (DEC-06).
 
+**Notas de implementación (LUI-02):**
+- `String.prototype.normalize('NFD')` no descompone las tildes en Hermes/Android; la búsqueda usa un mapa explícito (`normalizeSearch`).
+- Las etiquetas de las pestañas necesitan `labelVisibilityMode="labeled"` en cada `NativeTabs.Trigger`; en la raíz no tuvo efecto.
+- Sin librería de iconos en JS, las acciones del encabezado son texto («Avisos», «Cuenta»).
+
 ## 7. Fixtures coherentes (datos ficticios, resuelve MK-06)
 
 Son datos sintéticos para LUI-02–06. Los nombres de tienda salen del mockup y son ficticios. **Fijan un único local por comercio**, en lugar del 208/204 de TechZone. Todas las pantallas leen del mismo módulo de fixtures, así que una cifra no puede diferir entre vistas.
 
 | Comercio | Local / piso | Categoría | Estado |
 | --- | --- | --- | --- |
-| `com-techzone` TechZone | Local 208 · Piso 2 | Tecnología | abierto |
+| `com-techzone` TechZone | Local 208 · Planta baja | Tecnología | abierto |
 | `com-moda` Boutique Aranjuez | Local 105 · Piso 1 | Moda | abierto |
 | `com-cafe` Café del Paseo | Local 012 · Planta baja | Gastronomía | cerrado (sirve para probar el estado «cerrado») |
 
@@ -191,8 +196,8 @@ Son datos sintéticos para LUI-02–06. Los nombres de tienda salen del mockup y
 | --- | --- | --- | --- |
 | Plus Jakarta Sans | Google Fonts CDN | paquete `@expo-google-fonts/plus-jakarta-sans`, empaquetado en la app | licencia SIL OFL 1.1, uso libre; se instala en LUI-02 |
 | Iconos | Material Symbols vía CDN | `@expo/vector-icons` (MaterialIcons/MaterialCommunityIcons, ya incluido en Expo) | Apache 2.0; los nombres se mapean en LUI-02 |
-| Fotos de tiendas y productos | `lh3.googleusercontent.com` (generadas por Stitch) | sustituir por imágenes locales propias o placeholders sin marca | **licencia desconocida → no se usan** hasta DEC-15 |
-| Logo PaseoYa | `logo.html` / `logo.png` | SVG o PNG local tras su aprobación | DEC-11 |
+| Fotos de tiendas y productos | `lh3.googleusercontent.com` (generadas por Stitch) | **placeholders locales sin marca** (bloques de color con icono de categoría) | DEC-15: no se usan las fotos de Stitch; datos 100 % ficticios |
+| Logo PaseoYa | `logo.html` / `logo.png` | **texto provisional** «PaseoYA» con Plus Jakarta Sans 800 y color `primary` | DEC-11: provisional hasta que Paulo aporte un logo |
 | Mapa de la plaza | imagen remota | fuera hasta DEC-20 | — |
 | Tailwind CDN | HTML | no aplica a RN; los tokens se trasladan a `src/constants/theme.ts` | — |
 
@@ -205,13 +210,13 @@ Son datos sintéticos para LUI-02–06. Los nombres de tienda salen del mockup y
 | MK-03 | El texto del carrito dice «Disponible ahora» sin prometer reserva | DEC-05 |
 | MK-04 | Glosario de §6; chips de pago separados del pedido | DEC-04 |
 | MK-05 | Marcador **[plazo DEC-06]** en todos los textos de plazo | DEC-06 |
-| MK-06 | Resuelto en fixtures (§7): TechZone = Local 208 | confirmación de Paulo |
+| MK-06 | **Resuelto** (§7): TechZone = Local 208 · Planta baja | confirmado por Paulo el 2026-10-03 |
 | MK-07 | Tabla de §8; las fotos de Stitch quedan fuera | DEC-11/15 |
 | MK-08 | La comparación muestra «productos similares de varios comercios» sin afirmar equivalencia | DEC-09 |
 
-## 10. Para cerrar LUI-01 (lista para DEC-11)
+## 10. Cierre de LUI-01 (respuesta a DEC-11)
 
-Paulo confirma o corrige:
+Respuesta de Paulo del 2026-10-03: aprobados los puntos 1, 2, 3 y 6; punto 4 → texto provisional; punto 5 → **usted** con el glosario; punto 7 → **Local 208 · Planta baja**; punto 8 → placeholders sin marca. Lista original:
 
 1. La paleta canónica Material 3 de §1, descartando los hex de la prosa.
 2. El tema claro sólo para la demo.

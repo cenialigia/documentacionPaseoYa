@@ -106,3 +106,29 @@ Para relevo entre agentes: actualizar esta nota con tarea/intent/revisión, auto
 - **Evidencia:** EVID-LUI-01a PASS (documental/estática). T-UI `NO_EJECUTADA`. LUI-01 sigue abierta.
 - **Próximo paso:** Paulo responde DEC-11 (y DEC-15 para imágenes). Con eso se cierra LUI-01 y arranca LUI-02 (shell de cuatro pestañas, tema y componentes con fixtures) en `frontend/`.
 - **Uso de sesión:** `SessionUsage/v1`: análisis `null`, redacción `null`.
+
+## 2026-10-03 · DEC-11/15 resueltas, LUI-01 cerrada y LUI-02 implementada
+
+**Entrada:** respuestas de Paulo en el chat:
+- DEC-11: especificación aprobada tal cual.
+- Logo: texto provisional.
+- DEC-15: placeholders sin marca.
+- Textos y datos: TechZone en «208, planta baja» y trato formal (usted).
+
+- Registrado en el formulario, en Decisiones pendientes, en ADR-010 y en la especificación (estado `aprobado`). **LUI-01 cerrada (EVID-LUI-01b).**
+- **LUI-02, frontend `cdf4aa8`:**
+  - Tokens en `src/constants/theme.ts`, Plus Jakarta Sans (`@expo-google-fonts/plus-jakarta-sans`) y `userInterfaceStyle: light`.
+  - Grupo `(cliente)` con `NativeTabs` de 4 pestañas e iconos Material Symbols (prop `md`), con insignia de carritos.
+  - Pila con tienda, producto, checkout, ticket, cuenta y avisos.
+  - Componentes base: texto, botón con bloqueo de doble toque, chips, tarjeta, precio y estados.
+  - Un único módulo de fixtures y el hook `useNow`.
+  - Se retiraron los archivos de demostración de la plantilla.
+- **Hallazgos al probar:**
+  - La búsqueda no encontraba «Audífonos» con «audi» porque `normalize` no actúa en Hermes; se cambió a un mapa explícito.
+  - Las etiquetas de pestaña requieren la prop en cada `Trigger`.
+  - El watcher de Metro dejó de detectar una edición y hubo que reiniciarlo con `--clear`.
+  - `expo start --android` sin dispositivo lanza otro AVD por su cuenta: es preferible arrancar Metro solo y abrir la app con un enlace `exp://`.
+  - Durante la prueba se activó por error el inspector de Expo Go y unos toques cayeron en el lanzador; sin efectos.
+- **Evidencia:** EVID-LUI-02a PASS en emulador. TalkBack y texto al 200 % siguen `NO_EJECUTADA`, por eso LUI-02 sigue abierta.
+- **Próximo paso:** prueba de accesibilidad de LUI-02 y después LUI-03. BE-01 espera DEC-10 (roles y altas).
+- **Uso de sesión:** `SessionUsage/v1`: implementación `null`, pruebas `null`, documentación `null`.

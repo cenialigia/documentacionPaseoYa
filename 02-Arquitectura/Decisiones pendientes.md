@@ -21,11 +21,11 @@ No bloquear trabajo documental ni pruebas sintéticas por preguntas abiertas. **
 | DEC-08 | ¿Qué cancelaciones excepcionales/reembolsos simulados y quién las autoriza? | Transiciones, auditoría y stock. |
 | DEC-09 | ¿Cómo se emparejan productos equivalentes de distintos comercios? ¿Comparación manual o automática? | SRC-04 compara modelos diferentes de audífonos; no declarar equivalencia por simple categoría o texto. Buscador global y RF-10. |
 | DEC-10 | ¿Qué comercio/persona accede a cada dato y cómo se da de alta? ¿Administrador móvil o superficie separada? | Roles, RLS, pantallas y pruebas. |
-| DEC-11 | ¿Qué elementos de SRC-04 se aprueban: logo, paleta, tipografía, fotos, tono, navegación y textos? | [[02-Arquitectura/Mockup Stitch - vistas y ubicaciones]] y [[02-Arquitectura/Wireframes iniciales]] son referencias; `DESIGN.md` y HTML difieren en tokens. |
+| DEC-11 | **Resuelta 2026-10-03:** especificación LUI-01 aprobada, con logo de texto provisional, trato formal y TechZone en Local 208 · Planta baja. | [[02-Arquitectura/Mockup Stitch - vistas y ubicaciones]] y [[02-Arquitectura/Wireframes iniciales]] son referencias; `DESIGN.md` y HTML difieren en tokens. |
 | DEC-12 | ¿Pedidos de servicios tienen stock, horario y retiro igual que productos? | El PDF incluye servicios; el MD modela unidades físicas. |
 | DEC-13 | ¿Promociones, estadísticas, notificaciones y comparación entran en demo o versión posterior? | Equilibrio entre reto oficial y tiempo disponible. |
 | DEC-14 | ¿Cómo se entregan presentación, repositorio y demo? ¿Habrá conectividad y dispositivos durante la defensa? | Plan de contingencia y evidencia. |
-| DEC-15 | ¿Qué datos ficticios, imágenes/licencias y políticas de retención se permiten? | Seed de demo y privacidad. |
+| DEC-15 | **Resuelta en parte 2026-10-03:** datos ficticios y placeholders sin marca; quedan abiertos el catálogo real, las imágenes autorizadas y la retención. | Seed de demo y privacidad. |
 | DEC-16 | ¿QR de retiro, PIN o ambos? ¿Caducidad, reintentos y método de respaldo? | Riesgo de entrega indebida. |
 | DEC-18 | ¿Crear/asociar un cerebro React Native o mantener este Core sin cerebro de dominio por ahora? | El catálogo marca Android como reservado/vacío; la plantilla Next/Nest aquí sólo aportó estructura. El Manager podrá registrar asociación cuando Paulo la elija. |
 | DEC-19 | ¿La meta es demo A, cobertura funcional B o piloto real C? ¿Con qué fecha y aceptación? | Activa F11–F13 y define el denominador de «100 %». |

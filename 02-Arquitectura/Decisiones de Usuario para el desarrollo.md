@@ -50,11 +50,11 @@ updated: 2026-10-02
 
 ### DEC-11 · Dirección visual
 
-**Indicar:** si se aprueba Stitch como dirección visual o qué cambia: logo, paleta, tipografía, textos, navegación, fotos y estados faltantes. El HTML no se copia como React Native. **Fija:** LUI-01/02 y aceptación visual. **Para responder rápido:** la lista de 8 puntos en [[02-Arquitectura/Especificacion UI LUI-01#10. Para cerrar LUI-01 (lista para DEC-11)]]. **Respuesta:** `PENDIENTE`.
+**Indicar:** si se aprueba Stitch como dirección visual o qué cambia: logo, paleta, tipografía, textos, navegación, fotos y estados faltantes. El HTML no se copia como React Native. **Fija:** LUI-01/02 y aceptación visual. **Para responder rápido:** la lista de 8 puntos en [[02-Arquitectura/Especificacion UI LUI-01#10. Cierre de LUI-01 (respuesta a DEC-11)]]. **Respuesta (2026-10-03, en el chat):** se aprueba la especificación LUI-01 tal cual (paleta M3, Plus Jakarta Sans, iconos Material, sólo tema claro, 4 pestañas), con **logo de texto provisional**, **trato formal (usted)** y TechZone en **Local 208 · Planta baja**.
 
 ### DEC-15 · Datos e imágenes de desarrollo
 
-**Elegir:** usar sólo datos ficticios al inicio o datos autorizados; qué imágenes/logo/fuentes tienen permiso de uso; quién aporta catálogo real y cómo se borran datos de prueba. **Fija:** fixtures, Storage, demo y privacidad. **Respuesta:** `PENDIENTE`.
+**Elegir:** usar sólo datos ficticios al inicio o datos autorizados; qué imágenes/logo/fuentes tienen permiso de uso; quién aporta catálogo real y cómo se borran datos de prueba. **Fija:** fixtures, Storage, demo y privacidad. **Respuesta (2026-10-03, en el chat), parcial:** **datos 100 % ficticios y placeholders sin marca**; no se usan las fotos de Stitch. Siguen abiertos: el catálogo real, las imágenes autorizadas y la política de borrado.
 
 ## Decisiones antes de funciones específicas
 
