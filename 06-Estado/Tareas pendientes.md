@@ -7,13 +7,13 @@ updated: 2026-10-02
 
 # Tareas pendientes
 
-Casillas del plan [[05-Desarrollo/Plan por fases]]. **F0-01 y F0-02 cerradas con evidencia (2026-10-02)**; el resto sigue pendiente. El inventario SRC-04 y la planificación de esta sesión son documentación, no ejecución de fases. Marcar una casilla sólo al registrar salida y prueba en [[05-Desarrollo/Testing]] y [[06-Estado/Bitacora]].
+Casillas del plan [[05-Desarrollo/Plan por fases]]. **F0 cerrada con evidencia (2026-10-02)**; el resto sigue pendiente. El inventario SRC-04 y la planificación de esta sesión son documentación, no ejecución de fases. Marcar una casilla sólo al registrar salida y prueba en [[05-Desarrollo/Testing]] y [[06-Estado/Bitacora]].
 
 ## F0 · Preparación técnica
 
 - [x] **F0-01** (EVID-F0-01) Verificar existencia y versiones compatibles de Node.js, gestor, React Native/Expo o bare según DEC-01, Android/iOS elegido, emulador/dispositivo y Supabase CLI; registrar faltantes.
 - [x] **F0-02** (EVID-F0-02: `frontend/` y `backend/`, remotos `cenialigia/PaseoYaFrontend` y `cenialigia/PaseoYaBackend`) Crear o verificar `PaseoYA-frontend/` y `PaseoYA-backend/` como **dos repositorios Git independientes**, sin meter `PaseoYA-Core/` en ninguno; registrar rutas/remotos autorizados.
-- [ ] **F0-03** *(parcial 2026-10-02: cliente y backend inicializados y publicados; Supabase local y migraciones verificados; falta sólo arrancar la app en un dispositivo, ver EVID-F0-03a–e)* Inicializar cliente y backend Supabase reproducibles según DEC-01/02; ejemplos de variables sin secretos, migración local de prueba y arranque mínimo cuando esté autorizado.
+- [x] **F0-03** (EVID-F0-03a–e: Expo SDK 57 en emulador, Supabase local con migración de prueba, push verificado) Inicializar cliente y backend Supabase reproducibles según DEC-01/02; ejemplos de variables sin secretos, migración local de prueba y arranque mínimo.
 
 ## UI · F1–F6
 
