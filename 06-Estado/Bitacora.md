@@ -143,6 +143,20 @@ Para relevo entre agentes: actualizar esta nota con tarea/intent/revisión, auto
   - Estado de carritos en cliente (`src/state/cart.tsx`): un carrito por comercio que se crea si no existe; comprueba stock y comercio cerrado; no reserva stock (DEC-05); plazo ilustrativo de 4 h (DEC-06).
   - Pantallas: categorías y ofertas en Explorar; tienda real con aviso de cerrado; detalle con selector de cantidad accesible (rol `adjustable`); Comparar con resumen de menor precio y aviso de que la equivalencia no está verificada (DEC-09).
 - **Evidencia:** EVID-LUI-03a PASS en emulador; el rechazo por falta de stock y el comercio cerrado quedaron verificados.
-- **Nota operativa:** el watcher de Metro de este equipo no detecta de forma fiable las ediciones. Antes de probar, conviene reiniciar con `npx expo start --clear` y comprobar en el bundle que el cambio llegó.
+- **Nota operativa (corregida el 2026-10-03):** el problema no era un watcher inestable. Metro se arrancaba con `CI=1`, que desactiva la vigilancia de archivos y las recargas (lo dice su log). Hay que arrancarlo sin `CI`, como proceso independiente, para que no lo corte el límite de tiempo de las tareas en segundo plano.
 - **Próximo paso:** LUI-04 (carritos completos). Decisiones útiles: DEC-09 para cerrar LUI-03, DEC-05/06 para el texto de carritos y DEC-10 para el backend.
 - **Uso de sesión:** `SessionUsage/v1`: pruebas `null`, implementación `null`, documentación `null`.
+
+## 2026-10-03 · LUI-04: carritos completos
+
+**Entrada:** el usuario pidió continuar con LUI-04.
+
+- **Frontend `9c264fd`:**
+  - El estado de carritos añade cambio de cantidad, quitar línea (un carrito vacío desaparece), eliminar carrito con confirmación nativa y recuperar un vencido. Al recuperar sólo vuelven los productos con stock, la cantidad se limita al disponible, se suma a un carrito activo del mismo comercio si existe y no se permite si el comercio está cerrado.
+  - La pantalla muestra el temporizador por segundo con aviso en los últimos 5 minutos (el lector anuncia minutos), los avisos de stock cambiante que bloquean el pago hasta corregirlos, la ubicación de retiro y el bloque «Cómo funciona».
+  - Texto prudente: «La disponibilidad se confirma al pagar» (DEC-05).
+- Fixtures ajustados para cubrir los estados: chaqueta 7 de 6 en stock y un carrito TechZone vencido con un producto agotado. Se retiró el carrito vencido de Café, que estaba cerrado.
+- **Evidencia:** EVID-LUI-04a PASS en emulador.
+- **Hallazgo operativo:** el modo CI de Metro explica los «fallos del watcher» anteriores; la nota anterior quedó corregida.
+- **Próximo paso:** LUI-05 (checkout) con marcadores hasta DEC-04/05/06. Siguen pendientes la pasada manual con TalkBack (LUI-02), DEC-09 (LUI-03) y DEC-10 (backend).
+- **Uso de sesión:** `SessionUsage/v1`: implementación `null`, pruebas `null`, documentación `null`.

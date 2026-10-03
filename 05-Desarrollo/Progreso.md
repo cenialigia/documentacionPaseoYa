@@ -16,8 +16,9 @@ Derivado de las 27 casillas potenciales de [[06-Estado/Tareas pendientes]] y los
 - Decisiones materiales: DEC-01–16 y DEC-18–25 pendientes según la fase; DEC-17 resuelta por RN-02/03. ADR-008 registra la separación de repositorios solicitada.
 - **LUI-01:** cerrada con la aprobación de DEC-11 (EVID-LUI-01b). Es una especificación documental: todavía no hay pantallas implementadas.
 - **LUI-02:** implementado; accesibilidad automática y texto al 200 % en PASS (EVID-LUI-02b). Abierta sólo por la pasada manual con TalkBack (EVID-LUI-02c `NO_EJECUTADA`).
-- **LUI-03:** implementado y probado en el emulador (EVID-LUI-03a); abierto hasta DEC-09 (equivalencia en la comparación). Ninguno suma todavía al porcentaje.
-- Próximo paso: **LUI-04** (carritos: cantidades, eliminar, temporizador en vivo y vencimiento), que se apoya en el estado de carritos creado en LUI-03. DEC-05/06 siguen pendientes para el texto de reserva y los plazos. Backend BE-01 espera DEC-10.
+- **LUI-03:** implementado y probado en el emulador (EVID-LUI-03a); abierto hasta DEC-09 (equivalencia en la comparación).
+- **LUI-04:** implementado y probado en el emulador (EVID-LUI-04a); abierto hasta DEC-05/06 (reserva de stock y plazos). Ninguno de los lotes LUI-02 a 04 suma todavía al porcentaje, porque cada uno espera una decisión o una prueba manual.
+- Próximo paso: **LUI-05** (checkout de un comercio, selector QR simulado/efectivo, procesando/error/reintento sin duplicar el pedido). Su texto y su lógica dependen de DEC-04/05/06; se puede maquetar con marcadores. Backend BE-01 espera DEC-10.
 - Separación de progreso: documentación de planificación ≠ implementación ≠ funcionamiento probado.
 
 Actualizar esta nota desde casillas reales del plan y resultados de pruebas; no estimar porcentajes desde sensación. Si una prueba no es ejecutable por falta de entorno, listar su motivo sin contarla como aprobada.
