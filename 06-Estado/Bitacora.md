@@ -195,3 +195,20 @@ Para relevo entre agentes: actualizar esta nota con tarea/intent/revisión, auto
 - **Límites:** la app no usa el backend (INT-01 fuera del plazo). Sin probar en el dispositivo: «Guardar ticket» y el registro. TalkBack sigue pendiente.
 - **Próximo paso:** ensayar la demo con el guion del README del frontend; después de la entrega, INT-01.
 - **Uso de sesión:** `SessionUsage/v1`: decisiones `null`, implementación `null`, pruebas `null`, documentación `null`.
+
+## 2026-10-03 · INT-01: app conectada a Supabase, con un lote paralelo de backend
+
+**Entrada:** el usuario pidió conectar la app al backend y hacer dos tareas a la vez si era lógico.
+
+- **Orquestación:** dos escritores en superficies sin solape. Un agente trabajó sólo en `backend/` (Realtime + pg_cron); el integrador, en `frontend/` y el Core. El integrador revisó el commit del agente antes de aceptarlo.
+- **Backend `45b0e3e` (agente):** `pedidos` en la publicación `supabase_realtime` y job `expirar-pedidos` cada minuto con pg_cron 1.6.4; 17/17 PASS. **El push falló por red** y el control de permisos bloqueó el reintento del agente. No se publicó en su nombre: queda pendiente de que el usuario lo confirme.
+- **Frontend `146c16a`:**
+  - Datos: `@supabase/supabase-js` + `expo-sqlite` (sesión en localStorage, según la guía de Expo SDK 57); `src/lib/supabase.ts`; `src/data/modelo.ts` y `src/data/catalogo.tsx` sustituyen a los fixtures, que se borraron.
+  - Sesión y pedidos: `AuthProvider` con Supabase Auth y el rol leído de `perfiles`; `OrdersProvider` con lecturas bajo RLS, todas las escrituras por RPC y refresco por Realtime.
+  - Comportamiento: catálogo, carrito y pedidos se remontan por usuario; las áreas por rol muestran carga y error con reintento; se retiró el simulador de fallos del checkout. `.env` con la URL `10.0.2.2:54321` y la clave publishable, fuera de git.
+- **Hallazgos al integrar:**
+  - Un Metro antiguo seguía sirviendo código viejo y sin `.env`; se reinició y el log confirmó «env: load .env».
+  - La regla del React Compiler contra `setState` en efectos obligó a separar la lectura pura del `setState` dentro de `.then()`.
+- **Evidencia:** EVID-INT-01a y EVID-BE-d en PASS. Progreso 11/19 (57,9 %).
+- **Próximo paso:** publicar el backend tras la confirmación del usuario; INT-02 en un teléfono físico.
+- **Uso de sesión:** `SessionUsage/v1`: integración `null`, agente de backend 62 177 tokens (informado por el runtime), pruebas `null`, documentación `null`.

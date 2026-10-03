@@ -33,11 +33,11 @@ Casillas del plan [[05-Desarrollo/Plan por fases]]. **F0 cerrada con evidencia (
 - [x] **BE-01 / F7** *(cerrada 2026-10-03, backend `2475598`, EVID-BE-a/c)* Migraciones, Auth, membresías, RLS y pruebas de acceso directo.
 - [ ] **BE-02 / F7** *(catálogo por RLS y seed listos; sin búsqueda en el servidor)* Catálogo, búsqueda/comparación y seed sintético consistente.
 - [x] **BE-03 / F8** *(cerrada 2026-10-03, EVID-BE-a/b)* Carritos y checkout transaccional por comercio, pago separado, idempotencia y concurrencia de stock.
-- [ ] **BE-04 / F9** *(transiciones, PIN, cancelación y `expirar_pedidos` probados; falta programar la expiración con pg_cron)* Flujo comercio, retiro QR/PIN de un uso, cancelación y expiraciones independientes del móvil.
+- [x] **BE-04 / F9** *(cerrada 2026-10-03: transiciones, PIN, cancelación y expiración con pg_cron; EVID-BE-a/d; commit `45b0e3e` pendiente de push)* Flujo comercio, retiro QR/PIN de un uso, cancelación y expiraciones independientes del móvil.
 
 ## Integración · F10
 
-- [ ] **INT-01** Conectar UI con contratos backend, sustituir fixtures y probar cada rol.
+- [x] **INT-01** *(cerrada 2026-10-03, frontend `146c16a`, EVID-INT-01a)* Conectar UI con contratos backend, sustituir fixtures y probar cada rol.
 - [ ] **INT-02** Pruebas en dispositivo, RLS/concurrencia/expiración, manual, presentación y demo reproducible.
 
 ## Alcance B · F11, si DEC-19 lo elige
