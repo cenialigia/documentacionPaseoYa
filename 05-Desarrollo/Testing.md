@@ -66,4 +66,4 @@ Registrar `EVID-ID | fecha | versión | dispositivo/ambiente | datos sintéticos
 | EVID-ID | Fecha | Superficie | Pasos | Observado | Resultado | Límite |
 | --- | --- | --- | --- | --- | --- | --- |
 | EVID-F14-DOC | 2026-10-03 | `PaseoYA-Core` | Extraer los tres PDF (13/31/10 páginas), conservar 3 PDF + 3 mosaicos con SHA-256, recortar 26/14/14 vistas, inspeccionar muestras, comprobar enlaces/embeds nuevos y `git diff --check` | 54 recortes asignados a tareas/ubicación, 6 originales preservados, 0 enlaces nuevos faltantes y diff sin error de espacio | PASS (documentación) | El código vive en otro equipo; no se ejecutó comparación UI real ni backend F14 |
-| EVID-F14-EXEC | 2026-10-03 | Frontend/backend | F14-00, UI, BE y QA aún no iniciados | Puerta de decisiones pendiente | NO_EJECUTADA | Requiere inventario de commits y respuestas de Paulo por lote |
+| EVID-F14-EXEC | 2026-10-03 | Frontend/backend | F14-00, UI, BE y QA aún no iniciados | Puerta de decisiones pendiente | NO_EJECUTADA | Requiere inventario de commits y respuestas de Usuario por lote |

@@ -7,7 +7,7 @@ updated: 2026-10-02
 
 # Procedencia de la semilla y mapa de superficies
 
-**Raíz objetivo autorizada:** `E:/Repositorios/Hackathon/PaseoYA`. **Core vivo:** `PaseoYA-Core`. **Propietario/integrador inicial:** Paulo. **Identidad provisional:** `LIVE_CORE:paseoya`; no consta todavía en el catálogo del Manager. **Cerebro de dominio:** `unknown`. Manager y plantilla Next/Nest ofrecen método y organización, no reglas técnicas de React Native.
+**Raíz objetivo autorizada:** `E:/Repositorios/Hackathon/PaseoYA`. **Core vivo:** `PaseoYA-Core`. **Propietario/integrador inicial:** Usuario. **Identidad provisional:** `LIVE_CORE:paseoya`; no consta todavía en el catálogo del Manager. **Cerebro de dominio:** `unknown`. Manager y plantilla Next/Nest ofrecen método y organización, no reglas técnicas de React Native.
 
 **Fuente estructural exclusiva:** `E:/Repositorios/CORES/nextjs+nestjs/Plantilla-Core-Proyecto`, revisión Git consultada `0f45b9267090e121840686802d5ffe91ad4a23e9` (24 archivos). Se replicaron los nombres y superficies de la semilla aplicables al Core; se reescribió el contenido de producto para este reto. No se copió el cerebro completo. Los tres archivos `_Plantilla` permanecen como ejemplos editables, con marcadores legítimos de plantilla. Se añadieron notas expresamente necesarias para decisiones, contexto, plan y diseño visual por la petición actual.
 

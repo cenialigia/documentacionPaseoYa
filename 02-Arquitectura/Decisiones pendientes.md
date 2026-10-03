@@ -7,7 +7,7 @@ updated: 2026-10-03
 
 # Decisiones pendientes del propietario
 
-No bloquear trabajo documental ni pruebas sintéticas por preguntas abiertas. **Antes de implementar lo que dependa de una decisión, pedirla a Paulo con opciones y efecto.** IDs estables para no repetir el cuestionario. Formulario completo, opciones y orden de respuesta: [[Decisiones de Usuario para el desarrollo]].
+No bloquear trabajo documental ni pruebas sintéticas por preguntas abiertas. **Antes de implementar lo que dependa de una decisión, pedirla a Usuario con opciones y efecto.** IDs estables para no repetir el cuestionario. Formulario completo, opciones y orden de respuesta: [[Decisiones de Usuario para el desarrollo]].
 
 | ID | Pregunta concreta | Impacto / propuesta para revisar |
 | --- | --- | --- |
@@ -27,7 +27,7 @@ No bloquear trabajo documental ni pruebas sintéticas por preguntas abiertas. **
 | DEC-14 | ¿Cómo se entregan presentación, repositorio y demo? ¿Habrá conectividad y dispositivos durante la defensa? | Plan de contingencia y evidencia. |
 | DEC-15 | **Resuelta en parte 2026-10-03:** datos ficticios y placeholders sin marca; quedan abiertos el catálogo real, las imágenes autorizadas y la retención. | Seed de demo y privacidad. |
 | DEC-16 | **Resuelta 2026-10-03** (ver formulario). ¿QR de retiro, PIN o ambos? ¿Caducidad, reintentos y método de respaldo? | Riesgo de entrega indebida. |
-| DEC-18 | ¿Crear/asociar un cerebro React Native o mantener este Core sin cerebro de dominio por ahora? | El catálogo marca Android como reservado/vacío; la plantilla Next/Nest aquí sólo aportó estructura. El Manager podrá registrar asociación cuando Paulo la elija. |
+| DEC-18 | ¿Crear/asociar un cerebro React Native o mantener este Core sin cerebro de dominio por ahora? | El catálogo marca Android como reservado/vacío; la plantilla Next/Nest aquí sólo aportó estructura. El Manager podrá registrar asociación cuando Usuario la elija. |
 | DEC-19 | **Resuelta 2026-10-03** (ver formulario). ¿La meta es demo A, cobertura funcional B o piloto real C? ¿Con qué fecha y aceptación? | Activa F11–F13 y define el denominador de «100 %». |
 | DEC-20 | **Resuelta 2026-10-03** (ver formulario). ¿Cuáles acciones extras de Stitch funcionan, se difieren o se quitan? | Notificaciones, mapa, ETA, llegada, wallet/descarga, incidencias, puntuación/garantía/descuentos. |
 | DEC-21 | ¿Quién mantiene horarios, locales, precios, stock y catálogo, y cómo se publica un comercio? | Fuente de verdad y operación comercial; F7/F11. |
@@ -36,6 +36,6 @@ No bloquear trabajo documental ni pruebas sintéticas por preguntas abiertas. **
 | DEC-24 | ¿Cómo se tratan datos personales, retención, respaldo, soporte e incidencias? | F12/F13; política operativa. |
 | DEC-25 | ¿Con qué comercios, dispositivos, volumen y metas se acepta el piloto? | F13, UAT y firma de cierre. |
 
-DEC-17 queda **resuelta por SRC-02**: varios carritos y un pedido por comercio son requisitos expresos RN-02/03; se conserva el ID histórico sin volver a preguntarlo. El PDF oficial manda en condiciones del reto; el MD contiene requisitos de Paulo. Ninguno concede permiso de conectar servicios, hacer pagos reales o publicar.
+DEC-17 queda **resuelta por SRC-02**: varios carritos y un pedido por comercio son requisitos expresos RN-02/03; se conserva el ID histórico sin volver a preguntarlo. El PDF oficial manda en condiciones del reto; el MD contiene requisitos de Usuario. Ninguno concede permiso de conectar servicios, hacer pagos reales o publicar.
 
-**Nueva puerta F14:** DEC-F14-01–14 en [[02-Arquitectura/Decisiones F14 antes de iniciar]] quedan **PENDIENTES**. Se formulan antes de implementar los lotes afectados por los PDF/mosaicos nuevos. En particular, DEC-04 (QR simulado), DEC-11 (dirección visual/local/trato), DEC-16 (credencial sólo al estar listo) y DEC-20 (avisos retirados) siguen vigentes hasta respuesta expresa de Paulo; una captura discrepante no los revoca.
+**Nueva puerta F14:** DEC-F14-01–14 en [[02-Arquitectura/Decisiones F14 antes de iniciar]] quedan **PENDIENTES**. Se formulan antes de implementar los lotes afectados por los PDF/mosaicos nuevos. En particular, DEC-04 (QR simulado), DEC-11 (dirección visual/local/trato), DEC-16 (credencial sólo al estar listo) y DEC-20 (avisos retirados) siguen vigentes hasta respuesta expresa de Usuario; una captura discrepante no los revoca.

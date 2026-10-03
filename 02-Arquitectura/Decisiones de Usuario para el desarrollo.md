@@ -1,5 +1,5 @@
 ---
-title: "Decisiones de Paulo para el desarrollo"
+title: "Decisiones de Usuario para el desarrollo"
 tags: [paseoya, decisiones, propietario]
 status: pendiente
 updated: 2026-10-02
@@ -7,7 +7,7 @@ updated: 2026-10-02
 
 # Decisiones de Usuario para el desarrollo
 
-**Propósito:** formulario único para decidir alcance, comportamiento y entregas de PaseoYA sin confundir una imagen, una propuesta técnica y una orden del propietario. Fuente: petición actual de Paulo (SRC-06), [[09-Entradas/_Indice de entradas|SRC-01/02/04]], [[02-Arquitectura/Decisiones pendientes]] y [[05-Desarrollo/Plan por fases]]. Una opción sugerida **no queda aprobada** hasta que Paulo la marque o escriba otra. Si delega una elección técnica, escribir «delegado al agente con criterio …»; el agente registra su elección y evidencia antes de implementarla.
+**Propósito:** formulario único para decidir alcance, comportamiento y entregas de PaseoYA sin confundir una imagen, una propuesta técnica y una orden del propietario. Fuente: petición actual de Usuario (SRC-06), [[09-Entradas/_Indice de entradas|SRC-01/02/04]], [[02-Arquitectura/Decisiones pendientes]] y [[05-Desarrollo/Plan por fases]]. Una opción sugerida **no queda aprobada** hasta que Usuario la marque o escriba otra. Si delega una elección técnica, escribir «delegado al agente con criterio …»; el agente registra su elección y evidencia antes de implementarla.
 
 ## Lo ya solicitado, sin volver a decidir
 
@@ -24,7 +24,7 @@ updated: 2026-10-02
 | **B · Alcance funcional completo** | cada RF-01–44 y RN/RNF aplicable tiene implementación y prueba, incluido comercio/admin, promociones y estadísticas; las acciones extras del mockup se incluyen o descartan expresamente | A + F11 |
 | **C · Uso real/piloto** | además, entornos, distribución, datos/actores autorizados, observabilidad, respaldo, recuperación, soporte y validación operativa en dispositivos | B + F12–F13 |
 
-**DEC-19 define el nivel objetivo.** Si Paulo modifica o excluye un RF, registrar el nuevo alcance como variante explícita; no llamarlo cobertura completa de RF-01–44. Ningún porcentaje «100 %» se declara por número de pantallas; se calcula contra criterios de aceptación cerrados y pruebas ejecutadas. El PDF del hackathon pide prototipo, no lanzamiento comercial.
+**DEC-19 define el nivel objetivo.** Si Usuario modifica o excluye un RF, registrar el nuevo alcance como variante explícita; no llamarlo cobertura completa de RF-01–44. Ningún porcentaje «100 %» se declara por número de pantallas; se calcula contra criterios de aceptación cerrados y pruebas ejecutadas. El PDF del hackathon pide prototipo, no lanzamiento comercial.
 
 ## Decisiones necesarias para iniciar F0/F1/F2
 

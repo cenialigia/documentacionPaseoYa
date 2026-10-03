@@ -7,7 +7,7 @@ updated: 2026-10-02
 
 # Reglas de negocio y estados
 
-Fuente primaria del retiro: SRC-01 PDF §5.6. Las RN-02–09 son requisitos expresos del MD SRC-02 aportado por Paulo; conservar sus IDs. Sólo sus detalles ambiguos o con efecto externo requieren una decisión adicional.
+Fuente primaria del retiro: SRC-01 PDF §5.6. Las RN-02–09 son requisitos expresos del MD SRC-02 aportado por Usuario; conservar sus IDs. Sólo sus detalles ambiguos o con efecto externo requieren una decisión adicional.
 
 | ID | Regla | Validación pendiente / prueba |
 | --- | --- | --- |

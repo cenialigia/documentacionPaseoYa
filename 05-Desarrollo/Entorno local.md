@@ -7,13 +7,13 @@ updated: 2026-10-03
 
 # Entorno local previsto
 
-Al crear la semilla no existían proyectos React Native/Supabase en esta raíz. Después F0 se cerró en otro equipo y la app se integró con Supabase local según [[05-Desarrollo/Testing]]. **En este workspace de Paulo sólo se observó el Core**; las rutas y versiones de código citadas abajo describen el equipo `Ferfloo27` y deben volver a comprobarse en F14-00 antes de ejecutar trabajo nuevo. Ver [[05-Desarrollo/Plan por fases]].
+Al crear la semilla no existían proyectos React Native/Supabase en esta raíz. Después F0 se cerró en otro equipo y la app se integró con Supabase local según [[05-Desarrollo/Testing]]. **En este workspace de Usuario sólo se observó el Core**; las rutas y versiones de código citadas abajo describen el equipo `Ferfloo27` y deben volver a comprobarse en F14-00 antes de ejecutar trabajo nuevo. Ver [[05-Desarrollo/Plan por fases]].
 
 Topología operativa solicitada: `PaseoYA-frontend/` y `PaseoYA-backend/` como repositorios Git independientes, ambos fuera de `PaseoYA-Core/`. Backend contiene migraciones, RLS, configuración y operaciones confiables de Supabase; no equivale necesariamente a un servidor Node. **Estado (2026-10-02, F0-02):** repositorios verificados, ver tabla siguiente; proyecto Supabase cloud no conectado.
 
 ## Raíces observadas en el equipo de desarrollo actual
 
-El Core declara la raíz `E:/Repositorios/Hackathon/PaseoYA` del equipo de Paulo. En el equipo Windows `Ferfloo27` (sin unidad E:) la raíz equivalente es `C:/Users/Ferfloo27/Desktop/PaseoYa`; no se copian rutas absolutas entre equipos. `AGENTS.md` y `CLAUDE.md` viven en la raíz del equipo de Paulo y no forman parte de ningún repositorio: aquí no están disponibles.
+El Core declara la raíz `E:/Repositorios/Hackathon/PaseoYA` del equipo de Usuario. En el equipo Windows `Ferfloo27` (sin unidad E:) la raíz equivalente es `C:/Users/Ferfloo27/Desktop/PaseoYa`; no se copian rutas absolutas entre equipos. `AGENTS.md` y `CLAUDE.md` viven en la raíz del equipo de Usuario y no forman parte de ningún repositorio: aquí no están disponibles.
 
 | Superficie | Carpeta local | Remoto `origin` | Commit observado |
 | --- | --- | --- | --- |

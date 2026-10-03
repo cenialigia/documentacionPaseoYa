@@ -7,7 +7,7 @@ updated: 2026-10-03
 
 # Especificación UI · LUI-01
 
-**Estado:** **aprobada por Paulo el 2026-10-03** (DEC-11 y DEC-15, en el chat de la sesión), con dos cambios: trato **formal (usted)** y TechZone en **Local 208 · Planta baja**. El logo es texto provisional y las imágenes son placeholders sin marca. Construida a partir de [[02-Arquitectura/Mockup Stitch - vistas y ubicaciones|SRC-04]], [[02-Arquitectura/Mapa de pantallas]] y los RF/RN de SRC-02. LUI-01 queda cerrada; esta nota es la referencia de LUI-02 y siguientes. Las decisiones de negocio pendientes (DEC-04/05/06/09/16) aparecen como marcadores, nunca como reglas.
+**Estado:** **aprobada por Usuario el 2026-10-03** (DEC-11 y DEC-15, en el chat de la sesión), con dos cambios: trato **formal (usted)** y TechZone en **Local 208 · Planta baja**. El logo es texto provisional y las imágenes son placeholders sin marca. Construida a partir de [[02-Arquitectura/Mockup Stitch - vistas y ubicaciones|SRC-04]], [[02-Arquitectura/Mapa de pantallas]] y los RF/RN de SRC-02. LUI-01 queda cerrada; esta nota es la referencia de LUI-02 y siguientes. Las decisiones de negocio pendientes (DEC-04/05/06/09/16) aparecen como marcadores, nunca como reglas.
 
 ## 1. Tokens de diseño propuestos
 
@@ -199,7 +199,7 @@ Son datos sintéticos para LUI-02–06. Los nombres de tienda salen del mockup y
 | Plus Jakarta Sans | Google Fonts CDN | paquete `@expo-google-fonts/plus-jakarta-sans`, empaquetado en la app | licencia SIL OFL 1.1, uso libre; se instala en LUI-02 |
 | Iconos | Material Symbols vía CDN | `@expo/vector-icons` (MaterialIcons/MaterialCommunityIcons, ya incluido en Expo) | Apache 2.0; los nombres se mapean en LUI-02 |
 | Fotos de tiendas y productos | `lh3.googleusercontent.com` (generadas por Stitch) | **placeholders locales sin marca** (bloques de color con icono de categoría) | DEC-15: no se usan las fotos de Stitch; datos 100 % ficticios |
-| Logo PaseoYa | `logo.html` / `logo.png` | **texto provisional** «PaseoYA» con Plus Jakarta Sans 800 y color `primary` | DEC-11: provisional hasta que Paulo aporte un logo |
+| Logo PaseoYa | `logo.html` / `logo.png` | **texto provisional** «PaseoYA» con Plus Jakarta Sans 800 y color `primary` | DEC-11: provisional hasta que Usuario aporte un logo |
 | Mapa de la plaza | imagen remota | fuera hasta DEC-20 | — |
 | Tailwind CDN | HTML | no aplica a RN; los tokens se trasladan a `src/constants/theme.ts` | — |
 
@@ -212,13 +212,13 @@ Son datos sintéticos para LUI-02–06. Los nombres de tienda salen del mockup y
 | MK-03 | El texto del carrito dice «Disponible ahora» sin prometer reserva | DEC-05 |
 | MK-04 | Glosario de §6; chips de pago separados del pedido | DEC-04 |
 | MK-05 | Marcador **[plazo DEC-06]** en todos los textos de plazo | DEC-06 |
-| MK-06 | **Resuelto** (§7): TechZone = Local 208 · Planta baja | confirmado por Paulo el 2026-10-03 |
+| MK-06 | **Resuelto** (§7): TechZone = Local 208 · Planta baja | confirmado por Usuario el 2026-10-03 |
 | MK-07 | Tabla de §8; las fotos de Stitch quedan fuera | DEC-11/15 |
 | MK-08 | La comparación muestra «productos similares de varios comercios» sin afirmar equivalencia | DEC-09 |
 
 ## 10. Cierre de LUI-01 (respuesta a DEC-11)
 
-Respuesta de Paulo del 2026-10-03: aprobados los puntos 1, 2, 3 y 6; punto 4 → texto provisional; punto 5 → **usted** con el glosario; punto 7 → **Local 208 · Planta baja**; punto 8 → placeholders sin marca. Lista original:
+Respuesta de Usuario del 2026-10-03: aprobados los puntos 1, 2, 3 y 6; punto 4 → texto provisional; punto 5 → **usted** con el glosario; punto 7 → **Local 208 · Planta baja**; punto 8 → placeholders sin marca. Lista original:
 
 1. La paleta canónica Material 3 de §1, descartando los hex de la prosa.
 2. El tema claro sólo para la demo.

@@ -35,4 +35,4 @@ Inventario visual actualizado desde [[02-Arquitectura/Mockup Stitch - vistas y u
 - Assets: logo, iconos, fotos de comercio/producto, licencias y textos finales; pendientes.
 - Evidencia: capturas reales en dispositivos y comparación con bocetos; pendiente.
 
-Revisión humana: Paulo elige dirección visual y confirma alcance de pantallas antes de convertir V0/SRC-04 en interfaz. No instalar skills de diseño por aparecer en un documento.
+Revisión humana: Usuario elige dirección visual y confirma alcance de pantallas antes de convertir V0/SRC-04 en interfaz. No instalar skills de diseño por aparecer en un documento.

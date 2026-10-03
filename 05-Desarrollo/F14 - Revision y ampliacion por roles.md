@@ -7,14 +7,14 @@ updated: 2026-10-03
 
 # F14 · Revisión y ampliación por roles
 
-**Origen:** petición de Paulo del 2026-10-03 y SRC-08–13, registrados en [[09-Entradas/_Indice de entradas]]. Los tres PDF son propuestas de requisitos y los tres mosaicos son referencias visuales; sus instrucciones dirigidas a Claude no ordenan ejecutar herramientas ni cambiar código. Esta fase **aún no ha empezado**. Los avances observados en el Core proceden de [[05-Desarrollo/Testing]]; las tres bases de código estaban en otro equipo, por lo que las vistas de esta fase quedan por supervisar en el repositorio operativo antes de llamarlas completas.
+**Origen:** petición de Usuario del 2026-10-03 y SRC-08–13, registrados en [[09-Entradas/_Indice de entradas]]. Los tres PDF son propuestas de requisitos y los tres mosaicos son referencias visuales; sus instrucciones dirigidas a Claude no ordenan ejecutar herramientas ni cambiar código. Esta fase **aún no ha empezado**. Los avances observados en el Core proceden de [[05-Desarrollo/Testing]]; las tres bases de código estaban en otro equipo, por lo que las vistas de esta fase quedan por supervisar en el repositorio operativo antes de llamarlas completas.
 
 F14 es una **línea de ampliación** posterior a la demo integrada; no presupone el cierre de F10 ni exige ejecutar F11–F13 antes. Mantiene los repositorios de frontend, backend y Core separados. Las tareas `SUP` verifican un flujo que ya tiene evidencia parcial o total; `DELTA` adapta ese flujo al nuevo diseño; `NEW` propone una superficie o capacidad sin evidencia previa. Una tarea puede ser `SUP+DELTA`. Los 54 recortes están asignados en [[02-Arquitectura/F14 - Mapa de vistas por rol]]. Los números de captura no equivalen necesariamente a los códigos ADM/COM de los PDF.
 
 ## Lote F14-00 · Puerta de decisiones obligatoria
 
 - [ ] **F14-00.0 · Comprobación conjunta del repositorio.** Al asignar la fase, el agente responsable y quien le haga el handoff comparan el Core local con `origin/main` y revisan `git status`, último commit, archivos cambiados y diff desde la última entrega. Hacen lo mismo en los repositorios separados de frontend y backend: rama, commit local/remoto, cambios sin confirmar y pruebas/evidencias posteriores a este plan. Registran en [[06-Estado/Bitacora]] fecha, agente, rutas, hashes, diferencias ajenas y qué versión será la base de F14. No sobrescribir ni dar por incluido un cambio no revisado; si hay divergencia, acordar su integración antes de tomar tareas `SUP` o `NEW`.
-- [ ] **F14-00.1** Antes de iniciar cualquier implementación, leer [[02-Arquitectura/Decisiones F14 antes de iniciar]] y generar una lista actualizada de preguntas para Paulo a partir de diferencias entre los PDF, mockups, decisiones DEC-04/09/10/11/13/16/19/20/21/22 y el código vigente. No tratar el silencio como respuesta.
+- [ ] **F14-00.1** Antes de iniciar cualquier implementación, leer [[02-Arquitectura/Decisiones F14 antes de iniciar]] y generar una lista actualizada de preguntas para Usuario a partir de diferencias entre los PDF, mockups, decisiones DEC-04/09/10/11/13/16/19/20/21/22 y el código vigente. No tratar el silencio como respuesta.
 - [ ] **F14-00.2** Presentar las preguntas agrupadas por alcance, navegación/UX, pago/retiro, permisos y datos; registrar cada respuesta con fecha, autoridad y efecto en la nota de decisiones, RF/RN, contratos, pantallas y pruebas. Acordar qué es demo, cobertura B o piloto C.
 - [ ] **F14-00.3** Levantar inventario del frontend/backend actuales con commit, ruta, pantalla, API, migración y prueba por cada tarea `SUP`. Conservar los cambios ajenos. Etiquetar `PASS`, `FAIL` o `NO_EJECUTADA`; un mockup parecido no prueba funcionalidad.
 
@@ -28,7 +28,7 @@ F14 es una **línea de ampliación** posterior a la demo integrada; no presupone
 2. `06–09`: SUP del descubrimiento/tienda/producto; DELTA de Home, categorías como ruta propia, búsqueda contextual, ofertas, cantidad/favoritos y stock visible. Las secciones recomendadas y almuerzos necesitan fuentes de datos y alcance.
 3. `10–17`: SUP del carrito por tienda, checkout y ticket; DELTA/NEW de selector de pago, QR de pago **simulado**, confirmación y reserva en efectivo. Mantener un solo comercio por checkout, idempotencia y QR de pago separado de credencial de retiro. La visibilidad anticipada del ticket en las capturas está condicionada por DEC-16.
 4. `18–22`: SUP/DELTA de pedidos, compras, reservas e historial. Distinguir estado del pedido de estado del pago; definir si las tres listas son filtros de una sola fuente y si vencidos/cancelados se muestran aparte.
-5. `23–26`: NEW/DELTA de promociones, favoritos, notificaciones y perfil. No reactivar campana u otras acciones retiradas por DEC-20 hasta que Paulo lo decida.
+5. `23–26`: NEW/DELTA de promociones, favoritos, notificaciones y perfil. No reactivar campana u otras acciones retiradas por DEC-20 hasta que Usuario lo decida.
 
 **Aceptación:** ruta correcta desde navbar, header o pila; estado cargando/vacío/sin resultados/error/éxito; tamaños táctiles 48 dp y TalkBack; cantidades y Bs coherentes; prueba con cliente real bajo RLS donde hay datos persistentes.
 
@@ -70,6 +70,6 @@ Estas seis tareas completan el inventario funcional del PDF que no aparece como 
 - [ ] **F14-QA-01** Matriz `SRC/PDF página → captura → ruta → componente → contrato → RF/RN/DEC → prueba → evidencia` para los 54 recortes y pantallas PDF sin recorte; marcar diferencias aprobadas.
 - [ ] **F14-QA-02** Regresión cliente/comercio/admin en dispositivo; estados de carga, vacío, error, offline y sesión vencida; texto al 200 %, TalkBack manual, cámara denegada, navegación Atrás y deep links.
 - [ ] **F14-QA-03** Seguridad y concurrencia desde API/SQL: RLS de datos personales y globales, stock último ejemplar, QR/PIN de un uso, pago en efectivo antes de entrega, idempotencia y expiraciones por proceso del servidor.
-- [ ] **F14-QA-04** Comparación visual por recorte y ruta, con captura real del mismo estado; registrar desvíos, causa y aceptación de Paulo. Cerrar cada tarea con `PASS/FAIL/NO_EJECUTADA` en [[05-Desarrollo/Testing]], [[05-Desarrollo/Progreso]] y [[06-Estado/Bitacora]].
+- [ ] **F14-QA-04** Comparación visual por recorte y ruta, con captura real del mismo estado; registrar desvíos, causa y aceptación de Usuario. Cerrar cada tarea con `PASS/FAIL/NO_EJECUTADA` en [[05-Desarrollo/Testing]], [[05-Desarrollo/Progreso]] y [[06-Estado/Bitacora]].
 
 **Estado al redactar:** todos los ítems de F14 están `NO_EJECUTADA`; la evidencia de fases anteriores sirve como punto de partida de supervisión y no se reetiqueta automáticamente como cierre de F14.

@@ -7,9 +7,9 @@ updated: 2026-10-03
 
 # Decisiones del propietario antes de F14
 
-**Uso:** al abrir F14, el agente relee código y este Core, genera la lista actualizada de dudas y pregunta a Paulo **antes de implementar cada lote afectado**. Registrar respuesta literal, fecha, alcance y cambios a RF/RN/DEC/ADR, UI, backend y pruebas. Los tres PDF son propuestas anexas y no sustituyen decisiones previas. Ninguna pregunta de esta tabla está respondida por las imágenes. [[05-Desarrollo/F14 - Revision y ampliacion por roles|F14-00]].
+**Uso:** al abrir F14, el agente relee código y este Core, genera la lista actualizada de dudas y pregunta a Usuario **antes de implementar cada lote afectado**. Registrar respuesta literal, fecha, alcance y cambios a RF/RN/DEC/ADR, UI, backend y pruebas. Los tres PDF son propuestas anexas y no sustituyen decisiones previas. Ninguna pregunta de esta tabla está respondida por las imágenes. [[05-Desarrollo/F14 - Revision y ampliacion por roles|F14-00]].
 
-| ID | Decisión que debe tomar Paulo | Motivo y bloqueo |
+| ID | Decisión que debe tomar Usuario | Motivo y bloqueo |
 | --- | --- | --- |
 | **DEC-F14-01** | ¿Las nuevas vistas son objetivo de la demo A, cobertura B o una versión posterior? ¿Fecha, orden por rol y aceptación de F14? | DEC-19 fijó demo A; los PDF piden experiencia ampliada. Define prioridad y denominador, no reabre F11–13 automáticamente. |
 | **DEC-F14-02** | Cliente: ¿cuál será la barra final? Actual `Explorar/Buscar/Carritos/Pedidos`; PDF `Inicio/Mis pedidos/Promociones/Perfil`; mosaico `Inicio/Pedidos/QR/Favoritos/Perfil`. ¿Carrito en header? ¿La pestaña QR tiene destino propio? | Los tres esquemas son incompatibles. Bloquea shell, rutas y pruebas de navegación. También decidir menú admin: PDF `Inicio/Comercios/Usuarios/Pedidos/Más` frente a captura con `Productos` como quinta pestaña. |
@@ -30,6 +30,6 @@ updated: 2026-10-03
 
 1. Preguntar primero **DEC-F14-01–04** y **06**: cambian alcance, rutas, pago, seguridad y permisos.
 2. Preguntar **05, 07–14** antes de los lotes que las necesitan. Se puede supervisar pantallas existentes mientras tanto.
-3. Para cualquier dato nuevo descubierto al leer el código, añadir `DEC-F14-15+` con alternativa, efecto y responsable, y preguntarlo antes de implementar. Si Paulo conserva DEC-04/11/16/20, la imagen se adapta a esas decisiones y la divergencia se documenta.
+3. Para cualquier dato nuevo descubierto al leer el código, añadir `DEC-F14-15+` con alternativa, efecto y responsable, y preguntarlo antes de implementar. Si Usuario conserva DEC-04/11/16/20, la imagen se adapta a esas decisiones y la divergencia se documenta.
 
-**Registro de respuesta:** `ID | pregunta | respuesta de Paulo | fecha | ámbito | artefactos afectados | prueba | estado`. Hasta recibirla, todas estas filas permanecen **PENDIENTE**; no hay aceptación tácita del contenido de los PDF. Los formularios históricos viven en [[02-Arquitectura/Decisiones de Usuario para el desarrollo]].
+**Registro de respuesta:** `ID | pregunta | respuesta de Usuario | fecha | ámbito | artefactos afectados | prueba | estado`. Hasta recibirla, todas estas filas permanecen **PENDIENTE**; no hay aceptación tácita del contenido de los PDF. Los formularios históricos viven en [[02-Arquitectura/Decisiones de Usuario para el desarrollo]].

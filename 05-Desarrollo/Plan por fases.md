@@ -9,7 +9,7 @@ updated: 2026-10-03
 
 **IDs:** `UI-01`–`UI-10` nombran pantallas del [[02-Arquitectura/Mapa de pantallas]]; `LUI-01`–`LUI-10` nombran **lotes de trabajo**. `BE`, `COMP`, `OPS` y `PIL` nombran otros lotes. Así una captura no se confunde con una tarea cerrada.
 
-**Plan original:** Paulo pidió interfaz desde [[02-Arquitectura/Mockup Stitch - vistas y ubicaciones|SRC-04]], backend y F0 con repositorios separados. P-00 fue la semilla documental previa. F0–F10 conducen a demo MVP; F11–F13 amplían cobertura y piloto. **Estado real posterior:** F0 cerrada y demo integrada parcialmente cerrada según [[05-Desarrollo/Progreso]]/[[05-Desarrollo/Testing]]. Las tablas de esta nota conservan el plan inicial; para los PDF y 54 vistas nuevos usar [[05-Desarrollo/F14 - Revision y ampliacion por roles]].
+**Plan original:** Usuario pidió interfaz desde [[02-Arquitectura/Mockup Stitch - vistas y ubicaciones|SRC-04]], backend y F0 con repositorios separados. P-00 fue la semilla documental previa. F0–F10 conducen a demo MVP; F11–F13 amplían cobertura y piloto. **Estado real posterior:** F0 cerrada y demo integrada parcialmente cerrada según [[05-Desarrollo/Progreso]]/[[05-Desarrollo/Testing]]. Las tablas de esta nota conservan el plan inicial; para los PDF y 54 vistas nuevos usar [[05-Desarrollo/F14 - Revision y ampliacion por roles]].
 
 ## Destino de artefactos al ejecutar
 
@@ -19,19 +19,19 @@ updated: 2026-10-03
 | Cliente | `PaseoYA-frontend/` como **repositorio Git independiente** | React Native, navegación, componentes, assets, pruebas de UI | pendiente F0 |
 | Backend | `PaseoYA-backend/` como **repositorio Git independiente** | configuración Supabase local, migraciones SQL, RLS, funciones/operaciones confiables y pruebas | pendiente F0 |
 
-Los dos repositorios de código tendrán historias y remotos propios si Paulo autoriza remotos. El Core queda fuera de ambos. **Supabase es servicio/plataforma, no un repositorio Git remoto por sí mismo**; su definición reproducible vive en `PaseoYA-backend/`. Node.js se verifica como herramienta para React Native y tooling/backend; un servidor Node adicional no se presupone. F0 documenta versiones compatibles y decide Expo/bare, Supabase local/cloud y propietario de los recursos con DEC-01/02 antes de inicializar o conectar. Las rutas exactas y remotos se registrarán al crearlos.
+Los dos repositorios de código tendrán historias y remotos propios si Usuario autoriza remotos. El Core queda fuera de ambos. **Supabase es servicio/plataforma, no un repositorio Git remoto por sí mismo**; su definición reproducible vive en `PaseoYA-backend/`. Node.js se verifica como herramienta para React Native y tooling/backend; un servidor Node adicional no se presupone. F0 documenta versiones compatibles y decide Expo/bare, Supabase local/cloud y propietario de los recursos con DEC-01/02 antes de inicializar o conectar. Las rutas exactas y remotos se registrarán al crearlos.
 
 ## Secuencia y puertas
 
 | Fase | Lotes y resultado aceptable | Depende de | Puerta / prueba planeada |
 | --- | --- | --- | --- |
 | **F0 · Preparación técnica** | F0-01 inventario Node.js, gestor, React Native/Android-iOS, Supabase CLI y dispositivo; F0-02 dos repositorios independientes; F0-03 bootstrap reproducible y variables de ejemplo sin secretos | P-00, DEC-01/02 para elecciones con efecto | evidenciar comandos/versiones, arranque mínimo en dispositivo y migración local si se autoriza; `NO_EJECUTADA` mientras no se haga |
-| **F1 · Especificación UI** | LUI-01 inventario de 6 capturas + shell, rutas, tokens, componentes, assets/licencias, datos ficticios coherentes y estados faltantes | SRC-04, RF/RN/DEC; aprobación DEC-11 para cerrar | Paulo valida dirección visual y puntos MK-01–08; comparación con mockup y T-UI documental |
+| **F1 · Especificación UI** | LUI-01 inventario de 6 capturas + shell, rutas, tokens, componentes, assets/licencias, datos ficticios coherentes y estados faltantes | SRC-04, RF/RN/DEC; aprobación DEC-11 para cerrar | Usuario valida dirección visual y puntos MK-01–08; comparación con mockup y T-UI documental |
 | **F2 · Base de interfaz** | LUI-02 shell cliente, navegación de 4 pestañas, stacks, tema, componentes, datos fixture y accesibilidad básica | F0, LUI-01/DEC-11 | build móvil y navegación con lector de pantalla/tamaños táctiles |
 | **F3 · Descubrimiento** | LUI-03 Explorar, tienda, detalle de producto faltante, búsqueda/comparación y filtros | LUI-02, DEC-09 para equivalencias | T-UI/T-CAT con fixtures: rutas, vacíos, agotado, sin red |
 | **F4 · Compra visual** | LUI-04 carritos por tienda y temporizadores; LUI-05 checkout, selector QR simulado/efectivo y estados de confirmación | LUI-02/03, DEC-04–06 | T-UI/T-CART/T-CHECKOUT con fixtures; sin declarar stock real |
 | **F5 · Seguimiento y retiro visual** | LUI-06 Mis pedidos, historial, ticket QR/PIN ilustrativo, ubicación e incidencias | LUI-02/05, DEC-16 | T-UI; credencial de fixture inequívocamente no válida |
-| **F6 · Cobertura UI restante** | LUI-07 acceso/cuenta, LUI-08 comercio catálogo/cola/retiro, LUI-09 admin según alcance, LUI-10 revisión responsive/accesibilidad y capturas | LUI-02, RF-01–04/27–44, DEC-10/13 | T-UI; Paulo acepta superficies no representadas en Stitch |
+| **F6 · Cobertura UI restante** | LUI-07 acceso/cuenta, LUI-08 comercio catálogo/cola/retiro, LUI-09 admin según alcance, LUI-10 revisión responsive/accesibilidad y capturas | LUI-02, RF-01–04/27–44, DEC-10/13 | T-UI; Usuario acepta superficies no representadas en Stitch |
 | **F7 · Base backend** | BE-01 esquema/migraciones/Auth/RLS; BE-02 comercios, productos, búsqueda/comparación y datos ficticios | F0 + F1 aceptada, decisiones de datos/roles | T-RLS con llamadas directas y T-CAT; ningún secreto en Core |
 | **F8 · Transacciones backend** | BE-03 carritos, checkout por comercio, pedido/pago separado, stock atómico e idempotencia | BE-01/02, DEC-04–06/09 | T-CART/T-ORD/T-CHECKOUT/T-STOCK con acceso y concurrencia |
 | **F9 · Operación backend** | BE-04 cola de comercio, transición, credencial de retiro de un uso, cancelación y expiraciones programadas | BE-03, DEC-06–08/16 | T-RET/T-CAN/T-EXP sin depender de app abierta |
@@ -47,7 +47,7 @@ Los dos repositorios de código tendrán historias y remotos propios si Paulo au
 
 | Lote | Tareas a realizar | RF/RN/DEC | Criterio de aceptación |
 | --- | --- | --- | --- |
-| LUI-01 | Auditar cada elemento de SRC-04; resolver MK-01–08; definir tokens con contraste, tamaños, copy, mapa de navegación, estados y fixtures por comercio/pedido; aprobar assets/licencias. | RF-01–44 según vista; DEC-09/11/15 | especificación y matriz vista→componente→estado→acción; Paulo registra decisiones pendientes |
+| LUI-01 | Auditar cada elemento de SRC-04; resolver MK-01–08; definir tokens con contraste, tamaños, copy, mapa de navegación, estados y fixtures por comercio/pedido; aprobar assets/licencias. | RF-01–44 según vista; DEC-09/11/15 | especificación y matriz vista→componente→estado→acción; Usuario registra decisiones pendientes |
 | LUI-02 | Crear shell cliente, header, campana/cuenta como rutas explícitas, pestañas Explorar/Comparar/Carritos/Pedidos, contadores y stacks; componentes Card/Chip/Button/Price/Status/Loading/Error. | RNF-07/09, DEC-01/10/11 | volver atrás conserva estado, no duplica checkout; controles táctiles/lector de pantalla |
 | LUI-03 | Explorar: hero/categorías/tiendas/ofertas; Comparar: búsqueda/filtros/resumen/tarjetas por comercio; crear detalle y tienda faltantes; manejar datos vacíos y stock. | RF-05–13, DEC-09 | acción de cada tarjeta lleva al comercio y carrito correctos; comparación no mezcla variantes no homologadas |
 | LUI-04 | Dos o más carritos simultáneos, subtotal por tienda, cantidad/eliminar, reloj de expiración, ubicación y CTA de checkout por carrito; no afirmar reserva de stock antes de DEC-05. | RF-13–17, RN-02–05 | editar uno no modifica otro; caducidad/stock cambiante visible y recuperable |

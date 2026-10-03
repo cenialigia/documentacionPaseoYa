@@ -44,7 +44,7 @@ Casillas del plan [[05-Desarrollo/Plan por fases]]. **F0 y otros 10 lotes de dem
 
 - [ ] **COMP-01** Gestión comercial completa de productos, precios, stock, horarios y ventas (RF-27–31/38).
 - [ ] **COMP-02** Gestión admin, estadísticas y promociones de punta a punta (RF-39–44).
-- [ ] **COMP-03** Servicios y acciones adicionales del mockup que Paulo apruebe en DEC-12/20.
+- [ ] **COMP-03** Servicios y acciones adicionales del mockup que Usuario apruebe en DEC-12/20.
 - [ ] **COMP-04** Matriz de cobertura RF/RN/RNF y regresión de todos los requisitos incluidos.
 
 ## Alcance C · F12–F13, si DEC-19 lo elige

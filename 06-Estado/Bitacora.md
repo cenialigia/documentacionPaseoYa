@@ -9,7 +9,7 @@ updated: 2026-10-02
 
 ## 2026-10-02 · Creación de semilla
 
-**Entrada:** petición de Paulo en esta sesión; fuentes SRC-01 y SRC-02 en [[09-Entradas/_Indice de entradas]].
+**Entrada:** petición de Usuario en esta sesión; fuentes SRC-01 y SRC-02 en [[09-Entradas/_Indice de entradas]].
 **Estado:** documentación propuesta; implementación no iniciada.
 
 - Raíz objetivo: `E:/Repositorios/Hackathon/PaseoYA`. Core: `PaseoYA-Core`.
@@ -24,18 +24,18 @@ Para relevo entre agentes: actualizar esta nota con tarea/intent/revisión, auto
 
 ## 2026-10-02 · Mockup Stitch y nuevo plan UI/backend
 
-**Entrada:** SRC-04 ZIP Stitch y SRC-05 instrucción de Paulo. **Integrador:** agente de esta sesión; una sola raíz objetivo `E:/Repositorios/Hackathon/PaseoYA/PaseoYA-Core`.
+**Entrada:** SRC-04 ZIP Stitch y SRC-05 instrucción de Usuario. **Integrador:** agente de esta sesión; una sola raíz objetivo `E:/Repositorios/Hackathon/PaseoYA/PaseoYA-Core`.
 
 - Se preservó el ZIP intacto en `09-Entradas/Mockup Stitch/original.zip`, SHA-256 `096656AA0A36F3D1F73F90E033276EF7C4E08E0CD51F1D4FDE67D1CF1A783CBE`. Se copiaron seis capturas de vistas, logo, ocho HTML y `DESIGN.md` para consulta local. La variante Explorar 2 no tenía PNG ni contenido principal.
 - Se creó [[02-Arquitectura/Mockup Stitch - vistas y ubicaciones]] con imágenes incrustadas, ubicación lógica, acciones, estados y conflictos MK-01–08. Se actualizó [[02-Arquitectura/Mapa de pantallas]] y se separó Mis pedidos (UI-06A) de Ticket (UI-06B).
 - [[05-Desarrollo/Plan por fases]] ahora contiene F0 de herramientas y dos repositorios independientes, UI F1–F6, backend F7–F9 e integración F10. [[06-Estado/Tareas pendientes]] contiene 19 casillas. ADR-008 registra la separación solicitada; DEC-01/02/04–06/09–11/15–16 siguen sin resolver donde aplican.
 - **Evidencia documental:** lectura de capturas y archivos; inventario y SHA-256 de origen. **Evidencia estática PASS (2026-10-02):** primera comprobación de 15 notas afectadas con front matter; comprobación ampliada de 27 notas del Core con 0 enlaces wiki rotos; ZIP copiado con hash idéntico al original; 7 PNG (6 vistas + logo), 8 HTML, 19 casillas y 12 pruebas planificadas. Límite: la comprobación estática no renderiza Obsidian ni ejecuta app/servicio. **Runtime:** T-F0/T-UI/T-RLS/T-STOCK y demás `NO_EJECUTADA`; no existen app, backend ni proyecto Supabase creados en esta sesión. Renderizado en Obsidian: `NO_EJECUTADA`.
-- **Próximo paso:** Paulo revisa mockup, decide alcance visual/DEC-11 y opciones F0/DEC-01/02 al iniciar implementación. El siguiente agente lee Core → contexto activo → RF/RN/DEC del lote → artefacto actual; inicia F0-01 o LUI-01 y registra evidencia real.
+- **Próximo paso:** Usuario revisa mockup, decide alcance visual/DEC-11 y opciones F0/DEC-01/02 al iniciar implementación. El siguiente agente lee Core → contexto activo → RF/RN/DEC del lote → artefacto actual; inicia F0-01 o LUI-01 y registra evidencia real.
 - **Uso de sesión:** `SessionUsage/v1`: planificación/documentación `null`, inspección de mockup `null`, validación `null`; telemetría de tokens no disponible, no se declara cero.
 
 ## 2026-10-02 · Revisión del alcance «100 %»
 
-**Entrada:** SRC-06, pregunta de Paulo sobre cobertura, pendientes y fases iniciables. **Estado:** sólo documentación; no se ejecutaron F0–F13.
+**Entrada:** SRC-06, pregunta de Usuario sobre cobertura, pendientes y fases iniciables. **Estado:** sólo documentación; no se ejecutaron F0–F13.
 
 - Se distinguieron tres metas en [[Decisiones de Usuario para el desarrollo]]: A demo MVP (F0–F10), B RF-01–44 completos (añade F11) y C piloto/uso real (añade F12–F13). DEC-19 queda `PENDIENTE`; no se llama «100 %» a la demo.
 - Se añadieron ocho lotes condicionales COMP-01–04, OPS-01/02 y PIL-01/02 para cubrir gestión comercial/admin, extras aprobados, trazabilidad RF, distribución, seguridad/operación y aceptación real. [[06-Estado/Tareas pendientes]] tiene ahora 19 casillas de demo + 4 de B + 4 de C; [[05-Desarrollo/Testing]] añade T-FULL/T-OPS/T-PIL.
@@ -45,7 +45,7 @@ Para relevo entre agentes: actualizar esta nota con tarea/intent/revisión, auto
 
 ## 2026-10-02 · Publicación del baúl en GitHub
 
-**Entrada:** SRC-07, autorización expresa de Paulo. **Destino:** repositorio público `cenialigia/documentacionPaseoYa`, rama `main`.
+**Entrada:** SRC-07, autorización expresa de Usuario. **Destino:** repositorio público `cenialigia/documentacionPaseoYa`, rama `main`.
 
 - Se inicializó Git dentro de `PaseoYA-Core`; la raíz `PaseoYA`, `AGENTS.md` y `CLAUDE.md` quedaron fuera. Se conservaron los 54 archivos del baúl, incluidos `.obsidian`, entradas originales, mockup y el cambio reciente del propietario.
 - Importación inicial: commit `7989005406c1d765aee741a33f49336a75330afa`. Antes del commit, los 54 blobs staged coincidían byte por byte con los archivos locales. Se mantuvieron finales de línea y espacios de las fuentes originales.
@@ -54,11 +54,11 @@ Para relevo entre agentes: actualizar esta nota con tarea/intent/revisión, auto
 
 ## 2026-10-02 · Fase 0: F0-01 y F0-02
 
-**Entrada:** petición actual en la sesión de Claude Code, equipo `Ferfloo27`. **Raíz:** `C:/Users/Ferfloo27/Desktop/PaseoYa`, equivalente a la raíz `E:/…/PaseoYA` del equipo de Paulo (sin unidad E: aquí). `AGENTS.md` no está disponible en este equipo y no se leyó. **Estado:** preparación del entorno; producto no implementado.
+**Entrada:** petición actual en la sesión de Claude Code, equipo `Ferfloo27`. **Raíz:** `C:/Users/Ferfloo27/Desktop/PaseoYa`, equivalente a la raíz `E:/…/PaseoYA` del equipo de Usuario (sin unidad E: aquí). `AGENTS.md` no está disponible en este equipo y no se leyó. **Estado:** preparación del entorno; producto no implementado.
 
 - **F0-01 PASS (EVID-F0-01):** inventario sin instalar nada, contrastado con la documentación oficial vigente de React Native 0.87, Expo SDK 57 y Supabase CLI. Node 24.19.0 cumple los tres. Android listo. Faltan Supabase CLI y el daemon de Docker. iOS sólo es posible vía Expo Go o build en la nube. Detalle en [[05-Desarrollo/Entorno local]].
 - **F0-02 PASS (EVID-F0-02):** `frontend/` y `backend/` son repositorios independientes con remotos propios del propietario, y el Core `documentacion/` es un tercer repositorio. La raíz no es repositorio. No se creó ni se publicó nada.
-- Se respetaron los cambios locales sin confirmar de `.obsidian/*` y el fin de línea de las decisiones de Paulo; no se confirmaron ni se revirtieron.
+- Se respetaron los cambios locales sin confirmar de `.obsidian/*` y el fin de línea de las decisiones de Usuario; no se confirmaron ni se revirtieron.
 - **Orquestación:** se mantiene la evaluación vigente del plan: coordinación por archivos del Core, un solo escritor y sin runtime adicional.
 - **Pendiente:** DEC-01/02 antes de F0-03; Docker Desktop activo antes de `supabase start`. EVID-F0-03 queda `NO_EJECUTADA`.
 - **Uso de sesión:** `SessionUsage/v1`: lectura `null`, inventario `null`, documentación `null`; el runtime no expone telemetría de tokens.
@@ -104,12 +104,12 @@ Para relevo entre agentes: actualizar esta nota con tarea/intent/revisión, auto
   - Las fotos de Stitch tienen licencia desconocida y no se usarán.
 - Enlaces añadidos en Inicio, Contexto activo, Mapa de pantallas, la nota del mockup y DEC-11 (lista de 8 puntos para responder).
 - **Evidencia:** EVID-LUI-01a PASS (documental/estática). T-UI `NO_EJECUTADA`. LUI-01 sigue abierta.
-- **Próximo paso:** Paulo responde DEC-11 (y DEC-15 para imágenes). Con eso se cierra LUI-01 y arranca LUI-02 (shell de cuatro pestañas, tema y componentes con fixtures) en `frontend/`.
+- **Próximo paso:** Usuario responde DEC-11 (y DEC-15 para imágenes). Con eso se cierra LUI-01 y arranca LUI-02 (shell de cuatro pestañas, tema y componentes con fixtures) en `frontend/`.
 - **Uso de sesión:** `SessionUsage/v1`: análisis `null`, redacción `null`.
 
 ## 2026-10-03 · DEC-11/15 resueltas, LUI-01 cerrada y LUI-02 implementada
 
-**Entrada:** respuestas de Paulo en el chat:
+**Entrada:** respuestas de Usuario en el chat:
 - DEC-11: especificación aprobada tal cual.
 - Logo: texto provisional.
 - DEC-15: placeholders sin marca.
@@ -252,19 +252,26 @@ Para relevo entre agentes: actualizar esta nota con tarea/intent/revisión, auto
 
 ## 2026-10-03 · F14 documental por vistas de Cliente, Comercio y Administrador
 
-**Entrada:** Paulo pidió revisar avances y cambios antes de agregar una nueva fase desde tres PDF y tres mosaicos, distinguir tareas existentes para supervisión de tareas nuevas, recortar cada cuadro y exigir decisiones antes de comenzar.
+**Entrada:** Usuario pidió revisar avances y cambios antes de agregar una nueva fase desde tres PDF y tres mosaicos, distinguir tareas existentes para supervisión de tareas nuevas, recortar cada cuadro y exigir decisiones antes de comenzar.
 
 - **Contexto revisado:** 13/19 lotes de demo cerrados en el Core; EVID-INT-01/02, EVID-BE-a/b/c/d, EVID-CART-a y EVID-LUI-08a. Los repositorios de código se trabajaron en otro equipo; aquí sólo está el Core, así que su estado actual requiere inventario F14-00 y ninguna captura se declaró prueba de implementación.
 - **Fuentes:** SRC-08–10 PDF Cliente (13 pp.), Comercio (31 pp.) y Administrador (10 pp.); SRC-11–13 tres mosaicos. Originales conservados sin cambios y SHA-256 en [[09-Entradas/_Indice de entradas]]. Las instrucciones internas a Claude se trataron como material de propuesta, no como órdenes operativas.
 - **Salida:** 54 recortes exactos (26/14/14) incrustados por rol con ubicación y tarea `SUP`, `DELTA` o `NEW` en [[02-Arquitectura/F14 - Mapa de vistas por rol]]. [[05-Desarrollo/F14 - Revision y ampliacion por roles]] contiene puerta F14-00, lotes UI/backend/QA y criterios; [[02-Arquitectura/Decisiones F14 antes de iniciar]] contiene 14 decisiones candidatas para preguntar al arrancar. Se corrigieron portadas/progreso desactualizados.
-- **Contradicciones visibles:** navbar cliente (actual/PDF/mosaico), campana/favoritos/promociones versus DEC-20, QR de pago aparente versus DEC-04, ticket antes de listo versus DEC-16, CTA admin «Marcar listo» versus PDF de supervisión y flujo comercio «Entregado» sin validación. Mantener decisiones vigentes hasta respuesta de Paulo.
+- **Contradicciones visibles:** navbar cliente (actual/PDF/mosaico), campana/favoritos/promociones versus DEC-20, QR de pago aparente versus DEC-04, ticket antes de listo versus DEC-16, CTA admin «Marcar listo» versus PDF de supervisión y flujo comercio «Entregado» sin validación. Mantener decisiones vigentes hasta respuesta de Usuario.
 - **Prueba:** `EVID-F14-DOC` PASS: 54 PNG (26/14/14), seis originales con hashes preservados, 54 tareas/embeds únicos, ningún enlace nuevo faltante y `git diff --check` sin errores. **F14 implementación/supervisión: NO_EJECUTADA**.
 - **Próxima acción:** al iniciar F14, revisar commits reales de frontend/backend, generar preguntas actualizadas y solicitar respuestas por lote; después supervisar/implementar y probar según el plan. Uso de sesión: `null`.
 
 ## 2026-10-03 · Handoff de F14 y publicación del baúl
 
-**Entrada:** Paulo pidió que, al asignar la nueva fase, se comprueben conjuntamente los cambios de los tres repositorios con el agente responsable, y autorizó commit y push de todo el baúl a `main`.
+**Entrada:** Usuario pidió que, al asignar la nueva fase, se comprueben conjuntamente los cambios de los tres repositorios con el agente responsable, y autorizó commit y push de todo el baúl a `main`.
 
 - **Plan actualizado:** F14-00.0 obliga a cotejar rama, commits locales/remotos, estado y diff de Core, frontend y backend; documentar hallazgos y acordar la base antes de supervisar o implementar tareas.
 - **Alcance de publicación:** únicamente `PaseoYA-Core`, preservando los originales y 54 recortes de SRC-08–13. No se modifican ni publican frontend/backend en este handoff.
 - **Estado de F14:** NO_EJECUTADA. La comprobación conjunta con el futuro agente se realiza cuando se le asigne la fase; esta entrada deja preparado el criterio.
+
+## 2026-10-03 · Referencia impersonal al propietario
+
+**Entrada:** el propietario pidió reemplazar su nombre por «Usuario» en los archivos del baúl y publicar el cambio en `main`.
+
+- **Cambio:** 69 menciones sustituidas en 21 notas Markdown. Se conservaron los PDF, mosaicos y ZIP originales sin edición para mantener su procedencia y hashes.
+- **Verificación:** búsqueda sin coincidencias del nombre anterior en los textos del baúl; `git diff --check` sin errores. El código de frontend/backend queda fuera del alcance de este commit.

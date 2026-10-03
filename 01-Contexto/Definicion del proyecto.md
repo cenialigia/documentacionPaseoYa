@@ -31,5 +31,5 @@ Delivery, integración bancaria real, sistemas comerciales reales, Paseo Points,
 
 Una persona demuestra en vivo: cliente localiza producto, crea pedido de **un** comercio, el comercio lo confirma y prepara, el cliente presenta código y el comercio marca entrega. También se muestran al menos el segundo método de pago simulado/reserva, protección de stock, roles y comportamiento de vencimiento mediante reloj de prueba o evidencia reproducible. El entregable oficial incluye prototipo funcional, código fuente, presentación, demo y explicación de arquitectura (PDF §§7–9). Alcance exacto de demo pendiente en [[02-Arquitectura/Decisiones pendientes]].
 
-**Estado real:** carpeta de proyecto inicialmente vacía. No hay app, base, cuentas ni pruebas ejecutadas. React Native + Supabase/PostgreSQL es la tecnología indicada por Paulo, no una obligación del PDF.
+**Estado real:** carpeta de proyecto inicialmente vacía. No hay app, base, cuentas ni pruebas ejecutadas. React Native + Supabase/PostgreSQL es la tecnología indicada por Usuario, no una obligación del PDF.
 
