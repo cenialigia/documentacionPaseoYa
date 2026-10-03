@@ -228,3 +228,13 @@ Para relevo entre agentes: actualizar esta nota con tarea/intent/revisión, auto
 - **Tareas:** LUI-06 cerrada; INT-02 abierta sólo por la presentación. Progreso 12/19 (63,2 %).
 - **Próximo paso:** la presentación del hackathon y el ensayo del guion.
 - **Uso de sesión:** `SessionUsage/v1`: pruebas `null`, documentación `null`.
+
+## 2026-10-03 · Carrito persistente (mejora de LUI-04)
+
+**Entrada:** el usuario pidió la tarea 5 («carrito persistente») como funcionalidad acoplable a los cambios de vistas que traerá al Core.
+
+- **Frontend `9068cd4`:** `src/state/cart-storage.ts` guarda los carritos en `localStorage` (expo-sqlite) con la clave `paseoya:carritos:v1:<usuario>` y descarta datos dañados. `CartProvider` los restaura al montarse (ya se monta por usuario) y oculta líneas de productos retirados del catálogo. Sin cambios de pantallas.
+- El id del carrito no cambia, así que la clave idempotente del checkout (`chk-<carritoId>`) sigue protegiendo contra duplicados tras reiniciar la app.
+- **Evidencia:** EVID-CART-a PASS.
+- **Nota:** el usuario actualizará este Core con vistas nuevas; esta entrada sólo se añade al final para no generar conflictos.
+- **Uso de sesión:** `SessionUsage/v1`: implementación `null`, pruebas `null`.
