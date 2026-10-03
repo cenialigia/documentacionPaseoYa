@@ -238,3 +238,14 @@ Para relevo entre agentes: actualizar esta nota con tarea/intent/revisión, auto
 - **Evidencia:** EVID-CART-a PASS.
 - **Nota:** el usuario actualizará este Core con vistas nuevas; esta entrada sólo se añade al final para no generar conflictos.
 - **Uso de sesión:** `SessionUsage/v1`: implementación `null`, pruebas `null`.
+
+## 2026-10-03 · LUI-08: catálogo del comercio
+
+**Entrada:** el usuario pidió la tarea 2 (catálogo del comercio, RF-27–31).
+
+- **Frontend `cf9c9da`:** `src/data/catalogo-comercio.ts` lee y escribe `productos` bajo RLS (cada comercio sólo los suyos, incluidos los inactivos). Pantallas `(comercio)/catalogo` (filtros todos, activos, inactivos y sin stock; activar o desactivar) y `(comercio)/editar-producto/[productoId]` (crear o editar nombre, precio, precio anterior y stock, con validación en el cliente y en el servidor mediante CHECK). Acceso desde el panel.
+- **Concurrencia:** el stock se guarda con `UPDATE … WHERE stock = <valor leído>`. Si una venta lo cambió entre medias, se avisa, se recarga y no se pisa (RN-09).
+- **Defecto global corregido:** el `ScrollView` de `Screen` no persistía los toques con el teclado abierto, así que el primer toque en un botón sólo cerraba el teclado. Ahora usa `keyboardShouldPersistTaps="handled"`, lo que afecta a todos los formularios.
+- **Evidencia:** EVID-LUI-08a PASS. LUI-08 queda cerrada: cola, preparación, efectivo y PIN ya estaban probados (EVID-DEMO-a, EVID-INT-02b). Progreso 13/19.
+- Los datos de la base local quedaron modificados por la prueba; `npm run db:reset` restaura el seed antes de la demo.
+- **Uso de sesión:** `SessionUsage/v1`: implementación `null`, pruebas `null`.
