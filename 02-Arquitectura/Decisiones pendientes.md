@@ -11,8 +11,8 @@ No bloquear trabajo documental ni pruebas sintéticas por preguntas abiertas. **
 
 | ID | Pregunta concreta | Impacto / propuesta para revisar |
 | --- | --- | --- |
-| DEC-01 | ¿Android, iOS o ambos para demo? ¿Expo o React Native bare? | F0 debe registrar compatibilidad/versiones Node.js y toolchain; build, pruebas en dispositivo y estructura inicial. Expo es candidato, no aprobado. |
-| DEC-02 | ¿Supabase local, proyecto cloud o ambos? ¿Quién crea el proyecto y cómo se protegerán claves, RLS y operaciones críticas? | F0 inicializa repositorio backend **separado** según autorización; proyecto cloud, remotos, coste, permisos, migraciones, funciones de checkout y expiraciones se deciden explícitamente. Supabase no exige por sí solo servidor Node. |
+| DEC-01 | **Resuelta 2026-10-02:** Android + Expo (ver formulario). | F0 debe registrar compatibilidad/versiones Node.js y toolchain; build, pruebas en dispositivo y estructura inicial. Expo es candidato, no aprobado. |
+| DEC-02 | **Resuelta en parte 2026-10-02:** Supabase local con Docker; remotos Git autorizados. Queda abierto el proyecto cloud: propietario, región, cuotas y protección de claves. | F0 inicializa repositorio backend **separado** según autorización; proyecto cloud, remotos, coste, permisos, migraciones, funciones de checkout y expiraciones se deciden explícitamente. Supabase no exige por sí solo servidor Node. |
 | DEC-03 | ¿Cuándo es el hackathon, tamaño del equipo y tiempo real disponible? | Priorizar RF-01–44 sin presentar todo como imprescindible para la primera demo. |
 | DEC-04 | ¿Cómo se confirma el pago QR simulado y quién puede cambiarlo? ¿Qué representa exactamente el QR de pago? | Evita confundir pago con código de retiro. |
 | DEC-05 | ¿Cuándo se reserva stock para QR y efectivo, y cuándo se descuenta? | SRC-04 muestra “stock reservado” ya en carrito; es sólo copy del mockup hasta resolver modelo y transacción atómica, sobreventa y doble liberación. |

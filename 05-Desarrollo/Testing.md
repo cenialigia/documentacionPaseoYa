@@ -7,7 +7,7 @@ updated: 2026-10-02
 
 # Plan de pruebas y evidencia
 
-Pruebas diseñadas, **ninguna ejecutada**. Fuentes: PDF §§5–9 y MD RF-01–44/RN-01–09. Datos ficticios; separar cuentas cliente, comercio A, comercio B y admin.
+Pruebas diseñadas; **T-F0 ejecutada en parte** (inventario y repositorios, 2026-10-02), el resto sin ejecutar. Fuentes: PDF §§5–9 y MD RF-01–44/RN-01–09. Datos ficticios; separar cuentas cliente, comercio A, comercio B y admin.
 
 | ID | Caso y resultado esperado | Requisito/fase |
 | --- | --- | --- |
@@ -28,3 +28,15 @@ Pruebas diseñadas, **ninguna ejecutada**. Fuentes: PDF §§5–9 y MD RF-01–4
 | T-PIL | UAT cliente/comercio/admin con datos autorizados, monitoreo del periodo acordado y aceptación o decisión de detener. | F13, DEC-25 |
 
 Registrar `EVID-ID | fecha | versión | dispositivo/ambiente | datos sintéticos | pasos/comando | observado | PASS/FAIL/NO_EJECUTADA | límite`. Un esquema SQL que compila no prueba RLS ni la demo. Si falta entorno, escribir NO_EJECUTADA con motivo. No usar datos reales sin permiso.
+
+## Registro de evidencia
+
+| EVID-ID | Fecha | Versión | Ambiente | Datos | Pasos/comando | Observado | Resultado | Límite |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| EVID-F0-01 | 2026-10-02 | — | Windows 11, equipo `Ferfloo27`, Git Bash | ninguno | comandos de inventario de [[05-Desarrollo/Entorno local]] | Node 24.19.0, npm 12.0.2, JDK 17 en `JAVA_HOME`, SDK Android 35/build-tools 36.0.0, 4 AVD, Docker 29.4.0 con daemon inactivo, Supabase CLI ausente | PASS (inventario completo y contrastado con la documentación oficial) | No instala ni arranca nada; no prueba un build |
+| EVID-F0-02 | 2026-10-02 | `a906e7b` / `6ff801e` / `2246b15` | mismo equipo | ninguno | `git -C <repo> rev-parse --show-toplevel`, `git remote -v`; `git status` en la raíz | tres repositorios con raíz y `origin` propios; la raíz `PaseoYa/` no es repositorio | PASS | Sólo verifica la separación local; no publica nada |
+| EVID-F0-03a | 2026-10-02 | frontend `a28e8c2` | Windows, Node 24.19.0 | ninguno | `npx expo-doctor`; `npx tsc --noEmit`; `npx expo lint`; `npx expo export --platform android` | doctor 21/21; tsc y lint con salida 0 tras corregir el hook de la plantilla; bundle Hermes Android de 3.7 MB | PASS (estática y de empaquetado) | No es una ejecución en dispositivo |
+| EVID-F0-03b | 2026-10-02 | — | emulador AVD `Pixel_3a_API_34` | ninguno | arrancar emulador + `npm run android` | — | NO_EJECUTADA: el usuario rechazó arrancar el emulador en esta sesión | Pendiente de una ejecución en dispositivo autorizada |
+| EVID-F0-03c | 2026-10-02 | backend `aa2466a` | Docker Desktop 29.4.0 | ninguno | `npm i -D supabase`; `npx supabase init`; `npx supabase start` | CLI 2.119.0 e init correctos; `start` descargó imágenes y salió con código 4 por falta de `supabase/seed.sql` (ya añadido); después Docker Desktop quedó detenido | FAIL, superado por EVID-F0-03e | — |
+| EVID-F0-03e | 2026-10-02 | backend `9dce273` | Docker Desktop 29.4.0, Windows | migración temporal `f0_smoke` | `npx supabase start`; `db reset` con la migración; `psql` dentro de `supabase_db_paseoya`; retirar la migración y `db reset` | primer `start`: Vector en bucle de reinicio (no lee el socket de Docker en Windows), con Studio y edge runtime detenidos. Con `[analytics] enabled = false`, los 10 contenedores quedan arriba y Studio responde HTTP 307. Un `db reset` falló una vez con `DbSetupError` transitorio y al repetirlo funcionó: aplicó la migración y el seed, se leyó la fila `1 F0-03 smoke` y quedó registrada la versión `20261002000000`. El reset final dejó el esquema sin la tabla | PASS (runtime local) | La migración de prueba no se versionó; el esquema real es BE-01 |
+| EVID-F0-03d | 2026-10-02 | `a28e8c2` / `aa2466a` | GitHub | ninguno | `git push origin HEAD`; `git ls-remote origin HEAD` | los hashes remotos coinciden con los locales en ambos repositorios | PASS | Publicación autorizada en el chat (DEC-02) |

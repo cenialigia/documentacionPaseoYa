@@ -34,11 +34,11 @@ updated: 2026-10-02
 
 ### DEC-01 · Plataforma y modalidad React Native
 
-**Elegir:** Android, iOS o ambos para la primera entrega; Expo, bare o «delegar elección tras F0-01». **Fija:** toolchain, builds, dispositivos y pruebas. **Respuesta:** `PENDIENTE`.
+**Elegir:** Android, iOS o ambos para la primera entrega; Expo, bare o «delegar elección tras F0-01». **Fija:** toolchain, builds, dispositivos y pruebas. **Datos de F0-01:** el entorno Android está listo (JDK 17, SDK 35, 4 AVD); iOS no puede compilarse en Windows, sólo con Expo Go o un build en la nube. Expo SDK 57 (RN 0.86) y RN 0.87 son compatibles con Node 24.19. **Respuesta (2026-10-02, en el chat de la sesión de Claude Code):** **Android + Expo**: Expo SDK 57 con Expo Router; iOS queda fuera de la primera entrega.
 
 ### DEC-02 · Supabase y repositorios
 
-**Elegir:** Supabase local, cloud o ambos; propietario de la cuenta/proyecto, región/cuotas permitidas y quién puede crear/conectar/aplicar migraciones. Confirmar si los dos repositorios Git serán sólo locales al inicio o también tendrán remotos separados, y dónde. **Fija:** F0-02/03, coste, permisos y seguridad. No poner credenciales en esta nota. **Respuesta:** `PENDIENTE`.
+**Elegir:** Supabase local, cloud o ambos; propietario de la cuenta/proyecto, región/cuotas permitidas y quién puede crear/conectar/aplicar migraciones. Confirmar si los dos repositorios Git serán sólo locales al inicio o también tendrán remotos separados, y dónde. **Fija:** F0-02/03, coste, permisos y seguridad. No poner credenciales en esta nota. **Datos de F0-01/02:** Docker Desktop está instalado (el daemon estaba inactivo) y Supabase CLI no está instalado; la propuesta es añadirlo como dependencia de `backend/`. Ya existen remotos separados `cenialigia/PaseoYaFrontend` y `cenialigia/PaseoYaBackend`, creados por el propietario. **Respuesta (2026-10-02, en el chat):** **Supabase local con Docker**, con la CLI como dependencia de `backend/`; ningún proyecto cloud por ahora. Se autoriza inicializar ambos repositorios, instalar sus dependencias, hacer commit y push a los remotos `cenialigia/PaseoYaFrontend` y `cenialigia/PaseoYaBackend`. Siguen abiertos: el propietario de un futuro proyecto cloud, su región y sus cuotas.
 
 ### DEC-03 · Tiempo y equipo
 
