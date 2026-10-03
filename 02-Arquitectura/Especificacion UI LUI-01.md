@@ -172,6 +172,8 @@ Se usan los estados **propuestos** en SRC-02 §12–13. Pedido y pago son dos ch
 - `String.prototype.normalize('NFD')` no descompone las tildes en Hermes/Android; la búsqueda usa un mapa explícito (`normalizeSearch`).
 - Las etiquetas de las pestañas necesitan `labelVisibilityMode="labeled"` en cada `NativeTabs.Trigger`; en la raíz no tuvo efecto.
 - Sin librería de iconos en JS, las acciones del encabezado son texto («Avisos», «Cuenta»).
+- Con React Compiler, `ref.current++` devolvió el valor ya incrementado; se usa asignación explícita.
+- Expo Router 57 tipa la ruta índice de una carpeta dinámica como `/…/index` y no la resuelve al navegar; se usan rutas con nombre (`pedido/[pedidoId]/detalle`).
 
 ## 7. Fixtures coherentes (datos ficticios, resuelve MK-06)
 

@@ -17,8 +17,9 @@ Derivado de las 27 casillas potenciales de [[06-Estado/Tareas pendientes]] y los
 - **LUI-01:** cerrada con la aprobación de DEC-11 (EVID-LUI-01b). Es una especificación documental: todavía no hay pantallas implementadas.
 - **LUI-02:** implementado; accesibilidad automática y texto al 200 % en PASS (EVID-LUI-02b). Abierta sólo por la pasada manual con TalkBack (EVID-LUI-02c `NO_EJECUTADA`).
 - **LUI-03:** implementado y probado en el emulador (EVID-LUI-03a); abierto hasta DEC-09 (equivalencia en la comparación).
-- **LUI-04:** implementado y probado en el emulador (EVID-LUI-04a); abierto hasta DEC-05/06 (reserva de stock y plazos). Ninguno de los lotes LUI-02 a 04 suma todavía al porcentaje, porque cada uno espera una decisión o una prueba manual.
-- Próximo paso: **LUI-05** (checkout de un comercio, selector QR simulado/efectivo, procesando/error/reintento sin duplicar el pedido). Su texto y su lógica dependen de DEC-04/05/06; se puede maquetar con marcadores. Backend BE-01 espera DEC-10.
+- **LUI-04:** implementado y probado en el emulador (EVID-LUI-04a); abierto hasta DEC-05/06.
+- **LUI-05:** implementado y probado en el emulador (EVID-LUI-05a): idempotencia ante respuesta perdida y doble toque con el servicio simulado; abierto hasta DEC-04/05/06. Los lotes LUI-02 a 05 no suman todavía al porcentaje, porque cada uno espera una decisión o una prueba manual.
+- Próximo paso: **LUI-06** (Mis pedidos e historial, ticket con credencial ilustrativa, ubicación e incidencias), que depende de DEC-16 para la credencial y de DEC-20 para las acciones extra. Las decisiones pendientes ya bloquean el cierre de la mayoría de los lotes UI: conviene resolver DEC-04/05/06/09/16 y DEC-10 (backend).
 - Separación de progreso: documentación de planificación ≠ implementación ≠ funcionamiento probado.
 
 Actualizar esta nota desde casillas reales del plan y resultados de pruebas; no estimar porcentajes desde sensación. Si una prueba no es ejecutable por falta de entorno, listar su motivo sin contarla como aprobada.

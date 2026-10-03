@@ -160,3 +160,21 @@ Para relevo entre agentes: actualizar esta nota con tarea/intent/revisión, auto
 - **Hallazgo operativo:** el modo CI de Metro explica los «fallos del watcher» anteriores; la nota anterior quedó corregida.
 - **Próximo paso:** LUI-05 (checkout) con marcadores hasta DEC-04/05/06. Siguen pendientes la pasada manual con TalkBack (LUI-02), DEC-09 (LUI-03) y DEC-10 (backend).
 - **Uso de sesión:** `SessionUsage/v1`: implementación `null`, pruebas `null`, documentación `null`.
+
+## 2026-10-03 · LUI-05: checkout de un comercio
+
+**Entrada:** el usuario pidió continuar con LUI-05.
+
+- **Frontend `780a59c`:**
+  - Estado de pedidos (`src/state/orders.tsx`) con un servicio simulado y clave de idempotencia derivada del carrito (`chk-<carritoId>`): un carrito sólo puede convertirse en un pedido. El pedido nace `CONFIRMED` con pago `PENDING`, separado del carrito (RN-05).
+  - Checkout con un comercio, un local y un total de productos (sin suponer tarifas). Selector accesible (`radiogroup`) de QR de pago simulado o efectivo, bloque de retiro presencial y estados procesando, error y reintento. Doble barrera contra el doble toque: botón con `loading` y un `ref` de envío en curso.
+  - Al confirmar, `router.replace` lleva al detalle del pedido, con bloques PAGO y RETIRO separados.
+  - Selector de fallo de conexión sólo en `__DEV__`.
+- **Marcadores:** [DEC-04] para la confirmación del pago simulado y [plazo DEC-06] para los plazos. «Total de productos» evita afirmar que no hay cargos (DEC-21).
+- **Hallazgos al probar:**
+  - El título del encabezado coincidía con el texto del botón y confundió al script; no era un defecto de la app.
+  - La ruta índice `pedido/[pedidoId]/index` terminaba en «Unmatched Route»; se renombró a `detalle`.
+  - Con React Compiler, `siguiente.current++` saltaba un número (se confirmó con un registro temporal, ya retirado); la idempotencia nunca falló.
+- **Evidencia:** EVID-LUI-05a PASS (servicio simulado). La idempotencia real se probará en BE-03.
+- **Próximo paso:** LUI-06, con DEC-16/20 pendientes. Las decisiones abiertas bloquean ya el cierre de LUI-02 a 05.
+- **Uso de sesión:** `SessionUsage/v1`: implementación `null`, pruebas `null`, documentación `null`.
