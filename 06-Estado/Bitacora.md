@@ -89,6 +89,6 @@ Para relevo entre agentes: actualizar esta nota con tarea/intent/revisión, auto
 **Entrada:** el usuario pidió hacer commit y push del Core (`bcd9295`, sin incluir los cambios locales de `.obsidian/`) y continuar con lo pendiente.
 
 - Emulador AVD `Pixel_3a_API_34` (Android 14) arrancado; `npx expo start --android` instaló Expo Go 57.0.9 y abrió PaseoYA (SDK 57.0.0), con 0 errores JS. Captura en [[06-Estado/evidencia/EVID-F0-03b-emulador.png]]. **EVID-F0-03b PASS → F0-03 y T-F0 cerradas; F0 3/3.**
-- Quedan en ejecución local el emulador, Metro (puerto 8081) y el stack de Supabase. Para detenerlos: cerrar el emulador, `Ctrl+C` en Metro y `npm run db:stop` en `backend/`.
+- Metro se detuvo después de la captura, al agotar el límite de tiempo de la tarea en segundo plano; se relanza con `npm run android` en `frontend/`. Quedan en ejecución el emulador y el stack de Supabase (`npm run db:stop` en `backend/`).
 - **Siguiente fase:** F1/LUI-01, la especificación visual desde SRC-04. Puede avanzar con propuestas y sólo se cierra con DEC-11. La primera tanda de decisiones (DEC-19, 03, 10, 11 y 15) desbloquea F2.
 - **Uso de sesión:** `SessionUsage/v1`: runtime `null`, documentación `null`.
