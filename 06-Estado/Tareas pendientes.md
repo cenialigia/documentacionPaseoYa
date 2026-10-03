@@ -22,7 +22,7 @@ Casillas del plan [[05-Desarrollo/Plan por fases]]. **F0 cerrada con evidencia (
 - [x] **LUI-03 / F3** *(cerrada 2026-10-03: DEC-09 retiró la comparación; pestaña Buscar, EVID-LUI-03a)* Explorar, tiendas, ofertas, detalle faltante, búsqueda/comparación y filtros.
 - [x] **LUI-04 / F4** *(cerrada 2026-10-03: DEC-05/06 aplicadas, EVID-LUI-04a + EVID-DEMO-a)* Carritos separados, cantidades, subtotal, temporizador y expiración visual.
 - [x] **LUI-05 / F4** *(cerrada 2026-10-03: DEC-04/05/06 aplicadas, EVID-LUI-05a + EVID-DEMO-a)* Checkout por comercio, QR **simulado**/efectivo, condiciones y errores/reintentos.
-- [ ] **LUI-06 / F5** *(implementado 2026-10-03: ticket QR + PIN, cancelación, simular pago; falta probar «Guardar ticket» en el dispositivo)* Pedidos en curso/historial, ticket, credencial ilustrativa, ubicación e incidencias.
+- [x] **LUI-06 / F5** *(cerrada 2026-10-03: ticket QR + PIN, «Guardar ticket», cancelación y actualización en tiempo real; EVID-DEMO-a, EVID-INT-02a/b)* Pedidos en curso/historial, ticket, credencial ilustrativa, ubicación e incidencias.
 - [ ] **LUI-07 / F6** *(mínimo implementado: login simulado por rol y registro de cliente; perfil y sesión real dependen de INT-01)* Acceso, cuenta y sesión por rol.
 - [ ] **LUI-08 / F6** *(cola, preparación, efectivo y validación de PIN probados en EVID-DEMO-a; falta gestión de catálogo)* Vistas de comercio: catálogo, cola, preparación y retiro.
 - [ ] **LUI-09 / F6** *(supervisión de sólo lectura; faltan acciones de gestión)* Vistas de administración según DEC-10/13.
@@ -38,7 +38,7 @@ Casillas del plan [[05-Desarrollo/Plan por fases]]. **F0 cerrada con evidencia (
 ## Integración · F10
 
 - [x] **INT-01** *(cerrada 2026-10-03, frontend `146c16a`, EVID-INT-01a)* Conectar UI con contratos backend, sustituir fixtures y probar cada rol.
-- [ ] **INT-02** Pruebas en dispositivo, RLS/concurrencia/expiración, manual, presentación y demo reproducible.
+- [ ] **INT-02** *(pruebas en emulador y en teléfono físico, RLS/concurrencia/expiración, manual y guion de demo listos (EVID-INT-02a/b); falta la presentación del hackathon)* Pruebas en dispositivo, RLS/concurrencia/expiración, manual, presentación y demo reproducible.
 
 ## Alcance B · F11, si DEC-19 lo elige
 

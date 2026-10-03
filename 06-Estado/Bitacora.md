@@ -212,3 +212,19 @@ Para relevo entre agentes: actualizar esta nota con tarea/intent/revisión, auto
 - **Evidencia:** EVID-INT-01a y EVID-BE-d en PASS. Progreso 11/19 (57,9 %).
 - **Próximo paso:** publicar el backend tras la confirmación del usuario; INT-02 en un teléfono físico.
 - **Uso de sesión:** `SessionUsage/v1`: integración `null`, agente de backend 62 177 tokens (informado por el runtime), pruebas `null`, documentación `null`.
+
+## 2026-10-03 · Backend publicado e INT-02 (teléfono físico)
+
+**Entrada:** el usuario autorizó publicar el backend y pidió continuar con INT-02.
+
+- **Backend `45b0e3e`** publicado (hash remoto igual al local), con confirmación expresa del usuario.
+- **Conexión de dispositivos:** había un Xiaomi M2102J20SG (Android 12) conectado por USB, sin Expo Go. El usuario eligió instalarlo él mismo. Se adoptó `EXPO_PUBLIC_SUPABASE_URL=http://127.0.0.1:54321` con `adb reverse` para 8081 y 54321 en cada dispositivo: la misma configuración sirve en el emulador y en el teléfono, y no depende del Wi-Fi.
+- **Pruebas en el emulador (EVID-INT-02a PASS):** Realtime con RLS, expiración por pg_cron reflejada en la app, registro de cliente con rol `CLIENTE` y «Guardar ticket».
+- **Prueba en dos dispositivos (EVID-INT-02b PASS):** MIUI bloquea los toques inyectados (`INJECT_EVENTS`), así que el usuario operó el teléfono como cliente mientras el agente operaba el comercio en el emulador. Estados y ticket se sincronizaron en tiempo real en ambos sentidos. No se activó ningún ajuste de seguridad del teléfono ni se guardaron capturas suyas.
+- **Documentación:**
+  - [[07-Manuales/Manual de usuario]] reescrito y verificado contra la app.
+  - [[08-Produccion/_Indice de produccion]] con el estado de los entregables.
+  - README del frontend (`2a5a32a`) con la configuración USB y un guion de demo para dos dispositivos.
+- **Tareas:** LUI-06 cerrada; INT-02 abierta sólo por la presentación. Progreso 12/19 (63,2 %).
+- **Próximo paso:** la presentación del hackathon y el ensayo del guion.
+- **Uso de sesión:** `SessionUsage/v1`: pruebas `null`, documentación `null`.
