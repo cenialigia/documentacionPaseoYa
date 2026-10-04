@@ -337,3 +337,9 @@ Para relevo entre agentes: actualizar esta nota con tarea/intent/revisión, auto
 - 18 productos nuevos con descripción (35 en total), reposición de stock, 3 promociones aprobadas y 12 ventas entregadas en los últimos 7 días generadas por el flujo real (confirmar → pagar → preparar → entregar con PIN).
 - 43 fotos libres de Unsplash para productos y comercios; créditos en [[06-Estado/Creditos de fotos de la demo]].
 - Antes se aplicaron a la nube las migraciones de Admin y DEC-24 y se generó el APK de EAS (build `f400bb4b`).
+
+## 2026-10-04 · Demo validada en la nube y rama `development` actualizada
+
+- Pruebas del usuario en el APK contra la nube: reserva en efectivo PY-1016 (TechStore) y compra con QR simulado PY-1019 (Bold, Botines a Bs 367,20 con 20 %), ambas hasta «Entregado» con código de un uso; admin revisado sin observaciones.
+- `development` avanzada hasta `main` (fast-forward): frontend `18594b4` (incluye `eas.json` y la configuración del APK), backend `043d0a2`.
+- Revisión previa: sin contraseñas, correos reales ni claves secretas en los repositorios; el archivo de credenciales de la demo queda sólo en la carpeta local.
