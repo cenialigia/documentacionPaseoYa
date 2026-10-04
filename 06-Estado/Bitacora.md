@@ -296,3 +296,11 @@ Para relevo entre agentes: actualizar esta nota con tarea/intent/revisión, auto
 - **Pendiente antes de construir:** F14-00.3 (inventario versionado de lo existente por tarea `SUP`); DEC-24 (retención de datos personales) sigue abierta.
 - **Próximo paso:** F14-00.3 y luego el lote F14-UI-C (Cliente) con su F14-BE asociado, por partes y con evidencia.
 - **Uso de sesión:** `SessionUsage/v1`: lectura `null`, preguntas `null`, documentación `null`.
+
+## 2026-10-03 · F14 lote Cliente (F14-UI-C + F14-BE)
+
+- **Agente:** Claude (Code). **Base:** frontend `cf9c9da`, backend `45b0e3e`, Core `b0c8625` ([[05-Desarrollo/F14 - Inventario base]]).
+- **Backend** (`8416682`, `d5d6cf1`): migración F14 cliente (perfil ampliado, categorías, promociones con aprobación, favoritos, notificaciones, Storage, contacto del cliente) y formato es-BO en notificaciones; 25/25 pruebas SQL (EVID-F14-BE-a).
+- **Frontend** (`de08a02`): vistas cliente del PDF con tuteo, pestañas Inicio/Mis pedidos/Promociones/Perfil, QR de pago con vencimiento, recuperación por código; recorrido completo en emulador (EVID-F14-CLI-a).
+- **Corregido durante la prueba:** aviso del ticket antes de «listo», etiqueta de pago de pedido cancelado, monto con punto decimal en notificaciones.
+- **Pendiente:** eliminar foto y galería (X-04); lote Comercio (verificar/confirmar entrega, escáner con cámara, promociones, ventas) y luego Admin; DEC-24.

@@ -16,7 +16,7 @@ F14 es una **línea de ampliación** posterior a la demo integrada; no presupone
 - [x] **F14-00.0 · Comprobación conjunta del repositorio.** *(2026-10-03: Core `beb261f`, frontend `cf9c9da`, backend `45b0e3e`, todos iguales a `origin/main`; ver Bitácora)* Al asignar la fase, el agente responsable y quien le haga el handoff comparan el Core local con `origin/main` y revisan `git status`, último commit, archivos cambiados y diff desde la última entrega. Hacen lo mismo en los repositorios separados de frontend y backend: rama, commit local/remoto, cambios sin confirmar y pruebas/evidencias posteriores a este plan. Registran en [[06-Estado/Bitacora]] fecha, agente, rutas, hashes, diferencias ajenas y qué versión será la base de F14. No sobrescribir ni dar por incluido un cambio no revisado; si hay divergencia, acordar su integración antes de tomar tareas `SUP` o `NEW`.
 - [x] **F14-00.1** *(2026-10-03: lista generada contra PDF, mosaicos y código; añadidas DEC-F14-15/16)* Antes de iniciar cualquier implementación, leer [[02-Arquitectura/Decisiones F14 antes de iniciar]] y generar una lista actualizada de preguntas para Usuario a partir de diferencias entre los PDF, mockups, decisiones DEC-04/09/10/11/13/16/19/20/21/22 y el código vigente. No tratar el silencio como respuesta.
 - [x] **F14-00.2** *(2026-10-03: 16 decisiones respondidas y registradas)* Presentar las preguntas agrupadas por alcance, navegación/UX, pago/retiro, permisos y datos; registrar cada respuesta con fecha, autoridad y efecto en la nota de decisiones, RF/RN, contratos, pantallas y pruebas. Acordar qué es demo, cobertura B o piloto C.
-- [ ] **F14-00.3** Levantar inventario del frontend/backend actuales con commit, ruta, pantalla, API, migración y prueba por cada tarea `SUP`. Conservar los cambios ajenos. Etiquetar `PASS`, `FAIL` o `NO_EJECUTADA`; un mockup parecido no prueba funcionalidad.
+- [x] **F14-00.3** *(2026-10-03: [[05-Desarrollo/F14 - Inventario base]])* Levantar inventario del frontend/backend actuales con commit, ruta, pantalla, API, migración y prueba por cada tarea `SUP`. Conservar los cambios ajenos. Etiquetar `PASS`, `FAIL` o `NO_EJECUTADA`; un mockup parecido no prueba funcionalidad.
 
 **Puerta de salida:** comprobación conjunta registrada, decisiones que afecten a un lote respondidas, inventario versionado y permisos/alcance aprobados. Se permite supervisión documental mientras la puerta sigue abierta; no se construye el comportamiento controvertido.
 
@@ -46,10 +46,10 @@ F14 es una **línea de ampliación** posterior a la demo integrada; no presupone
 
 ## Lote F14-UI-X · Vistas y estados del PDF sin recorte propio
 
-- [ ] **F14-X-01 · Acceso:** registro con errores por campo, indicadores de contraseña, selectores de género/fecha, foto previa, login inválido/cargando y recuperación si se aprueba. Compartir componentes con CLI-01–05; no multiplicar rutas cuando basta un estado.
-- [ ] **F14-X-02 · Catálogo y carrito:** lista de tiendas dentro de categoría, índice de carritos por comercio y búsqueda contextual por tienda/categoría; confirmar si ya son rutas reutilizables de CLI-07/08/10 antes de crear nuevas.
-- [ ] **F14-X-03 · Pago y pedido:** QR simulado pendiente, errores/reintento, detalle histórico y estados entregado/cancelado/expirado. La confirmación de reserva/compra puede ser pantalla o estado según DEC-F14-02/03, pero cada salida debe tener destino y prueba.
-- [ ] **F14-X-04 · Perfil cliente:** información personal/edición, foto (tomar/elegir/eliminar), legal, ayuda y confirmación de cierre, enlazadas a CLI-26 y validadas contra permisos/privacidad.
+- [x] **F14-X-01 · Acceso:** *(EVID-F14-CLI-a)* registro con errores por campo, indicadores de contraseña, selectores de género/fecha, foto previa, login inválido/cargando y recuperación si se aprueba. Compartir componentes con CLI-01–05; no multiplicar rutas cuando basta un estado.
+- [x] **F14-X-02 · Catálogo y carrito:** *(EVID-F14-CLI-a)* lista de tiendas dentro de categoría, índice de carritos por comercio y búsqueda contextual por tienda/categoría; confirmar si ya son rutas reutilizables de CLI-07/08/10 antes de crear nuevas.
+- [x] **F14-X-03 · Pago y pedido:** *(EVID-F14-CLI-a)* QR simulado pendiente, errores/reintento, detalle histórico y estados entregado/cancelado/expirado. La confirmación de reserva/compra puede ser pantalla o estado según DEC-F14-02/03, pero cada salida debe tener destino y prueba.
+- [ ] **F14-X-04 · Perfil cliente:** *(parcial, EVID-F14-CLI-a: datos, foto con cámara, legal, ayuda y cierre PASS; falta eliminar foto y probar galería)* información personal/edición, foto (tomar/elegir/eliminar), legal, ayuda y confirmación de cierre, enlazadas a CLI-26 y validadas contra permisos/privacidad.
 - [ ] **F14-X-05 · Operación comercio:** modales de confirmar pedido, efectivo y entrega; PIN manual, cámara denegada, código ajeno/usado/expirado, pedido no listo y pago pendiente. Asociarlos a COM-03–06, sin pestañas extra.
 - [ ] **F14-X-06 · Formularios admin:** crear/editar categoría y promoción, cancelación/cambios sin guardar/errores/éxito. Son ADM-10 y ADM-12 del PDF, enlazados desde las capturas F14-ADM-12/13.
 
@@ -57,13 +57,13 @@ Estas seis tareas completan el inventario funcional del PDF que no aparece como 
 
 ## Lote F14-BE · Datos y operaciones
 
-- [ ] **F14-BE-01 · Identidad y perfiles:** auditar Auth y RLS existentes; si se aprueba, migrar teléfono/género/nacimiento/avatar, edición de perfil y almacenamiento de imágenes con política por propietario. Probar acceso cruzado y persistencia.
+- [x] **F14-BE-01 · Identidad y perfiles:** *(EVID-F14-BE-a)* auditar Auth y RLS existentes; si se aprueba, migrar teléfono/género/nacimiento/avatar, edición de perfil y almacenamiento de imágenes con política por propietario. Probar acceso cruzado y persistencia.
 - [ ] **F14-BE-02 · Descubrimiento:** contratos de búsquedas contextuales (global, categoría, tienda, promociones, favoritos, historial), paginación, filtros y datos para secciones de Home. Revisar BE-02 abierto; no duplicar catálogo cliente.
 - [ ] **F14-BE-03 · Compra/reserva:** auditar BE-03/04 y definir estados `pedido`/`pago`/`reserva` sin duplicar entidades por UI; QR de pago simulado separado del ticket QR+PIN, idempotencia, plazos DEC-06 y stock atómico. Probar dos pedidos concurrentes, reintentos y cancelación/expiración.
 - [ ] **F14-BE-04 · Retiro por cámara:** añadir, si se aprueba, validación del mismo código de un uso por cámara y PIN manual; confirmar pertenencia al comercio, estado listo, vigencia y pago antes de entregar. Pruebas de código ajeno, duplicado, expirado y error de cámara.
 - [ ] **F14-BE-05 · Comercio:** auditar RLS y CRUD ya evidenciados; ampliar sólo campos aprobados de producto/establecimiento/horario; consulta de ventas y detalle usando montos y estados de pago reales. Probar cambios concurrentes de stock y acceso entre dos comercios.
 - [ ] **F14-BE-06 · Administración:** consultas globales, gestión autorizada de comercios/usuarios/categorías/promociones y métricas con definiciones temporales; auditoría de acciones, permisos de cambio de estado y pruebas RLS por rol. No tomar cifras ficticias de las capturas como datos reales.
-- [ ] **F14-BE-07 · Extras condicionales:** favoritos, notificaciones y promociones sólo tras decisión de alcance/operación; persistencia, disparadores, lectura/no lectura, vigencias y pruebas de autorización. Si se descartan, retirar controles y documentar el motivo.
+- [x] **F14-BE-07 · Extras condicionales:** *(EVID-F14-BE-a; DEC-F14-05/11)* favoritos, notificaciones y promociones sólo tras decisión de alcance/operación; persistencia, disparadores, lectura/no lectura, vigencias y pruebas de autorización. Si se descartan, retirar controles y documentar el motivo.
 
 ## Lote F14-QA · Cierre y trazabilidad
 
