@@ -343,3 +343,10 @@ Para relevo entre agentes: actualizar esta nota con tarea/intent/revisión, auto
 - Pruebas del usuario en el APK contra la nube: reserva en efectivo PY-1016 (TechStore) y compra con QR simulado PY-1019 (Bold, Botines a Bs 367,20 con 20 %), ambas hasta «Entregado» con código de un uso; admin revisado sin observaciones.
 - `development` avanzada hasta `main` (fast-forward): frontend `18594b4` (incluye `eas.json` y la configuración del APK), backend `043d0a2`.
 - Revisión previa: sin contraseñas, correos reales ni claves secretas en los repositorios; el archivo de credenciales de la demo queda sólo en la carpeta local.
+
+## 2026-10-04 · Cierre de F14 en el Core
+
+- **QA-01/04:** [[05-Desarrollo/F14 - Matriz QA]] con los 54 recortes (ruta, archivo, contrato, DEC, evidencia y comparación visual): 18 coinciden, 29 difieren por decisión, modelo o funciones añadidas, 7 mejoras aceptadas para la demo.
+- **QA-02:** EVID-F14-QA-02 (accesibilidad automática, sin conexión, sesión vencida, rutas por rol); TalkBack y texto al 200 % quedan para el usuario.
+- **QA-03:** EVID-F14-QA-03 (37/37 SQL y API). **DEC-24** registrada como resuelta en el formulario y en decisiones pendientes; EVID-DEC24-a. Demo en la nube: EVID-DEMO-NUBE-a.
+- BE-02 y BE-03 marcados con su evidencia; F14 queda cerrada para la demo. Siguiente según el plan: F11 (matriz RF-01–44), F12 (ambientes, SMTP, restauración) y F13 (piloto, DEC-25).

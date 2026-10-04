@@ -118,7 +118,13 @@ updated: 2026-10-02
 
 ### DEC-24 · Datos y atención · antes de piloto real
 
-**Indicar:** qué datos personales se recogen, retención y eliminación, respaldo/recuperación, canal de soporte e incidencias, responsables de atender pedidos fallidos y criterio para pausar el piloto. Las políticas legales aplicables se revisan con quien corresponda. **Respuesta:** `PENDIENTE`.
+**Indicar:** qué datos personales se recogen, retención y eliminación, respaldo/recuperación, canal de soporte e incidencias, responsables de atender pedidos fallidos y criterio para pausar el piloto. Las políticas legales aplicables se revisan con quien corresponda. **Respuesta (Usuario, 2026-10-04):**
+- **Eliminación:** a pedido, con anonimización. El cliente la pide desde Perfil o la hace el admin; se borran nombre, correo, teléfono, género, nacimiento, foto, favoritos y avisos, y los pedidos se conservan como «Cliente eliminado» para ventas y estadísticas. No se elimina con pedidos en curso; las cuentas de comercio se desactivan, no se eliminan.
+- **Retención:** avisos 90 días y reportes 12 meses, con purga diaria programada; los pedidos se conservan sin datos personales.
+- **Respaldo y soporte:** respaldo semanal manual (`npm run respaldo` en el backend, guardado fuera del repositorio); incidencias por «Reportar un problema», atendidas por el admin.
+- **Sigue abierto para el piloto (F13):** responsables nominales de pedidos fallidos, criterio para pausar el piloto, ensayo de restauración y revisión legal.
+
+Implementación: migración `20261007000000_dec24_datos_personales.sql`; evidencia EVID-DEC24-a.
 
 ### DEC-25 · Criterios de aceptación del piloto · antes de F13
 

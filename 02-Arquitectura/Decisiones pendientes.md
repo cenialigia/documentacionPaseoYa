@@ -33,7 +33,7 @@ No bloquear trabajo documental ni pruebas sintéticas por preguntas abiertas. **
 | DEC-21 | ¿Quién mantiene horarios, locales, precios, stock y catálogo, y cómo se publica un comercio? | Fuente de verdad y operación comercial; F7/F11. |
 | DEC-22 | ¿Qué operaciones, métricas y promociones exactas tendrá administración y consulta de ventas? | RF-38–44; F11. |
 | DEC-23 | ¿Cómo se distribuye la app y quién es titular de cuentas, remotos y costes? | F12, publicación y entornos. |
-| DEC-24 | ¿Cómo se tratan datos personales, retención, respaldo, soporte e incidencias? | F12/F13; política operativa. |
+| DEC-24 | **Resuelta 2026-10-04** (ver formulario): eliminación a pedido con anonimización, avisos 90 días, reportes 12 meses, respaldo semanal manual y soporte in-app. Queda para F13: responsables, criterio de pausa y ensayo de restauración. | F12/F13; política operativa. |
 | DEC-25 | ¿Con qué comercios, dispositivos, volumen y metas se acepta el piloto? | F13, UAT y firma de cierre. |
 
 DEC-17 queda **resuelta por SRC-02**: varios carritos y un pedido por comercio son requisitos expresos RN-02/03; se conserva el ID histórico sin volver a preguntarlo. El PDF oficial manda en condiciones del reto; el MD contiene requisitos de Usuario. Ninguno concede permiso de conectar servicios, hacer pagos reales o publicar.

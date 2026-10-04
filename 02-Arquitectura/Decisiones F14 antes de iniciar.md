@@ -57,4 +57,4 @@ Recogidas en el chat de la sesión de Claude Code, en cinco tandas agrupadas por
 | DEC-F14-15 | **Tabla de categorías de comercio** gestionada por el admin; cada comercio pertenece a una; navegación Inicio → categoría → tiendas. | Migración `categorias` + FK en `comercios`. |
 | DEC-F14-16 | **Supabase Storage**: bucket público de sólo lectura para fotos de productos/tiendas (cada comercio sube las suyas) y privado para avatares (cada usuario el suyo). | Políticas de Storage + subida desde la app. |
 
-Ninguna decisión anterior se considera cambiada salvo las señaladas (DEC-11 parcial por DEC-F14-12; DEC-20 parcial por DEC-F14-05). DEC-24 (retención de datos personales) sigue **PENDIENTE**.
+Ninguna decisión anterior se considera cambiada salvo las señaladas (DEC-11 parcial por DEC-F14-12; DEC-20 parcial por DEC-F14-05). DEC-24 (retención de datos personales) quedó **resuelta el 2026-10-04** (ver [[Decisiones de Usuario para el desarrollo]]).

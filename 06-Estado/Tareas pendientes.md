@@ -54,14 +54,15 @@ Casillas del plan [[05-Desarrollo/Plan por fases]]. **F0 y otros 10 lotes de dem
 - [ ] **PIL-01** Datos y comercios autorizados, capacitación y UAT por rol.
 - [ ] **PIL-02** Salida controlada, observación, corrección y aceptación del piloto.
 
-## F14 · Nueva documentación por roles, aún NO_EJECUTADA
+## F14 · Revisión y ampliación por roles · cerrada para la demo (2026-10-04)
 
-- [ ] **F14-00.0–00.3** Comprobación conjunta de cambios/commits del Core, frontend y backend con el agente asignado; después inventario del código y preguntas/decisiones de [[02-Arquitectura/Decisiones F14 antes de iniciar]] antes de implementar cada lote afectado.
-- [ ] **F14-UI-C** 26 tareas `F14-CLI-01`–`26`, cada una con captura y ubicación en [[02-Arquitectura/F14 - Cliente - vistas y tareas]].
-- [ ] **F14-UI-M** 14 tareas `F14-COM-01`–`14` en [[02-Arquitectura/F14 - Comercio - vistas y tareas]].
-- [ ] **F14-UI-A** 14 tareas `F14-ADM-01`–`14` en [[02-Arquitectura/F14 - Administrador - vistas y tareas]].
-- [ ] **F14-UI-X** 6 tareas `F14-X-01`–`06` para rutas/estados exigidos por los PDF sin cuadro independiente, en [[05-Desarrollo/F14 - Revision y ampliacion por roles]].
-- [ ] **F14-BE-01–07** Identidad, búsqueda, compra/reserva, retiro por cámara, comercio, administración y extras condicionales, descritos en [[05-Desarrollo/F14 - Revision y ampliacion por roles]].
-- [ ] **F14-QA-01–04** Matriz de trazabilidad, dispositivo/accesibilidad, seguridad/concurrencia y comparación visual; evidencia en [[05-Desarrollo/Testing]].
+- [x] **F14-00.0–00.3** Comprobación conjunta de cambios/commits del Core, frontend y backend con el agente asignado; después inventario del código y preguntas/decisiones de [[02-Arquitectura/Decisiones F14 antes de iniciar]] antes de implementar cada lote afectado.
+- [x] **F14-UI-C** 26 tareas `F14-CLI-01`–`26`, cada una con captura y ubicación en [[02-Arquitectura/F14 - Cliente - vistas y tareas]].
+- [x] **F14-UI-M** 14 tareas `F14-COM-01`–`14` en [[02-Arquitectura/F14 - Comercio - vistas y tareas]].
+- [x] **F14-UI-A** 14 tareas `F14-ADM-01`–`14` en [[02-Arquitectura/F14 - Administrador - vistas y tareas]].
+- [x] **F14-UI-X** 6 tareas `F14-X-01`–`06` para rutas/estados exigidos por los PDF sin cuadro independiente, en [[05-Desarrollo/F14 - Revision y ampliacion por roles]].
+- [x] **F14-BE-01–07** Identidad, búsqueda, compra/reserva, retiro por cámara, comercio, administración y extras condicionales, descritos en [[05-Desarrollo/F14 - Revision y ampliacion por roles]].
+- [x] **F14-QA-01–04** Matriz de trazabilidad, dispositivo/accesibilidad, seguridad/concurrencia y comparación visual; evidencia en [[05-Desarrollo/Testing]] y [[05-Desarrollo/F14 - Matriz QA]].
+- [ ] **F14-QA-02 (resto)** TalkBack y texto al 200 % en el dispositivo: los activa el usuario; hasta entonces `NO_EJECUTADA`.
 
 **Puertas críticas:** ver [[Decisiones de Usuario para el desarrollo]]. DEC-19 determina si el denominador activo son 19 lotes para demo, 23 para cobertura funcional o 27 para piloto. Las decisiones restantes sólo bloquean los lotes dependientes; no se inventa una respuesta por el mockup. Ideas futuras como Points, Jarvis, delivery o IA permanecen fuera del MVP.
