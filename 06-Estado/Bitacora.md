@@ -275,3 +275,24 @@ Para relevo entre agentes: actualizar esta nota con tarea/intent/revisión, auto
 
 - **Cambio:** 69 menciones sustituidas en 21 notas Markdown. Se conservaron los PDF, mosaicos y ZIP originales sin edición para mantener su procedencia y hashes.
 - **Verificación:** búsqueda sin coincidencias del nombre anterior en los textos del baúl; `git diff --check` sin errores. El código de frontend/backend queda fuera del alcance de este commit.
+
+## 2026-10-03 · F14-00: comprobación conjunta y decisiones del propietario
+
+**Entrada:** el usuario pidió revisar que los repositorios estuvieran actualizados, leer F14 y traer las preguntas.
+
+- **F14-00.0 · Comprobación conjunta:** `git fetch` en los tres repositorios.
+  - El Core iba 2 commits por detrás (`13af925` «Documentar F14 por roles y puerta de revisión conjunta», `beb261f` «Usar Usuario en referencias del baúl»). Se integró con `git pull --ff-only`, sin conflicto. Se conservaron los 4 cambios locales de `.obsidian/`, que los commits entrantes no tocaban.
+  - Frontend `cf9c9da` y backend `45b0e3e` estaban iguales a `origin/main` y sin cambios locales.
+  - **Base de F14:** Core `beb261f`, frontend `cf9c9da`, backend `45b0e3e`. No había diferencias ajenas sin revisar.
+- **F14-00.1 · Lista de preguntas:** se leyeron el plan F14, el mapa de vistas, los tres archivos por rol y el formulario DEC-F14-01–14, contrastados con el código. Del código surgieron DEC-F14-15 (categorías como texto suelto) y DEC-F14-16 (sin almacenamiento de imágenes).
+- **F14-00.2 · Respuestas:** en cinco tandas, registradas en [[02-Arquitectura/Decisiones F14 antes de iniciar]] y en ADR-012. Lo más relevante:
+  - Orden Cliente → Comercio → Admin.
+  - Barras del PDF; QR simulado con pantalla propia.
+  - DEC-16 se mantiene.
+  - Favoritos y notificaciones; registro con datos del PDF.
+  - Promociones % con aprobación.
+  - Tuteo y datos de los mosaicos (sustituye parte de DEC-11).
+  - Cámara + PIN; entrega en dos pasos; tabla de categorías; Storage.
+- **Pendiente antes de construir:** F14-00.3 (inventario versionado de lo existente por tarea `SUP`); DEC-24 (retención de datos personales) sigue abierta.
+- **Próximo paso:** F14-00.3 y luego el lote F14-UI-C (Cliente) con su F14-BE asociado, por partes y con evidencia.
+- **Uso de sesión:** `SessionUsage/v1`: lectura `null`, preguntas `null`, documentación `null`.

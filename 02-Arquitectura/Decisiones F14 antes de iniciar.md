@@ -1,7 +1,7 @@
 ---
 title: "Decisiones del propietario antes de F14"
 tags: [paseoya, decisiones, fase14]
-status: pendiente
+status: decidido
 updated: 2026-10-03
 ---
 
@@ -33,3 +33,28 @@ updated: 2026-10-03
 3. Para cualquier dato nuevo descubierto al leer el código, añadir `DEC-F14-15+` con alternativa, efecto y responsable, y preguntarlo antes de implementar. Si Usuario conserva DEC-04/11/16/20, la imagen se adapta a esas decisiones y la divergencia se documenta.
 
 **Registro de respuesta:** `ID | pregunta | respuesta de Usuario | fecha | ámbito | artefactos afectados | prueba | estado`. Hasta recibirla, todas estas filas permanecen **PENDIENTE**; no hay aceptación tácita del contenido de los PDF. Los formularios históricos viven en [[02-Arquitectura/Decisiones de Usuario para el desarrollo]].
+
+## Respuestas de Usuario · 2026-10-03 (F14-00.2)
+
+Recogidas en el chat de la sesión de Claude Code, en cinco tandas agrupadas por alcance, navegación, pago/retiro, permisos y datos. Ámbito: F14. Prevalecen sobre las propuestas de los PDF y mosaicos; donde contradicen una decisión anterior se indica.
+
+| ID | Respuesta de Usuario | Efecto |
+| --- | --- | --- |
+| DEC-F14-01 | F14 **progresivo y por partes**: primero **Cliente**, luego **Comercio** y, si alcanza, el resto (Administración). | Orden de lotes F14-UI-C → F14-UI-M → F14-UI-A con sus F14-BE; cada lote se cierra con evidencia antes del siguiente. |
+| DEC-F14-02 | Cliente: **barra del PDF** Inicio · Mis pedidos · Promociones · Perfil, carrito en el encabezado. Admin: **barra del PDF** Inicio · Comercios · Usuarios · Pedidos · Más. Comercio: la del PDF (Inicio · Pedidos · Productos · Ventas, avatar → Perfil), sin contradicción. | Sustituye la barra Explorar/Buscar/Carritos/Pedidos; Buscar pasa a ser contextual (DEC-09 se mantiene: sin función Comparar). |
+| DEC-F14-03 | **Pantalla de QR simulada** con cuenta atrás de 5 min, regenerable; «Simular pago» lleva a «Pago confirmado». | Mantiene DEC-04 (sin dinero real); añade CLI-12/13. |
+| DEC-F14-04 | **Mantener DEC-16**: QR+PIN sólo en `READY_FOR_PICKUP`; antes, el ticket muestra pedido, local y plazo. | CLI-14/15 se adaptan; RLS de credenciales sin cambios. |
+| DEC-F14-05 | Se activan **favoritos** y **notificaciones** (campana). Reseñas, direcciones y métodos de pago **no**. Promociones aprobadas por DEC-F14-02. | **Reabre parcialmente DEC-20** (campana); valoraciones siguen retiradas. |
+| DEC-F14-06 | Admin puede: activar/desactivar productos de comercio, gestionar comercios (crear con cuenta única, editar, abrir/cerrar, activar/desactivar), categorías y promociones, y activar/desactivar usuarios. **No** marca pedidos como listos. | ADM-07 sin «Marcar como listo»; acciones auditadas; crear cuentas requiere función de servidor. |
+| DEC-F14-07 | **Reparto mixto**: el comercio edita descripción, horario, foto y abierto/cerrado; el admin fija nombre, categoría y piso/local. Producto con pedidos sólo se **desactiva**; sin pedidos se puede eliminar. | COM-09 «Eliminar» condicionado; COM-12 limitado a sus campos. |
+| DEC-F14-08 | Registro **como el PDF**: teléfono, género y fecha de nacimiento obligatorios; foto opcional. Uso: teléfono para contacto sobre pedidos (lo ven el usuario, el admin y **el comercio en pedidos activos**); género y nacimiento sólo para analítica agregada del admin; el usuario los edita. | Migración de perfil + Storage de avatar; RLS por propietario; DEC-24 (retención) sigue abierta. |
+| DEC-F14-09 | **Correo + recuperar contraseña**; se retiran Google/Apple; sin verificación de correo en el registro. | Cierra el hueco de LUI-07. |
+| DEC-F14-10 | **Pestañas sobre una sola fuente**: Reservas (efectivo activo), Compras (QR activo), Historial (entregados, cancelados y expirados, con estado visible). | Sin entidades nuevas en BE-03; CLI-18–22 son filtros. |
+| DEC-F14-11 | Promociones **sólo por % de descuento** con vigencia; las crea **el admin y también el comercio**; las del comercio **esperan aprobación** del admin; precio final calculado en servidor y congelado en el pedido. | Nuevo modelo `promociones` y ajuste de `confirmar_pedido`. |
+| DEC-F14-12 | **Adoptar el estilo nuevo** de los mosaicos (tuteo y sus datos). Las fotos/marcas de terceros siguen excluidas salvo licencia. | **Sustituye en parte DEC-11/ADR-010** (usted → tuteo) y los datos de seed (p. ej. local de TechZone) se ajustan a los mosaicos. Tokens/paleta se mantienen salvo cambio visual explícito. |
+| DEC-F14-13 | **Cámara + PIN de respaldo** (lector QR con `expo-camera`), validación siempre en servidor; prueba en el teléfono. | COM-05; instalación autorizada de `expo-camera` vía `expo install`. |
+| DEC-F14-14 | **Verificar y confirmar**: verificar QR/PIN sin consumirlo; «Confirmar entrega» consume la credencial y entrega en una operación atómica. | Divide `validar_retiro` en verificar + confirmar; pruebas de cancelación intermedia. |
+| DEC-F14-15 | **Tabla de categorías de comercio** gestionada por el admin; cada comercio pertenece a una; navegación Inicio → categoría → tiendas. | Migración `categorias` + FK en `comercios`. |
+| DEC-F14-16 | **Supabase Storage**: bucket público de sólo lectura para fotos de productos/tiendas (cada comercio sube las suyas) y privado para avatares (cada usuario el suyo). | Políticas de Storage + subida desde la app. |
+
+Ninguna decisión anterior se considera cambiada salvo las señaladas (DEC-11 parcial por DEC-F14-12; DEC-20 parcial por DEC-F14-05). DEC-24 (retención de datos personales) sigue **PENDIENTE**.
