@@ -311,3 +311,8 @@ Para relevo entre agentes: actualizar esta nota con tarea/intent/revisión, auto
 - **Backend** (`3fcd670`): retiro en dos pasos `verificar_retiro` + `confirmar_entrega` (QR o PIN, DEC-F14-14), edición limitada del local (DEC-F14-07), `horario`, avisos del comercio; 28/28 pruebas (EVID-F14-BE-b).
 - **Frontend** (`bbdece0`): barra Inicio · Pedidos · Productos · Ventas, avisos y perfil en el encabezado, detalle de pedido, «Gestionar retiro» con `expo-camera` (instalado por DEC-F14-13) o PIN, productos con foto/descripción/promociones/eliminación condicionada, ventas, perfil y edición del local; recorrido en emulador (EVID-F14-COM-a).
 - **Pendiente:** leer un QR real con la cámara en el teléfono físico (lo hace una persona; MIUI bloquea toques inyectados); lote Admin (aprobar promociones, gestionar comercios/usuarios/categorías); DEC-24.
+
+## 2026-10-04 · Rama `development` para la demo (MVP local)
+
+- A pedido del usuario se avanzó `development` hasta `main` (fast-forward, sólo tenía el README inicial): frontend `bbdece0`, backend `3fcd670`.
+- Alcance: MVP de demostración **local** (Supabase en Docker + Expo Go). Sin build instalable (APK) ni proyecto Supabase en la nube; el lote Admin de F14 y la lectura de QR con cámara en teléfono siguen pendientes.
