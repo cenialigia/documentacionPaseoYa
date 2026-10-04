@@ -324,3 +324,9 @@ Para relevo entre agentes: actualizar esta nota con tarea/intent/revisión, auto
 - **Frontend:** barra Inicio · Comercios · Usuarios · Pedidos · Más con todas las vistas ADM del PDF; recorrido en emulador (EVID-F14-ADM-a).
 - **Nube:** el proyecto Supabase (`iytupuqawrywssrwtmxa`) tiene las migraciones hasta el lote Comercio; confirmación de correo desactivada y código de 6 dígitos. La plantilla de recuperación no se puede editar en el plan gratuito sin SMTP propio (decisión pendiente del usuario).
 - **Pendiente:** QR con cámara en teléfono, eliminar foto de perfil (X-04), QA transversal (F14-QA-01..04), DEC-24.
+
+## 2026-10-04 · Pendientes F14: quitar foto y QR con cámara en teléfono
+
+- **Quitar foto de perfil** (frontend `6f7c91c`, en `main`): borra el archivo de `avatares` y limpia `avatar_path`; EVID-F14-CLI-b.
+- **QR con cámara física:** el usuario, con su teléfono como TechStore, leyó el QR del ticket mostrado en el emulador y confirmó la entrega de PY-1016; la base quedó `DELIVERED` con la credencial usada y el ticket del cliente cambió solo; EVID-F14-COM-b.
+- Con esto quedan cerradas F14-X-04 y F14-X-05. Siguen pendientes F14-QA-01..04, DEC-24 y la decisión del correo de recuperación en la nube.
