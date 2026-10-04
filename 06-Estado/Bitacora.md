@@ -316,3 +316,11 @@ Para relevo entre agentes: actualizar esta nota con tarea/intent/revisión, auto
 
 - A pedido del usuario se avanzó `development` hasta `main` (fast-forward, sólo tenía el README inicial): frontend `bbdece0`, backend `3fcd670`.
 - Alcance: MVP de demostración **local** (Supabase en Docker + Expo Go). Sin build instalable (APK) ni proyecto Supabase en la nube; el lote Admin de F14 y la lectura de QR con cámara en teléfono siguen pendientes.
+
+## 2026-10-04 · F14 lote Administrador
+
+- **Agente:** Claude (Code). Trabajo en `main` (frontend `0388b1e`, backend `43f3b5e`); `development` sin cambios por pedido del usuario. `eas.json` y los cambios de `app.json` de EAS siguen sin commit.
+- **Backend:** auditoría por disparador, productos sólo activar/desactivar para el admin, `crear_comercio` con cuenta, usuarios activos/inactivos con bloqueo en Auth, `listar_usuarios`, avisos de promociones; 33/33 pruebas (EVID-F14-BE-c).
+- **Frontend:** barra Inicio · Comercios · Usuarios · Pedidos · Más con todas las vistas ADM del PDF; recorrido en emulador (EVID-F14-ADM-a).
+- **Nube:** el proyecto Supabase (`iytupuqawrywssrwtmxa`) tiene las migraciones hasta el lote Comercio; confirmación de correo desactivada y código de 6 dígitos. La plantilla de recuperación no se puede editar en el plan gratuito sin SMTP propio (decisión pendiente del usuario).
+- **Pendiente:** QR con cámara en teléfono, eliminar foto de perfil (X-04), QA transversal (F14-QA-01..04), DEC-24.
