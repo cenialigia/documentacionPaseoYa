@@ -350,3 +350,10 @@ Para relevo entre agentes: actualizar esta nota con tarea/intent/revisión, auto
 - **QA-02:** EVID-F14-QA-02 (accesibilidad automática, sin conexión, sesión vencida, rutas por rol); TalkBack y texto al 200 % quedan para el usuario.
 - **QA-03:** EVID-F14-QA-03 (37/37 SQL y API). **DEC-24** registrada como resuelta en el formulario y en decisiones pendientes; EVID-DEC24-a. Demo en la nube: EVID-DEMO-NUBE-a.
 - BE-02 y BE-03 marcados con su evidencia; F14 queda cerrada para la demo. Siguiente según el plan: F11 (matriz RF-01–44), F12 (ambientes, SMTP, restauración) y F13 (piloto, DEC-25).
+
+## 2026-10-04 · F11 · Cobertura funcional
+
+- Plan replanteado tras la demo: se retoma F11 → F12 → F13 con el orden de [[06-Estado/Tareas pendientes]].
+- **Matriz** [[05-Desarrollo/F11 - Matriz de requisitos]]: RF-01–44, RN-01–09, §11–14 y RNF-01–10 con implementación y evidencia.
+- **Huecos cerrados:** RNF-06 con `pedido_eventos` (cada estado y pago con fecha y autor o «Sistema»), visible como horas en la línea de estado y como historial completo en el admin; RF-33 con DEC-F11-01 (rechazo del comercio con motivo, reembolso, stock y aviso); §11 con las unidades reservadas en el detalle de producto del comercio.
+- 42/42 pruebas SQL; tsc y lint limpios (EVID-F11-a). Pendiente: probar la interfaz nueva en un dispositivo y aplicar la migración primero en un ambiente de pruebas (OPS-01a).

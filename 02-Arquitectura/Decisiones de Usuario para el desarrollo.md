@@ -142,3 +142,7 @@ Implementación: migración `20261007000000_dec24_datos_personales.sql`; evidenc
 3. **Antes de completar RF y operar:** DEC-07, 08, 12, 13, 20, 22–25. DEC-14 antes de demo; DEC-18 cuando interese.
 
 Mientras llegan respuestas se puede hacer **F0-01** (inventario sin instalación) y **F1/LUI-01** (análisis visual con propuestas), auditar RF→pantalla→prueba y diseñar pruebas sintéticas. F1 no se cierra sin DEC-11. Se puede crear la separación **local** de repositorios solicitada cuando se fije la ruta; conectar cuentas, instalar herramientas, publicar o decidir políticas no se infiere de este archivo. Al recibir una respuesta, registrar fecha, autoridad y efecto en este formulario y en [[02-Arquitectura/Decisiones pendientes]]/[[02-Arquitectura/Decisiones tecnicas]], y actualizar tareas/pruebas afectadas. No marcar pendiente como decidido por silencio.
+
+### DEC-F11-01 · Confirmación del pedido por el comercio (RF-33) · F11
+
+**Respuesta (Usuario, 2026-10-04):** se mantiene la confirmación automática al pagar o reservar (el stock queda apartado de inmediato) y se agrega **«Rechazar pedido»** para el comercio, con motivo, mientras el pedido no esté listo. El rechazo cancela, reembolsa el QR simulado, devuelve el stock y avisa al cliente con el motivo. Implementación: `rechazar_pedido` en `20261008000000_f11_trazabilidad.sql`; evidencia EVID-F11-a.

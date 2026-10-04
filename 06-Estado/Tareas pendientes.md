@@ -40,12 +40,12 @@ Casillas del plan [[05-Desarrollo/Plan por fases]]. **F0 y otros 10 lotes de dem
 - [x] **INT-01** *(cerrada 2026-10-03, frontend `146c16a`, EVID-INT-01a)* Conectar UI con contratos backend, sustituir fixtures y probar cada rol.
 - [ ] **INT-02** *(pruebas en emulador y en teléfono físico, RLS/concurrencia/expiración, manual y guion de demo listos (EVID-INT-02a/b); falta la presentación del hackathon)* Pruebas en dispositivo, RLS/concurrencia/expiración, manual, presentación y demo reproducible.
 
-## Alcance B · F11, si DEC-19 lo elige
+## Alcance B · F11 · cerrada 2026-10-04 ([[05-Desarrollo/F11 - Matriz de requisitos]])
 
-- [ ] **COMP-01** Gestión comercial completa de productos, precios, stock, horarios y ventas (RF-27–31/38).
-- [ ] **COMP-02** Gestión admin, estadísticas y promociones de punta a punta (RF-39–44).
-- [ ] **COMP-03** Servicios y acciones adicionales del mockup que Usuario apruebe en DEC-12/20.
-- [ ] **COMP-04** Matriz de cobertura RF/RN/RNF y regresión de todos los requisitos incluidos.
+- [x] **COMP-01** Gestión comercial completa de productos, precios, stock, horarios y ventas (RF-27–31/38).
+- [x] **COMP-02** Gestión admin, estadísticas y promociones de punta a punta (RF-39–44).
+- [x] **COMP-03** Servicios y acciones adicionales del mockup que Usuario apruebe en DEC-12/20. *(Aprobados y hechos en F14: avisos, favoritos, promociones, cámara; el resto quedó fuera por DEC-20/DEC-F14-05.)*
+- [x] **COMP-04** Matriz de cobertura RF/RN/RNF y regresión de todos los requisitos incluidos. *(RF 42/44 PASS y 2 parciales con límite; RN 13/13; RNF 9/10; huecos listados en la matriz.)*
 
 ## Alcance C · F12–F13, si DEC-19 lo elige
 
@@ -66,3 +66,19 @@ Casillas del plan [[05-Desarrollo/Plan por fases]]. **F0 y otros 10 lotes de dem
 - [ ] **F14-QA-02 (resto)** TalkBack y texto al 200 % en el dispositivo: los activa el usuario; hasta entonces `NO_EJECUTADA`.
 
 **Puertas críticas:** ver [[Decisiones de Usuario para el desarrollo]]. DEC-19 determina si el denominador activo son 19 lotes para demo, 23 para cobertura funcional o 27 para piloto. Las decisiones restantes sólo bloquean los lotes dependientes; no se inventa una respuesta por el mockup. Ideas futuras como Points, Jarvis, delivery o IA permanecen fuera del MVP.
+
+## Orden de trabajo después de la demo (2026-10-04)
+
+La demo pasó; se retoma el flujo F11 → F12 → F13, reordenado según lo que ya existe.
+
+1. **F11 · Cobertura funcional** — cerrada: matriz de requisitos, trazabilidad (RNF-06), rechazo del comercio (DEC-F11-01) y stock reservado visible (§11).
+2. **F12 · Preparación para uso real**, en este orden:
+   - [ ] **OPS-01a** Separar ambientes: proyecto Supabase de pruebas distinto del de producción, perfiles de EAS por ambiente y aplicar las migraciones F11 primero en pruebas.
+   - [ ] **OPS-02a** Correo propio (SMTP) para la recuperación de contraseña por código y otros avisos por correo.
+   - [ ] **OPS-01b** CI: tipos, lint y pruebas SQL en cada cambio; migraciones reversibles documentadas.
+   - [ ] **OPS-02b** Restauración ensayada de un respaldo, monitoreo de errores y revisión de seguridad.
+   - [ ] **OPS-02c** Accesibilidad: TalkBack y texto al 200 % (activa el usuario); paginación de búsquedas.
+   - [ ] **OPS-01c** Distribución (DEC-23): titular de cuentas, build firmado para tienda o APK interno, costes.
+3. **F13 · Piloto** — requiere DEC-25 (comercios, dispositivos, volumen y metas) y lo pendiente de DEC-24 (responsables, criterio de pausa).
+
+Mejoras sin decisión registradas en [[05-Desarrollo/F14 - Matriz QA]] (filas compactas, gráficos de línea, avisos de promociones al cliente) quedan para cuando se priorice diseño.
