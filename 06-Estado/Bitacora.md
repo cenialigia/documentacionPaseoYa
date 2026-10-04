@@ -330,3 +330,10 @@ Para relevo entre agentes: actualizar esta nota con tarea/intent/revisión, auto
 - **Quitar foto de perfil** (frontend `6f7c91c`, en `main`): borra el archivo de `avatares` y limpia `avatar_path`; EVID-F14-CLI-b.
 - **QR con cámara física:** el usuario, con su teléfono como TechStore, leyó el QR del ticket mostrado en el emulador y confirmó la entrega de PY-1016; la base quedó `DELIVERED` con la credencial usada y el ticket del cliente cambió solo; EVID-F14-COM-b.
 - Con esto quedan cerradas F14-X-04 y F14-X-05. Siguen pendientes F14-QA-01..04, DEC-24 y la decisión del correo de recuperación en la nube.
+
+## 2026-10-04 · Contenido de demostración en la nube
+
+- Cuentas del equipo creadas en el proyecto en la nube (cliente, comercio Bold en la categoría nueva «Calzado» y admin); contraseñas sólo en un archivo local fuera de los repositorios.
+- 18 productos nuevos con descripción (35 en total), reposición de stock, 3 promociones aprobadas y 12 ventas entregadas en los últimos 7 días generadas por el flujo real (confirmar → pagar → preparar → entregar con PIN).
+- 43 fotos libres de Unsplash para productos y comercios; créditos en [[06-Estado/Creditos de fotos de la demo]].
+- Antes se aplicaron a la nube las migraciones de Admin y DEC-24 y se generó el APK de EAS (build `f400bb4b`).
