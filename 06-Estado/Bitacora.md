@@ -304,3 +304,10 @@ Para relevo entre agentes: actualizar esta nota con tarea/intent/revisión, auto
 - **Frontend** (`de08a02`): vistas cliente del PDF con tuteo, pestañas Inicio/Mis pedidos/Promociones/Perfil, QR de pago con vencimiento, recuperación por código; recorrido completo en emulador (EVID-F14-CLI-a).
 - **Corregido durante la prueba:** aviso del ticket antes de «listo», etiqueta de pago de pedido cancelado, monto con punto decimal en notificaciones.
 - **Pendiente:** eliminar foto y galería (X-04); lote Comercio (verificar/confirmar entrega, escáner con cámara, promociones, ventas) y luego Admin; DEC-24.
+
+## 2026-10-04 · F14 lote Comercio
+
+- **Agente:** Claude (Code). **Base:** frontend `de08a02`, backend `d5d6cf1`.
+- **Backend** (`3fcd670`): retiro en dos pasos `verificar_retiro` + `confirmar_entrega` (QR o PIN, DEC-F14-14), edición limitada del local (DEC-F14-07), `horario`, avisos del comercio; 28/28 pruebas (EVID-F14-BE-b).
+- **Frontend** (`bbdece0`): barra Inicio · Pedidos · Productos · Ventas, avisos y perfil en el encabezado, detalle de pedido, «Gestionar retiro» con `expo-camera` (instalado por DEC-F14-13) o PIN, productos con foto/descripción/promociones/eliminación condicionada, ventas, perfil y edición del local; recorrido en emulador (EVID-F14-COM-a).
+- **Pendiente:** leer un QR real con la cámara en el teléfono físico (lo hace una persona; MIUI bloquea toques inyectados); lote Admin (aprobar promociones, gestionar comercios/usuarios/categorías); DEC-24.
