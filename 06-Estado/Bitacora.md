@@ -357,3 +357,8 @@ Para relevo entre agentes: actualizar esta nota con tarea/intent/revisión, auto
 - **Matriz** [[05-Desarrollo/F11 - Matriz de requisitos]]: RF-01–44, RN-01–09, §11–14 y RNF-01–10 con implementación y evidencia.
 - **Huecos cerrados:** RNF-06 con `pedido_eventos` (cada estado y pago con fecha y autor o «Sistema»), visible como horas en la línea de estado y como historial completo en el admin; RF-33 con DEC-F11-01 (rechazo del comercio con motivo, reembolso, stock y aviso); §11 con las unidades reservadas en el detalle de producto del comercio.
 - 42/42 pruebas SQL; tsc y lint limpios (EVID-F11-a). Pendiente: probar la interfaz nueva en un dispositivo y aplicar la migración primero en un ambiente de pruebas (OPS-01a).
+
+## 2026-10-06 · F12 · CI y correo propio
+
+- **CI (OPS-01b):** GitHub Actions en backend y frontend; primera ejecución en verde (EVID-OPS-CI-a). Indicador de estado en los README.
+- **Correo (OPS-02a):** el usuario eligió Brevo; configura el SMTP en el panel de Supabase sin compartir la clave. La plantilla del código de 6 dígitos se sube después con una configuración mínima.

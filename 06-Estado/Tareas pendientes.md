@@ -75,7 +75,7 @@ La demo pasó; se retoma el flujo F11 → F12 → F13, reordenado según lo que 
 2. **F12 · Preparación para uso real**, en este orden:
    - [ ] **OPS-01a** Separar ambientes: proyecto Supabase de pruebas distinto del de producción, perfiles de EAS por ambiente y aplicar las migraciones F11 primero en pruebas.
    - [ ] **OPS-02a** Correo propio (SMTP) para la recuperación de contraseña por código y otros avisos por correo.
-   - [ ] **OPS-01b** CI: tipos, lint y pruebas SQL en cada cambio; migraciones reversibles documentadas.
+   - [x] **OPS-01b** CI: tipos, lint y pruebas SQL en cada cambio *(EVID-OPS-CI-a; falta documentar migraciones reversibles)*.
    - [ ] **OPS-02b** Restauración ensayada de un respaldo, monitoreo de errores y revisión de seguridad.
    - [ ] **OPS-02c** Accesibilidad: TalkBack y texto al 200 % (activa el usuario); paginación de búsquedas.
    - [ ] **OPS-01c** Distribución (DEC-23): titular de cuentas, build firmado para tienda o APK interno, costes.
